@@ -1,3 +1,4 @@
+[CmdletBinding(PositionalBinding = $false)]
 param(
     [string]$DeviceSerial = "",
     [string]$OutputDir = "d:\App\editremote.onlinehelp.io\assets\img\editremote",
@@ -104,7 +105,7 @@ Write-Host "Completato. Screenshot salvati in: $OutputDir" -ForegroundColor Cyan
 
 if ($UpdateHtmlReferences) {
     if (!(Test-Path $SiteRoot)) {
-        throw "SiteRoot non trovato: $SiteRoot"
+        throw "SiteRoot non trovato: $SiteRoot. Usa parametri nominati: -Names @(...) -UpdateHtmlReferences -SiteRoot 'd:\\App\\editremote.onlinehelp.io'"
     }
 
     $htmlFiles = Get-ChildItem -Path $SiteRoot -Filter "*.html" -File -Recurse

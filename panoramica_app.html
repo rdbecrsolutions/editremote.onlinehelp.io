@@ -360,13 +360,61 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Cosa vedi in home</h5>
+          <h5 class="card-title">Mainwindow: campi e funzioni</h5>
+          <p>
+            La schermata principale raccoglie tutti i controlli necessari per collegarsi alla cassa,
+            leggere i dati e aprire le sezioni di programmazione.
+          </p>
+          <h6>Area connessione</h6>
           <ul>
-            <li>Area connessione e stato dispositivo.</li>
-            <li>Matricola e modello rilevato.</li>
-            <li>Lista Configurazioni per aprire le programmazioni.</li>
+            <li><strong>Modalita connessione</strong>: Locale, Offline, Seriale (su Windows); Remoto e visibile per usi futuri.</li>
+            <li><strong>Indirizzo IP</strong>: usato in modalita Locale per raggiungere la cassa in rete.</li>
+            <li><strong>Cerca</strong>: tenta discovery IP automatico sulla LAN.</li>
+            <li><strong>Porta COM</strong>: visibile in Seriale per collegamento diretto RS/USB.</li>
+            <li><strong>Pulsante Connetti/Disconnetti</strong>: avvia o chiude la sessione con la cassa.</li>
           </ul>
-          <img src="assets/img/editremote/main_post_conn.png" class="img-fluid rounded border" alt="Home EditRemote post connessione">
+
+          <h6>Area identificazione dispositivo</h6>
+          <ul>
+            <li><strong>Matricola</strong>: identificativo RT letto dalla cassa (o impostato in offline).</li>
+            <li><strong>Modello</strong>: modello riconosciuto da matricola/revisione o selezionato in offline.</li>
+            <li><strong>Immagine modello</strong>: riferimento visuale del modello RT operativo.</li>
+          </ul>
+
+          <h6>Area Configurazioni</h6>
+          <ul>
+            <li>Elenco sezioni programmabili: Reparti, IVA, Articoli, Pagamenti, Clienti, POS, ecc.</li>
+            <li>Le voci non compatibili con modello/revisione vengono disabilitate automaticamente.</li>
+            <li>Abbonamento App resta sempre accessibile per controllo stato piano.</li>
+          </ul>
+
+          <h6>Come ci si connette alla cassa (Locale)</h6>
+          <ol>
+            <li>Seleziona <strong>Locale</strong>.</li>
+            <li>Inserisci IP oppure usa <strong>Cerca</strong>.</li>
+            <li>Premi <strong>Connetti</strong>.</li>
+            <li>Attendi stato connesso, poi apri una sezione e importa i dati.</li>
+          </ol>
+
+          <h6>Come si opera in offline</h6>
+          <ol>
+            <li>Seleziona <strong>Offline</strong>.</li>
+            <li>Scegli il modello offline.</li>
+            <li>Apri le sezioni e prepara/modifica la configurazione.</li>
+            <li>Esporta XML per backup o per successiva sincronizzazione.</li>
+          </ol>
+
+          <h6>Mainwindow prima e dopo connessione</h6>
+          <div class="row g-3">
+            <div class="col-lg-6">
+              <p class="mb-2"><strong>Prima connessione</strong></p>
+              <img src="assets/img/editremote/main.png" class="img-fluid rounded border" alt="Main EditRemote prima connessione">
+            </div>
+            <div class="col-lg-6">
+              <p class="mb-2"><strong>Dopo connessione</strong></p>
+              <img src="assets/img/editremote/main_post_conn.png" class="img-fluid rounded border" alt="Main EditRemote post connessione">
+            </div>
+          </div>
         </div>
       </div>
     </section>

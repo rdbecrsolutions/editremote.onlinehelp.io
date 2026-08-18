@@ -2,7 +2,31 @@
 param(
     [string]$DeviceSerial = "",
     [string]$OutputDir = "d:\App\editremote.onlinehelp.io\assets\img\editremote",
-    [string[]]$Names = @("main", "reparti", "iva", "clienti", "abbonamento"),
+    [string[]]$Names = @(
+        "abbonamento",
+        "opzioni_app",
+        "txemail",
+        "mailreports",
+        "report_esercente",
+        "dati_fattura",
+        "iva",
+        "ateco",
+        "reparti",
+        "articoli",
+        "modificatori",
+        "pagamenti",
+        "cassieri",
+        "clienti",
+        "autorizzazioni",
+        "messaggi_pubblicitari",
+        "varie",
+        "tastiera",
+        "intestazione",
+        "cortesia",
+        "pos",
+        "main",
+        "main_post_conn"
+    ),
     [switch]$UpdateHtmlReferences,
     [string]$SiteRoot = "d:\App\editremote.onlinehelp.io"
 )

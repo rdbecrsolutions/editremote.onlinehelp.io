@@ -8,6 +8,23 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+# Accept both array-style names and comma-separated single string.
+$normalizedNames = @()
+foreach ($n in $Names) {
+    if ($null -eq $n) { continue }
+    $parts = $n -split ','
+    foreach ($p in $parts) {
+        $clean = $p.Trim()
+        if ($clean.Length -gt 0) {
+            $normalizedNames += $clean
+        }
+    }
+}
+if ($normalizedNames.Count -eq 0) {
+    throw "Nessuna schermata richiesta. Usa -Names con almeno un nome."
+}
+$Names = $normalizedNames
+
 function Get-PathConfig {
     $configPath = "d:\App\EditRemote\android-paths.txt"
     $map = @{}
@@ -64,6 +81,7 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Acquisizione screenshot EditRemote" -ForegroundColor Cyan
 Write-Host "Apri ogni schermata dell'app sul telefono e premi INVIO per catturare." -ForegroundColor Yellow
+Write-Host ("Schermate da catturare: " + ($Names -join ', ')) -ForegroundColor Gray
 
 foreach ($name in $Names) {
     Read-Host "Pronto per schermata '$name'? Premi INVIO"

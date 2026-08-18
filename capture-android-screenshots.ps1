@@ -1,7 +1,9 @@
 param(
     [string]$DeviceSerial = "",
     [string]$OutputDir = "d:\App\editremote.onlinehelp.io\assets\img\editremote",
-    [string[]]$Names = @("main", "reparti", "iva", "clienti", "abbonamento")
+    [string[]]$Names = @("main", "reparti", "iva", "clienti", "abbonamento"),
+    [switch]$UpdateHtmlReferences,
+    [string]$SiteRoot = "d:\App\editremote.onlinehelp.io"
 )
 
 $ErrorActionPreference = 'Stop'
@@ -11,6 +13,11 @@ if (!(Test-Path $OutputDir)) {
 }
 
 $adb = "adb"
+$adbCmd = Get-Command $adb -ErrorAction SilentlyContinue
+if (-not $adbCmd) {
+    throw "adb non trovato nel PATH. Installa Android platform-tools o aggiungi adb al PATH."
+}
+
 $deviceArg = @()
 if ($DeviceSerial.Trim().Length -gt 0) {
     $deviceArg = @("-s", $DeviceSerial)
@@ -42,3 +49,29 @@ foreach ($name in $Names) {
 }
 
 Write-Host "Completato. Screenshot salvati in: $OutputDir" -ForegroundColor Cyan
+
+if ($UpdateHtmlReferences) {
+    if (!(Test-Path $SiteRoot)) {
+        throw "SiteRoot non trovato: $SiteRoot"
+    }
+
+    $htmlFiles = Get-ChildItem -Path $SiteRoot -Filter "*.html" -File -Recurse
+    $updated = 0
+
+    foreach ($file in $htmlFiles) {
+        $text = Get-Content -Path $file.FullName -Raw
+        $original = $text
+
+        foreach ($name in $Names) {
+            $text = $text -replace ("assets/img/editremote/{0}\\.jpeg" -f [regex]::Escape($name)), ("assets/img/editremote/{0}.png" -f $name)
+            $text = $text -replace ("assets/img/editremote/{0}\\.jpg" -f [regex]::Escape($name)), ("assets/img/editremote/{0}.png" -f $name)
+        }
+
+        if ($text -ne $original) {
+            Set-Content -Path $file.FullName -Value $text -Encoding UTF8
+            $updated++
+        }
+    }
+
+    Write-Host ("Riferimenti HTML aggiornati in {0} file." -f $updated) -ForegroundColor Cyan
+}

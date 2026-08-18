@@ -8,15 +8,49 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+function Get-PathConfig {
+    $configPath = "d:\App\EditRemote\android-paths.txt"
+    $map = @{}
+
+    if (-not (Test-Path $configPath)) {
+        return $map
+    }
+
+    foreach ($line in Get-Content -Path $configPath) {
+        $trimmed = $line.Trim()
+        if (-not $trimmed -or $trimmed.StartsWith("#")) { continue }
+        $parts = $trimmed -split "=", 2
+        if ($parts.Count -ne 2) { continue }
+        $key = $parts[0].Trim()
+        $value = $parts[1].Trim()
+        if ($key) { $map[$key] = $value }
+    }
+
+    return $map
+}
+
+function Resolve-AdbPath {
+    $pathConfig = Get-PathConfig
+    if ($pathConfig.ContainsKey("SDK_ROOT")) {
+        $candidate = Join-Path $pathConfig["SDK_ROOT"] "platform-tools\adb.exe"
+        if (Test-Path $candidate) {
+            return $candidate
+        }
+    }
+
+    $adbCmd = Get-Command adb -ErrorAction SilentlyContinue
+    if ($adbCmd -and $adbCmd.Source) {
+        return $adbCmd.Source
+    }
+
+    throw "adb non trovato: imposta SDK_ROOT in android-paths.txt oppure aggiungi adb al PATH."
+}
+
 if (!(Test-Path $OutputDir)) {
     New-Item -ItemType Directory -Path $OutputDir | Out-Null
 }
 
-$adb = "adb"
-$adbCmd = Get-Command $adb -ErrorAction SilentlyContinue
-if (-not $adbCmd) {
-    throw "adb non trovato nel PATH. Installa Android platform-tools o aggiungi adb al PATH."
-}
+$adb = Resolve-AdbPath
 
 $deviceArg = @()
 if ($DeviceSerial.Trim().Length -gt 0) {

@@ -86,43 +86,13 @@
         </a>
         <ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="impostazioni_abbonamento.html">
-              <i class="bi bi-circle"></i><span>Piani di abbonamento</span>
+            <a href="impostazioni_intestazione.html">
+              <i class="bi bi-circle"></i><span>Intestazione</span>
             </a>
           </li>
           <li>
-            <a href="impostazioni_prog_opzioni_app.html">
-              <i class="bi bi-circle"></i><span>Opzioni</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_prog_mail.html">
-              <i class="bi bi-circle"></i><span>Tx Email</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_prog_dati_fattura.html">
-              <i class="bi bi-circle"></i><span>Fatture RT</span>
-            </a>
-          </li>
-                    <li>
-            <a href="impostazioni_report_mail.html">
-              <i class="bi bi-circle"></i><span>Report Mail</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_report_esercente.html">
-              <i class="bi bi-circle"></i><span>Report Esercente</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_messaggi_pubblicitari.html">
-              <i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_tastiera.html">
-              <i class="bi bi-circle"></i><span>Tastiera</span>
+            <a href="impostazioni_cortesia.html">
+              <i class="bi bi-circle"></i><span>Cortesia</span>
             </a>
           </li>
           <li>
@@ -131,18 +101,8 @@
             </a>
           </li>
           <li>
-            <a href="impostazioni_prog_ateco.html">
-              <i class="bi bi-circle"></i><span>Ateco</span>
-            </a>
-          </li>
-          <li>
             <a href="impostazioni_prog_reparti.html">
               <i class="bi bi-circle"></i><span>Reparti</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_prog_articoli.html">
-              <i class="bi bi-circle"></i><span>Articoli</span>
             </a>
           </li>
           <li>
@@ -156,6 +116,26 @@
             </a>
           </li>
           <li>
+            <a href="impostazioni_prog_articoli.html">
+              <i class="bi bi-circle"></i><span>Articoli</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_prog_ateco.html">
+              <i class="bi bi-circle"></i><span>Ateco</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_prog_opzioni_app.html">
+              <i class="bi bi-circle"></i><span>Opzioni</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_autorizzazioni.html">
+              <i class="bi bi-circle"></i><span>Autorizzazioni</span>
+            </a>
+          </li>
+          <li>
             <a href="impostazioni_cassieri.html">
               <i class="bi bi-circle"></i><span>Cassieri</span>
             </a>
@@ -166,18 +146,8 @@
             </a>
           </li>
           <li>
-            <a href="impostazioni_autorizzazioni.html">
-              <i class="bi bi-circle"></i><span>Autorizzazioni</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_intestazione.html">
-              <i class="bi bi-circle"></i><span>Intestazione</span>
-            </a>
-          </li>
-          <li>
-            <a href="impostazioni_cortesia.html">
-              <i class="bi bi-circle"></i><span>Cortesia</span>
+            <a href="impostazioni_messaggi_pubblicitari.html">
+              <i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span>
             </a>
           </li>
           <li>
@@ -186,8 +156,38 @@
             </a>
           </li>
           <li>
+            <a href="impostazioni_prog_mail.html">
+              <i class="bi bi-circle"></i><span>Tx Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_prog_dati_fattura.html">
+              <i class="bi bi-circle"></i><span>Fatture RT</span>
+            </a>
+          </li>
+          <li>
             <a href="impostazioni_prog_pos.html">
               <i class="bi bi-circle"></i><span>Config POS</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_report_mail.html">
+              <i class="bi bi-circle"></i><span>Report Mail</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_report_esercente.html">
+              <i class="bi bi-circle"></i><span>Report Esercente</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_tastiera.html">
+              <i class="bi bi-circle"></i><span>Tastiera</span>
+            </a>
+          </li>
+          <li>
+            <a href="impostazioni_abbonamento.html">
+              <i class="bi bi-circle"></i><span>Piani di abbonamento</span>
             </a>
           </li>
         </ul>
@@ -231,7 +231,8 @@
 
     <section class="section">
       <div class="card">
-        <div class="card-body">`r`n          <h5 class="card-title">Procedura</h5>
+        <div class="card-body">
+          <h5 class="card-title">Procedura</h5>
           
           <p>
             Questa programmazione equivale al comando <strong>807 MENU</strong> sul registratore RT.
@@ -246,6 +247,23 @@
             <li>Compila anagrafica, indirizzo e dati fiscali necessari.</li>
             <li>Salva e verifica le anagrafiche in cassa.</li>
           </ol>
+
+          <h6>Significato campi</h6>
+          <ul>
+            <li><strong>Indice</strong>: identifica il cliente in memoria (posizione record).</li>
+            <li><strong>Persona fisica</strong>: indica se il cliente e' una persona fisica.</li>
+            <li><strong>Codice fiscale</strong>: codice fiscale del cliente; usato nei documenti fiscali.</li>
+            <li><strong>Partita IVA</strong>: partita IVA del cliente (se soggetto IVA).</li>
+            <li><strong>Denominazione</strong>: nome/ragione sociale visualizzato e stampato.</li>
+            <li><strong>Indirizzo</strong>: via e numero civico del cliente.</li>
+            <li><strong>Comune</strong>: comune della sede/residenza.</li>
+            <li><strong>Provincia</strong>: sigla provincia (es. MI, RM).</li>
+            <li><strong>CAP</strong>: codice di avviamento postale.</li>
+            <li><strong>Codice SDI</strong>: codice destinatario per fatturazione elettronica.</li>
+            <li><strong>Credito max</strong>: limite massimo di credito consentito al cliente.</li>
+            <li><strong>Email</strong>: indirizzo usato per invii e comunicazioni al cliente.</li>
+          </ul>
+
           <div class="alert alert-secondary mt-3" role="alert">
             <strong>Modifica descrizione:</strong> nei campi descrittivi (*) usa <strong>doppio clic</strong> su Windows
             oppure <strong>tap lungo</strong> su Android per aprire l'editor.

@@ -233,7 +233,7 @@
       <div class="row"><div class="col-12"><div class="card"><div class="card-body">
         <h5 class="card-title">Guida operativa</h5>
         <p>
-          Questa programmazione equivale al comando <strong>530 MENU</strong> sul registratore RT,
+          Questa programmazione equivale al comando <strong>811 MENU</strong> sul registratore RT,
           per la gestione dell'invio fatture tramite e-mail.
         </p>
           <div class="alert alert-info mt-3" role="alert">
@@ -247,6 +247,16 @@
           <li>Applica solo le modifiche necessarie.</li>
           <li>Salva e verifica l'esito operativo.</li>
         </ol>
+        <h6>Cosa cambiare e a cosa serve</h6>
+        <ul>
+          <li><strong>Server SMTP:</strong> definisce il server usato per spedire le e-mail.</li>
+          <li><strong>Porta:</strong> imposta il canale di comunicazione (es. 465 SSL o 587 TLS).</li>
+          <li><strong>Sicurezza SSL/TLS:</strong> abilita la cifratura del traffico SMTP.</li>
+          <li><strong>Utente mittente:</strong> account autorizzato all'invio.</li>
+          <li><strong>Password:</strong> credenziale dell'account SMTP (per Gmail usare password app).</li>
+          <li><strong>StartTLS:</strong> abilitalo quando il provider richiede cifratura negoziata sulla connessione SMTP (tipicamente porta 587). Se usi relay locale senza TLS, lascialo disattivo.</li>
+          <li><strong>Client Authentication:</strong> abilitala quando il server SMTP richiede login client (username/password). Se il server accetta invio senza autenticazione dalla rete locale, puo rimanere disattiva.</li>
+        </ul>
         <h6>Controlli finali consigliati</h6>
         <ul>
           <li>Conferma su cassa dei valori programmati.</li>
@@ -257,10 +267,8 @@
           Per account Google/Gmail usa una <strong>Password per le app</strong> (non la password principale):
           attiva prima la verifica in due passaggi sull'account Google e poi genera la password app dedicata da inserire in configurazione.
         </div>
-        <h6 class="mt-4">Configurazione TX Email</h6>
+        <h6 class="mt-4">Configurazione Tx Email</h6>
         <img src="assets/img/editremote/txemail.png" class="img-fluid rounded border" alt="Programmazione TX Email">
-        <h6 class="mt-4">Configurazione Report Mail</h6>
-        <img src="assets/img/editremote/mailreports.png" class="img-fluid rounded border" alt="Programmazione Report Mail">
       </div></div></div></div>
     </section>
   </main><!-- End #main -->

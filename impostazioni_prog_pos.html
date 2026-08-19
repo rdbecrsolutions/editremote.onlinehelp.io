@@ -254,7 +254,7 @@
                 <li>Salva e verifica l'esito operativo con una prova pagamento.</li>
               </ol>
 
-              <h6>Tipi POS disponibili (da firmware)</h6>
+              <h6>Tipi POS disponibili</h6>
               <ul>
                 <li><strong>NESSUNO</strong>: POS non collegato.</li>
                 <li><strong>NON SUPP.</strong>: POS non supportato (pagamenti gestiti in offline).</li>
@@ -294,7 +294,7 @@
 
               <h6>Dettaglio configurazione DOJO</h6>
               <p>
-                Quando selezioni <strong>TIPO POS = DOJO</strong>, il firmware avvia la procedura guidata di configurazione
+                Quando selezioni <strong>TIPO POS = DOJO</strong>, il registratore avvia la procedura guidata di configurazione
                 e richiede in sequenza i campi:
               </p>
               <ul>
@@ -310,7 +310,7 @@
 
               <h6>Esito operativo e fallback offline (DOJO)</h6>
               <ul>
-                <li>In caso di errori di comunicazione (es. TLS o errore interno), il firmware propone il fallback offline tramite richiesta <strong>CONTINUAOFFLINE?</strong>.</li>
+                <li>In caso di errori di comunicazione (es. TLS o errore interno), viene proposto il fallback offline tramite richiesta <strong>CONTINUAOFFLINE?</strong>.</li>
                 <li>Se l'operatore non conferma il fallback offline, viene segnalato <strong>POS NO OFFLINE</strong>.</li>
                 <li>Errori tipici associati: <strong>ERRORE CONN. POS</strong>, <strong>OP. POS FALLITA</strong>, <strong>POS TIMEOUT</strong>, <strong>POS UTENTE CANC</strong>.</li>
               </ul>
@@ -329,7 +329,7 @@
                 <li>Messaggi errore frequenti in esercizio: POS TIMEOUT, POS TX ERROR, OP. POS FALLITA, POS NO CARD, POS DISCONNESSO.</li>
               </ul>
 
-              <h6>Screenshot per scenario</h6>
+              <h6>Per scenario</h6>
               <div class="row g-3">
                 <div class="col-12 col-lg-4">
                   <p class="mb-2"><strong>Schermata Config POS (834 MENU)</strong></p>
@@ -358,7 +358,7 @@
                 <li>Conferma su cassa dei valori programmati e del tipo POS selezionato.</li>
                 <li>Prova una transazione per verificare dialogo RT-POS.</li>
                 <li>Export XML di backup dopo la modifica.</li>
-                <li>Se una voce non e disponibile, verifica revisione firmware e modello RT.</li>
+                <li>Se una voce non e disponibile, verifica modello RT e versione software del dispositivo.</li>
               </ul>
             </div>
           </div>

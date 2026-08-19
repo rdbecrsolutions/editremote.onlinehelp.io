@@ -233,7 +233,8 @@
       <div class="row"><div class="col-12"><div class="card"><div class="card-body">
         <h5 class="card-title">Guida operativa</h5>
         <p>
-          Questa programmazione equivale al comando <strong>853 MENU</strong> sul registratore RT.
+          Questa programmazione equivale al comando <strong>853 MENU</strong> sul registratore RT
+          e gestisce quali report automatici inviare via e-mail.
         </p>
           <div class="alert alert-info mt-3" role="alert">
             <strong>Nota operativa:</strong> <strong>Import</strong> legge i dati dalla cassa,
@@ -246,12 +247,20 @@
           <li>Applica solo le modifiche necessarie.</li>
           <li>Salva e verifica l'esito operativo.</li>
         </ol>
+        <h6>Campi principali e a cosa servono</h6>
+        <ul>
+          <li><strong>Email:</strong> indirizzo destinatario dei report.</li>
+          <li><strong>Eventi che generano report:</strong> seleziona quali eventi devono produrre una e-mail.</li>
+          <li><strong>Intervallo:</strong> definisce ogni quanto inviare i report.</li>
+        </ul>
         <h6>Controlli finali consigliati</h6>
         <ul>
           <li>Conferma su cassa dei valori programmati.</li>
           <li>Export XML di backup dopo la modifica.</li>
           <li>Verifica compatibilita modello/revisione se una voce non e disponibile.</li>
         </ul>
+        <h6 class="mt-4">Report Mail</h6>
+        <img src="assets/img/editremote/mailreports.png" class="img-fluid rounded border" alt="Programmazione Report Mail">
       </div></div></div></div>
     </section>
   </main><!-- End #main -->

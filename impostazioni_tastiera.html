@@ -246,6 +246,29 @@
           <li>Applica solo le modifiche necessarie.</li>
           <li>Salva e verifica l'esito operativo.</li>
         </ol>
+        <h6>Come programmare un tasto (passo passo)</h6>
+        <ol>
+          <li>Premi il tasto nella griglia che vuoi modificare.</li>
+          <li>Nel campo <strong>Tasto</strong> scegli la funzione da assegnare (es. Reparto, Pagamento, Modificatore, Cliente, ecc.).</li>
+          <li>Nel campo <strong>Numero</strong> seleziona il numero associato alla funzione scelta (quando previsto).</li>
+          <li>Nel campo <strong>Valore</strong> inserisci il valore numerico richiesto dalla funzione (quando abilitato).</li>
+          <li>Premi <strong>Applica al Tasto</strong> per confermare la modifica su quel tasto.</li>
+          <li>Ripeti sugli altri tasti e poi premi <strong>Salva</strong> per inviare tutta la tastiera aggiornata.</li>
+        </ol>
+
+        <h6>Significato dei campi della view</h6>
+        <ul>
+          <li><strong>Tasto</strong>: tipo comando assegnato al tasto selezionato.</li>
+          <li><strong>Numero</strong>: indice della funzione scelta (esempio: numero reparto o numero pagamento).</li>
+          <li><strong>Valore</strong>: parametro numerico aggiuntivo del comando, quando necessario.</li>
+          <li><strong>SHIFT</strong>: mostra e programma il banco alternativo dei tasti, se disponibile sul modello.</li>
+          <li><strong>Applica al Tasto</strong>: salva la modifica solo sul tasto corrente.</li>
+          <li><strong>Salva</strong>: invia tutte le modifiche della tastiera al dispositivo.</li>
+        </ul>
+
+        <div class="alert alert-warning" role="alert">
+          Se cambi i campi ma non premi <strong>Applica al Tasto</strong>, la modifica del tasto selezionato viene comunque acquisita quando premi <strong>Salva</strong>.
+        </div>
         <h6>Controlli finali consigliati</h6>
         <ul>
           <li>Conferma su cassa dei valori programmati.</li>

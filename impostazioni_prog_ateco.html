@@ -246,6 +246,38 @@
           <li>Applica solo le modifiche necessarie.</li>
           <li>Salva e verifica l'esito operativo.</li>
         </ol>
+
+        <h6>Quando usare ATECO</h6>
+        <ul>
+          <li>I codici ATECO servono solo se il cliente lavora in <strong>contabilita separata</strong>.</li>
+          <li>Se non usi contabilita separata, lascia i codici a <strong>0</strong> (disabilitati).</li>
+        </ul>
+
+        <h6>Regole importanti di compilazione</h6>
+        <ul>
+          <li><strong>ATECO = 0</strong> significa codice non attivo/disabilitato.</li>
+          <li>Non inserire zeri iniziali: il codice va scritto come numero naturale (esempio: 012400 va inserito come 12400).</li>
+          <li>L'app controlla solo che il valore sia numerico nel range consentito, ma <strong>non verifica l'esistenza reale del codice ATECO</strong>.</li>
+          <li>Se inserisci un ATECO errato o inesistente, la chiusura puo essere scartata in fase di invio dal server Agenzia Entrate.</li>
+        </ul>
+
+        <h6>Significato campi della view</h6>
+        <ul>
+          <li><strong>Codice 1 / Codice 2 / Codice 3</strong>: fino a tre codici ATECO configurabili per l'attivita.</li>
+          <li><strong>Ateco Default</strong>: seleziona quale ATECO usare come predefinito nelle operazioni che richiedono un ATECO attivo.</li>
+          <li><strong>Modalita</strong>: definisce il comportamento della selezione ATECO:
+            Disabilitato = nessuna selezione ATECO operativa;
+            Selezione stabile = rimane attivo il codice selezionato;
+            Selezione one-shot = selezione temporanea per la singola operazione.</li>
+        </ul>
+
+        <h6>Dipendenze tra ATECO1, ATECO2, ATECO3</h6>
+        <ul>
+          <li>Per usare <strong>ATECO 2</strong>, deve essere prima abilitato <strong>ATECO 1</strong>.</li>
+          <li>Per usare <strong>ATECO 3</strong>, devono essere prima abilitati <strong>ATECO 1</strong> e <strong>ATECO 2</strong>.</li>
+          <li>Se il Default punta a un codice disabilitato (0), la configurazione non e coerente e va corretta.</li>
+        </ul>
+
         <h6>Controlli finali consigliati</h6>
         <ul>
           <li>Conferma su cassa dei valori programmati.</li>

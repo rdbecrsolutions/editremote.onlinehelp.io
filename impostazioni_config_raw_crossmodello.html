@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurazioni RAW Cross-Modello - EditRemote Help</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .guide-card { border: 1px solid #dbe5ef; border-radius: 12px; background: #fff; }
+    .guide-chip { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+    .chip-ok { background: #e6f7ec; color: #0f5132; }
+    .chip-note { background: #eef4ff; color: #1e3a8a; }
+    .chip-warn { background: #fff4e5; color: #7c2d12; }
+    .kbd { border: 1px solid #d1d5db; border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; background: #f8fafc; }
+  </style>
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Icon.png" alt="">
+        <span class="d-none d-lg-block">EditRemote</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar"> <ul class="sidebar-nav" id="sidebar-nav"> <li class="nav-item"> <a class="nav-link collapsed" href="index.html"> <i class="bi bi-grid"></i> <span>Home</span> </a> </li><!-- End Dashboard Nav --> <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Panoramica</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav"> <li> <a href="panoramica_app.html"> <i class="bi bi-circle"></i><span>Panoramica</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Configurazioni</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav"> <li> <a href="impostazioni_intestazione.html"> <i class="bi bi-circle"></i><span>Intestazione</span> </a> </li> <li> <a href="impostazioni_cortesia.html"> <i class="bi bi-circle"></i><span>Cortesia</span> </a> </li> <li> <a href="impostazioni_prog_iva.html"> <i class="bi bi-circle"></i><span>IVA</span> </a> </li> <li> <a href="impostazioni_prog_reparti.html"> <i class="bi bi-circle"></i><span>Reparti</span> </a> </li> <li> <a href="impostazioni_modificatori.html"> <i class="bi bi-circle"></i><span>Modificatori</span> </a> </li> <li> <a href="impostazioni_pagamenti.html"> <i class="bi bi-circle"></i><span>Pagamenti</span> </a> </li> <li> <a href="impostazioni_prog_articoli.html"> <i class="bi bi-circle"></i><span>Articoli</span> </a> </li> <li> <a href="impostazioni_prog_ateco.html"> <i class="bi bi-circle"></i><span>Ateco</span> </a> </li> <li> <a href="impostazioni_prog_opzioni_app.html"> <i class="bi bi-circle"></i><span>Opzioni</span> </a> </li> <li> <a href="impostazioni_autorizzazioni.html"> <i class="bi bi-circle"></i><span>Autorizzazioni</span> </a> </li> <li> <a href="impostazioni_cassieri.html"> <i class="bi bi-circle"></i><span>Cassieri</span> </a> </li> <li> <a href="impostazioni_clienti.html"> <i class="bi bi-circle"></i><span>Clienti</span> </a> </li> <li> <a href="impostazioni_messaggi_pubblicitari.html"> <i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span> </a> </li> <li> <a href="impostazioni_varie.html"> <i class="bi bi-circle"></i><span>Varie</span> </a> </li> <li> <a href="impostazioni_prog_mail.html"> <i class="bi bi-circle"></i><span>Tx Email</span> </a> </li> <li> <a href="impostazioni_prog_dati_fattura.html"> <i class="bi bi-circle"></i><span>Fatture RT</span> </a> </li> <li> <a href="impostazioni_prog_pos.html"> <i class="bi bi-circle"></i><span>Config POS</span> </a> </li> <li> <a href="impostazioni_report_mail.html"> <i class="bi bi-circle"></i><span>Report Mail</span> </a> </li> <li> <a href="impostazioni_report_esercente.html"> <i class="bi bi-circle"></i><span>Report Esercente</span> </a> </li> <li> <a href="impostazioni_tastiera.html"> <i class="bi bi-circle"></i><span>Tastiera</span> </a> </li> <li> <a href="impostazioni_esporta.html"> <i class="bi bi-circle"></i><span>Esporta</span> </a> </li> <li> <a href="impostazioni_import_export.html"> <i class="bi bi-circle"></i><span>Import / Export</span> </a> </li> <li> <a href="impostazioni_config_raw_crossmodello.html" class="active"> <i class="bi bi-circle"></i><span>Config RAW cross-modello</span> </a> </li> <li> <a href="impostazioni_aggiornamento.html"> <i class="bi bi-circle"></i><span>Aggiornamento</span> </a> </li> <li> <a href="impostazioni_disegno.html"> <i class="bi bi-circle"></i><span>Disegno</span> </a> </li> <li> <a href="impostazioni_abbonamento.html"> <i class="bi bi-circle"></i><span>Piani di abbonamento</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>F.A.Q</span> </a> </li><!-- End F.A.Q Page Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-contact.html"> <i class="bi bi-envelope"></i> <span>Supporto</span> </a> </li><!-- End Contact Page Nav --> </ul> </aside>
+
+  <main id="main" class="main">
+    <div class="pagetitle mb-4">
+      <h1>Configurazioni RAW Cross-Modello</h1>
+      <p class="text-muted mb-0">Flusso operativo consigliato per importare da un modello e generare un file RAW per un modello diverso.</p>
+    </div>
+
+    <section class="card guide-card p-4 mb-4">
+      <h4 class="mb-3">Obiettivo</h4>
+      <p class="mb-2">Usare EditRemote in <strong>Offline</strong> come ponte tra modelli:</p>
+      <ol class="mb-0">
+        <li>Importare una configurazione RAW di origine (anche modello legacy).</li>
+        <li>Adattare automaticamente i dati al modello target scelto in app.</li>
+        <li>Esportare un file <strong>&lt;nome_modello&gt;_config.raw</strong> pronto per l'import lato cassa.</li>
+      </ol>
+    </section>
+
+    <section class="card guide-card p-4 mb-4">
+      <h4 class="mb-3">Procedura Passo-Passo</h4>
+      <ol class="mb-0">
+        <li>Apri EditRemote e seleziona <strong>Modalita: Offline</strong>.</li>
+        <li>Nel campo <strong>Modello Offline</strong> seleziona il modello di destinazione (es. ZERO TOP).</li>
+        <li>Apri <strong>Configurazioni ( Import / Export - 850/851 )</strong>.</li>
+        <li>Premi <strong>Import (851)</strong> e seleziona il file RAW di origine.</li>
+        <li>EditRemote legge modello/revisione sorgente e adatta i campi al modello target.</li>
+        <li>Verifica le sezioni principali (Reparti, Pagamenti, Opzioni, ecc.).</li>
+        <li>Premi <strong>Export (850)</strong> per generare <span class="kbd">&lt;nome_modello&gt;_config.raw</span>.</li>
+        <li>Copia il file su USB e usa il comando di import (857) sulla cassa target.</li>
+      </ol>
+    </section>
+
+    <section class="card guide-card p-4 mb-4">
+      <h4 class="mb-3">Regole di Compatibilita</h4>
+      <ul class="mb-0">
+        <li><span class="guide-chip chip-ok">Import</span> Sono accettati anche modelli legacy (supporto in sola importazione).</li>
+        <li><span class="guide-chip chip-note">Export</span> Disponibile solo per modelli correnti.</li>
+        <li><span class="guide-chip chip-warn">Tastiera</span> Se la <strong>Dimensione tastiera</strong> sorgente e target differisce, la tastiera non viene trasferita.</li>
+        <li><span class="guide-chip chip-ok">Tastiera</span> Se la <strong>Dimensione tastiera</strong> e uguale, la tastiera viene mantenuta.</li>
+        <li><span class="guide-chip chip-note">Nota</span> <strong>TIPO_TASTIERA</strong> corrisponde alla <strong>Dimensione tastiera</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="card guide-card p-4 mb-4">
+      <h4 class="mb-3">Note Pratiche</h4>
+      <ul class="mb-0">
+        <li>Nei passaggi tra modelli con meno reparti/pagamenti, i record eccedenti vengono esclusi.</li>
+        <li>Dopo l'import, e consigliato rivedere sempre Reparti, Pagamenti, Opzioni e POS.</li>
+        <li>Il file export standard e <span class="kbd">&lt;nome_modello&gt;_config.raw</span>.</li>
+      </ul>
+    </section>
+
+    <div class="text-muted small">Ultimo aggiornamento: 2026-08-20</div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>EditRemote Help</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

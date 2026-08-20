@@ -25,3 +25,8 @@ git push -u origin main
 
 - Modifica i file HTML principali e le risorse in assets/.
 - Esegui commit e push.
+
+## Nuova guida operativa
+
+- Pagina: `impostazioni_config_raw_crossmodello.html`
+- Contenuto: flusso offline Import/Export RAW cross-modello con regole tastiera e compatibilita'.

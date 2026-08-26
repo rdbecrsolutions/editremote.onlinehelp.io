@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Protezione parco installato - EditRemote Help</title>
+  <meta name="description" content="Guida programmazione Protezione parco installato">
+  <meta name="keywords" content="EditRemote, Park Protection, OTP, Tecnico.dat">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Nunito:300,400,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .hero-note {
+      border-left: 4px solid #f59e0b;
+      background: #fff8e6;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .step-list li {
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    .shot-wrap {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    }
+    .shot-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .shot-caption {
+      padding: 10px 14px;
+      background: #f8fafc;
+      color: #334155;
+      font-size: 0.95rem;
+      border-top: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main" class="main container py-4">
+    <div class="pagetitle mb-3">
+      <h1>Protezione parco installato</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Protezione parco installato</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="card">
+        <div class="card-body pt-4">
+          <h5 class="card-title">Programmazione guidata</h5>
+
+          <div class="hero-note">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            Rimuovere eventuali chiavette USB con Tecnico.dat esteso dalla cassa / RT prima di programmare.
+            Altrimenti la programmazione viene immediatamente sovrascritta.
+          </div>
+
+          <ol class="step-list">
+            <li>
+              <strong>Rimuovere USB dalla cassa con Tecnico.dat esteso</strong>
+              <br>
+              Se la chiavetta resta inserita, i dati appena programmati vengono sovrascritti subito.
+            </li>
+            <li>
+              <strong>Programmare i campi</strong>
+              <br>
+              Compilare i campi richiesti nella schermata (mail, password tecnica, partita IVA, regione e lock cfg).
+            </li>
+            <li>
+              <strong>Gestione OTP quando si sovrascrivono dati sensibili</strong>
+              <br>
+              Se si modifica una delle mail, la partita IVA o la password tecnica, occorre inserire OTP:
+              premere <em>Invia OTP</em>, attendere il codice e inserirlo nel campo OTP.
+              <br>
+              L'OTP viene inviato all'indirizzo indicato nel campo <em>Email OTP</em>.
+            </li>
+            <li>
+              <strong>Selezionare i blocchi desiderati</strong>
+              <br>
+              Checkare le programmazioni che si vogliono bloccare nella sezione lock configurazioni.
+            </li>
+            <li>
+              <strong>Salvare</strong>
+              <br>
+              Premere <em>Salva</em> per inviare la programmazione alla cassa / RT.
+            </li>
+          </ol>
+
+          <div class="shot-wrap mt-4">
+            <img src="assets/img/editremote/protezione_parco_installato.png" alt="Schermata Programmazione Park Protection">
+            <div class="shot-caption">
+              Schermata di riferimento: Programmazione Park Protection.
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a class="btn btn-outline-primary" href="index.html">
+              <i class="bi bi-arrow-left"></i>
+              Torna alla Home guida
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

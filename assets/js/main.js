@@ -39,6 +39,26 @@
   }
 
   /**
+   * Keep the configuration menu synchronized across the static help pages.
+   */
+  const addWifiHelpLink = () => {
+    const menu = select('#Configurazioni')
+    if (!menu || menu.querySelector('a[href*="impostazioni_wifi.html"]')) return
+
+    const linkPrefix = window.location.pathname.includes('/pagamenti/') ? '../' : ''
+    const item = document.createElement('li')
+    item.innerHTML = '<a href="' + linkPrefix + 'impostazioni_wifi.html"><i class="bi bi-circle"></i><span>Wifi</span></a>'
+    const posLink = menu.querySelector('a[href*="impostazioni_prog_pos.html"]')
+    if (posLink && posLink.parentElement) {
+      posLink.parentElement.after(item)
+    } else {
+      menu.appendChild(item)
+    }
+  }
+
+  addWifiHelpLink()
+
+  /**
    * Sidebar toggle
    */
   if (select('.toggle-sidebar-btn')) {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wifi - EditRemote Help</title>
+  <meta name="description" content="Guida alla programmazione della tabella WiFi interna della cassa o RT tramite EditRemote">
+  <meta name="keywords" content="EditRemote, WiFi, SSID, password, programmazione RT">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Icon.png" alt="">
+        <span class="d-none d-lg-block">EditRemote</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item"><a class="nav-link collapsed" href="index.html"><i class="bi bi-grid"></i><span>Home</span></a></li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#"><i class="bi bi-menu-button-wide"></i><span>Panoramica</span><i class="bi bi-chevron-down ms-auto"></i></a>
+        <ul id="Panoramica" class="nav-content collapse" data-bs-parent="#sidebar-nav"><li><a href="panoramica_app.html"><i class="bi bi-circle"></i><span>Panoramica</span></a></li></ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#"><i class="bi bi-menu-button-wide"></i><span>Configurazioni</span><i class="bi bi-chevron-down ms-auto"></i></a>
+        <ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li><a href="impostazioni_intestazione.html"><i class="bi bi-circle"></i><span>Intestazione</span></a></li>
+          <li><a href="impostazioni_cortesia.html"><i class="bi bi-circle"></i><span>Cortesia</span></a></li>
+          <li><a href="impostazioni_prog_iva.html"><i class="bi bi-circle"></i><span>IVA</span></a></li>
+          <li><a href="impostazioni_prog_reparti.html"><i class="bi bi-circle"></i><span>Reparti</span></a></li>
+          <li><a href="impostazioni_modificatori.html"><i class="bi bi-circle"></i><span>Modificatori</span></a></li>
+          <li><a href="impostazioni_pagamenti.html"><i class="bi bi-circle"></i><span>Pagamenti</span></a></li>
+          <li><a href="impostazioni_prog_articoli.html"><i class="bi bi-circle"></i><span>Articoli</span></a></li>
+          <li><a href="impostazioni_prog_ateco.html"><i class="bi bi-circle"></i><span>Ateco</span></a></li>
+          <li><a href="impostazioni_prog_opzioni_app.html"><i class="bi bi-circle"></i><span>Opzioni</span></a></li>
+          <li><a href="impostazioni_autorizzazioni.html"><i class="bi bi-circle"></i><span>Autorizzazioni</span></a></li>
+          <li><a href="impostazioni_cassieri.html"><i class="bi bi-circle"></i><span>Cassieri</span></a></li>
+          <li><a href="impostazioni_clienti.html"><i class="bi bi-circle"></i><span>Clienti</span></a></li>
+          <li><a href="impostazioni_messaggi_pubblicitari.html"><i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span></a></li>
+          <li><a href="impostazioni_varie.html"><i class="bi bi-circle"></i><span>Varie</span></a></li>
+          <li><a href="impostazioni_prog_mail.html"><i class="bi bi-circle"></i><span>Tx Email</span></a></li>
+          <li><a href="impostazioni_prog_dati_fattura.html"><i class="bi bi-circle"></i><span>Fatture RT</span></a></li>
+          <li><a href="impostazioni_prog_pos.html"><i class="bi bi-circle"></i><span>Config POS</span></a></li>
+          <li><a href="impostazioni_wifi.html" class="active"><i class="bi bi-circle"></i><span>Wifi</span></a></li>
+          <li><a href="impostazioni_protezione_parco_installato.html"><i class="bi bi-circle"></i><span>Park Protection</span></a></li>
+          <li><a href="impostazioni_report_mail.html"><i class="bi bi-circle"></i><span>Report Mail</span></a></li>
+          <li><a href="impostazioni_report_esercente.html"><i class="bi bi-circle"></i><span>Report Esercente</span></a></li>
+          <li><a href="impostazioni_tastiera.html"><i class="bi bi-circle"></i><span>Tastiera</span></a></li>
+          <li><a href="impostazioni_esporta.html"><i class="bi bi-circle"></i><span>Esporta</span></a></li>
+          <li><a href="impostazioni_import_export.html"><i class="bi bi-circle"></i><span>Import / Export</span></a></li>
+          <li><a href="impostazioni_aggiornamento.html"><i class="bi bi-circle"></i><span>Aggiornamento</span></a></li>
+          <li><a href="impostazioni_disegno.html"><i class="bi bi-circle"></i><span>Disegno</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <main id="main" class="main container py-4">
+    <div class="pagetitle mb-3">
+      <h1>Programmazione WiFi</h1>
+      <nav><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Wifi</li></ol></nav>
+    </div>
+
+    <section class="section">
+      <div class="card">
+        <div class="card-body pt-4">
+          <h5 class="card-title">Tabella reti WiFi</h5>
+          <p>EditRemote consente di programmare fino a cinque coppie <strong>Nome rete</strong> e <strong>Password</strong> nella tabella interna della cassa / RT.</p>
+          <div class="hero-note"><i class="bi bi-info-circle me-2"></i>Nome rete e password possono contenere al massimo 40 caratteri secondo il formato della tabella firmware.</div>
+
+          <h6 class="mt-4">Disponibilità</h6>
+          <p>La funzione è disponibile per:</p>
+          <ul>
+            <li>Evo, Evo+ e Jolly a partire dalla revisione 2.7.</li>
+            <li>Gamma Plus a partire dalla revisione 23.</li>
+          </ul>
+
+          <h6 class="mt-4">Compilazione</h6>
+          <ol class="step-list">
+            <li>Aprire <strong>Wifi</strong> nella sezione Configurazioni.</li>
+            <li>Inserire il nome della rete e la password in una delle cinque righe disponibili.</li>
+            <li>Usare <strong>Scansiona</strong> accanto al nome rete per scegliere una rete WiFi visibile.</li>
+            <li>Usare <strong>Scansiona</strong> accanto alla password per acquisire la password da un QR code.</li>
+            <li>Premere <strong>Salva</strong> per programmare la tabella interna della cassa / RT.</li>
+          </ol>
+
+          <div class="shot-wrap mt-4">
+            <img src="assets/img/editremote/wifi.png" alt="Schermata di programmazione WiFi EditRemote">
+            <div class="shot-caption">Schermata di programmazione WiFi.</div>
+          </div>
+
+          <h6 class="mt-4">Cambio della rete utilizzata</h6>
+          <p>La programmazione aggiorna la tabella interna della cassa / RT, ma non cambia automaticamente la rete attiva.</p>
+          <p>Per cambiare effettivamente rete, eseguire sulla cassa i seguenti passaggi:</p>
+          <div class="hero-note"><strong>833 [MENU] &rarr; WiFi &rarr; selezionare la rete di interesse &rarr; CAMBIO PSW: No</strong></div>
+          <p class="mt-3">Impostare <strong>CAMBIO PSW</strong> su <strong>No</strong> perché la password è stata appena programmata tramite EditRemote.</p>
+
+          <div class="mt-4"><a class="btn btn-outline-primary" href="index.html"><i class="bi bi-arrow-left"></i> Torna alla Home guida</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

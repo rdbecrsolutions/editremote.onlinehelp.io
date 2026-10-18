@@ -205,7 +205,8 @@
   const useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const isSmallScreen = window.matchMedia('(max-width: 1023.5px)').matches;
 
-  tinymce.init({
+  if (select('textarea.tinymce-editor')) {
+    tinymce.init({
     selector: 'textarea.tinymce-editor',
     plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
     editimage_cors_hosts: ['picsum.photos'],
@@ -296,8 +297,9 @@
     contextmenu: 'link image table',
     skin: useDarkMode ? 'oxide-dark' : 'oxide',
     content_css: useDarkMode ? 'dark' : 'default',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
-  });
+      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    });
+  }
 
   /**
    * Initiate Bootstrap validation check

@@ -1,1 +1,416 @@
-<!DOCTYPE html> <html lang="it"> <head> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <title>Aggiornamento - EditRemote Help</title> <meta content="" name="description"> <meta content="" name="keywords"> <!-- Favicons --> <link href="assets/img/favicon.png" rel="icon"> <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> <!-- Google Fonts --> <link href="https://fonts.gstatic.com" rel="preconnect"> <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> <!-- Vendor CSS Files --> <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet"> <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet"> <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"> <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> <!-- Template Main CSS File --> <link href="assets/css/style.css" rel="stylesheet"> </head> <body> <!-- ======= Header ======= --> <header id="header" class="header fixed-top d-flex align-items-center"> <div class="d-flex align-items-center justify-content-between"> <a href="index.html" class="logo d-flex align-items-center"> <img src="assets/img/Icon.png" alt=""> <span class="d-none d-lg-block">EditRemote</span> </a> <i class="bi bi-list toggle-sidebar-btn"></i> </div><!-- End Logo --> <nav class="header-nav ms-auto"> <ul class="d-flex align-items-center"> <li class="nav-item d-block d-lg-none"> <a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i> </a> </li><!-- End Search Icon--> <li class="nav-item dropdown"> </header><!-- End Header --> <!-- ======= Sidebar ======= --> <aside id="sidebar" class="sidebar"> <ul class="sidebar-nav" id="sidebar-nav"> <li class="nav-item"> <a class="nav-link collapsed" href="index.html"> <i class="bi bi-grid"></i> <span>Home</span> </a> </li><!-- End Dashboard Nav --> <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Panoramica</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav"> <li> <a href="panoramica_app.html"> <i class="bi bi-circle"></i><span>Panoramica</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Configurazioni</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav"> <li> <a href="impostazioni_intestazione.html"> <i class="bi bi-circle"></i><span>Intestazione</span> </a> </li> <li> <a href="impostazioni_cortesia.html"> <i class="bi bi-circle"></i><span>Cortesia</span> </a> </li> <li> <a href="impostazioni_prog_iva.html"> <i class="bi bi-circle"></i><span>IVA</span> </a> </li> <li> <a href="impostazioni_prog_reparti.html"> <i class="bi bi-circle"></i><span>Reparti</span> </a> </li> <li> <a href="impostazioni_modificatori.html"> <i class="bi bi-circle"></i><span>Modificatori</span> </a> </li> <li> <a href="impostazioni_pagamenti.html"> <i class="bi bi-circle"></i><span>Pagamenti</span> </a> </li> <li> <a href="impostazioni_prog_articoli.html"> <i class="bi bi-circle"></i><span>Articoli</span> </a> </li> <li> <a href="impostazioni_prog_ateco.html"> <i class="bi bi-circle"></i><span>Ateco</span> </a> </li> <li> <a href="impostazioni_prog_opzioni_app.html"> <i class="bi bi-circle"></i><span>Opzioni</span> </a> </li> <li> <a href="impostazioni_autorizzazioni.html"> <i class="bi bi-circle"></i><span>Autorizzazioni</span> </a> </li> <li> <a href="impostazioni_cassieri.html"> <i class="bi bi-circle"></i><span>Cassieri</span> </a> </li> <li> <a href="impostazioni_clienti.html"> <i class="bi bi-circle"></i><span>Clienti</span> </a> </li> <li> <a href="impostazioni_messaggi_pubblicitari.html"> <i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span> </a> </li> <li> <a href="impostazioni_varie.html"> <i class="bi bi-circle"></i><span>Varie</span> </a> </li> <li> <a href="impostazioni_prog_mail.html"> <i class="bi bi-circle"></i><span>Tx Email</span> </a> </li> <li> <a href="impostazioni_prog_dati_fattura.html"> <i class="bi bi-circle"></i><span>Fatture RT</span> </a> </li> <li> <a href="impostazioni_prog_pos.html"> <i class="bi bi-circle"></i><span>Config POS</span> </a> </li> <li> <a href="impostazioni_protezione_parco_installato.html"> <i class="bi bi-circle"></i><span>Protezione parco installato</span> </a> </li> <li> <a href="impostazioni_report_mail.html"> <i class="bi bi-circle"></i><span>Report Mail</span> </a> </li> <li> <a href="impostazioni_report_esercente.html"> <i class="bi bi-circle"></i><span>Report Esercente</span> </a> </li> <li> <a href="impostazioni_tastiera.html"> <i class="bi bi-circle"></i><span>Tastiera</span> </a> </li> <li> <a href="impostazioni_esporta.html"> <i class="bi bi-circle"></i><span>Esporta</span> </a> </li> <li> <a href="impostazioni_import_export.html"> <i class="bi bi-circle"></i><span>Import / Export</span> </a> </li> <li> <a href="impostazioni_aggiornamento.html" class="active"> <i class="bi bi-circle"></i><span>Aggiornamento</span> </a> </li> <li> <a href="impostazioni_disegno.html"> <i class="bi bi-circle"></i><span>Disegno</span> </a> </li> <li> <a href="impostazioni_abbonamento.html"> <i class="bi bi-circle"></i><span>Piani di abbonamento</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>F.A.Q</span> </a> </li><!-- End F.A.Q Page Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-contact.html"> <i class="bi bi-envelope"></i> <span>Supporto</span> </a> </li><!-- End Contact Page Nav --> </ul> </aside><!-- End Sidebar--> <main id="main" class="main"> <div class="pagetitle"> <h1>Aggiornamento</h1> <nav> <ol class="breadcrumb"> <li class="breadcrumb-item"><a href="index.html">Home</a></li> <li class="breadcrumb-item">Configurazioni</li> <li class="breadcrumb-item active">Aggiornamento</li> </ol> </nav> </div> <section class="section"> <div class="row"><div class="col-12"><div class="card"><div class="card-body"> <h5 class="card-title">Guida operativa</h5> <p> Questa sezione trasmette alla cassa un file <strong>.ecs</strong> di aggiornamento software. </p> <div class="alert alert-warning mt-3" role="alert"> <strong>Passo obbligatorio dopo upload:</strong> al termine del trasferimento rimuovi la USB ed esegui in cassa la funzione <strong>menu della cassa</strong>. </div> <h6>Come usare la pagina</h6> <ol> <li>Apri <strong>Aggiornamento</strong> dalla lista Configurazioni.</li> <li>Premi <strong>Sfoglia</strong> e seleziona il file <strong>.ecs</strong>.</li> <li>Controlla il percorso mostrato nel campo file.</li> <li>Premi <strong>Trasmetti</strong> per inviare il pacchetto alla cassa.</li> <li>A fine invio, esegui la funzione 978 sulla macchina RT.</li> </ol> <h6>Significato campi e pulsanti</h6> <ul> <li><strong>File ECS</strong>: pacchetto di aggiornamento da trasferire.</li> <li><strong>Sfoglia</strong>: apre il selettore file per scegliere il pacchetto ECS.</li> <li><strong>Trasmetti</strong>: avvia il trasferimento chunked del file verso la cassa.</li> <li><strong>Esci</strong>: chiude il dialog senza invio.</li> </ul> <div class="alert alert-warning" role="alert"> Non interrompere alimentazione o collegamento durante il trasferimento. </div> <h6>Controlli finali consigliati</h6> <ul> <li>Verifica conferma di fine trasferimento nell'app.</li> <li>Esegui menu della cassa su cassa e attendi completamento lato RT.</li> <li>Al riavvio, conferma revisione software attesa.</li> </ul> <h6 class="mt-4">Schermata Aggiornamento</h6> <img src="assets/img/editremote/aggiornamento.png" class="img-fluid rounded border" alt="Schermata Aggiornamento"> </div></div></div></div> </section> </main><!-- End #main --> <!-- ======= Footer ======= --> <footer id="footer" class="footer"> <div class="copyright"> &copy; Copyright <strong><span>EditRemote Help</span></strong>. All Rights Reserved </div> <div class="credits"> <!-- All the links in the footer should remain intact. --> <!-- You can delete the links only if you purchased the pro version. --> <!-- Licensing information: https://bootstrapmade.com/license/ --> <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ --> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> </div> </footer><!-- End Footer --> <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> <!-- Vendor JS Files --> <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Template Main JS File --> <script src="assets/js/main.js"></script> </body> </html> 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aggiornamento - EditRemote Help</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+<div class="d-flex align-items-center justify-content-between">
+<a href="index.html" class="logo d-flex align-items-center">
+<img src="assets/img/Icon.png" alt="">
+<span class="d-none d-lg-block">EditRemote</span>
+</a>
+<i class="bi bi-list toggle-sidebar-btn">
+</i>
+</div>
+<!-- End Logo -->
+<nav class="header-nav ms-auto">
+<ul class="d-flex align-items-center">
+<li class="nav-item d-block d-lg-none">
+<a class="nav-link nav-icon search-bar-toggle " href="#">
+<i class="bi bi-search">
+</i>
+</a>
+</li>
+<!-- End Search Icon-->
+<li class="nav-item dropdown">
+</header>
+<!-- End Header -->
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+<ul class="sidebar-nav" id="sidebar-nav">
+<li class="nav-item">
+<a class="nav-link collapsed" href="index.html">
+<i class="bi bi-grid">
+</i>
+<span>Home</span>
+</a>
+</li>
+<!-- End Dashboard Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Panoramica</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+<li>
+<a href="panoramica_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Panoramica</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Configurazioni</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+<li>
+<a href="impostazioni_intestazione.html">
+<i class="bi bi-circle">
+</i>
+<span>Intestazione</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cortesia.html">
+<i class="bi bi-circle">
+</i>
+<span>Cortesia</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_iva.html">
+<i class="bi bi-circle">
+</i>
+<span>IVA</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_reparti.html">
+<i class="bi bi-circle">
+</i>
+<span>Reparti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_modificatori.html">
+<i class="bi bi-circle">
+</i>
+<span>Modificatori</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_pagamenti.html">
+<i class="bi bi-circle">
+</i>
+<span>Pagamenti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_articoli.html">
+<i class="bi bi-circle">
+</i>
+<span>Articoli</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_ateco.html">
+<i class="bi bi-circle">
+</i>
+<span>Ateco</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_opzioni_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Opzioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_autorizzazioni.html">
+<i class="bi bi-circle">
+</i>
+<span>Autorizzazioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cassieri.html">
+<i class="bi bi-circle">
+</i>
+<span>Cassieri</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_clienti.html">
+<i class="bi bi-circle">
+</i>
+<span>Clienti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_messaggi_pubblicitari.html">
+<i class="bi bi-circle">
+</i>
+<span>Messaggi Pubblicitari</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_varie.html">
+<i class="bi bi-circle">
+</i>
+<span>Varie</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Tx Email</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_dati_fattura.html">
+<i class="bi bi-circle">
+</i>
+<span>Fatture RT</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_pos.html">
+<i class="bi bi-circle">
+</i>
+<span>Config POS</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_protezione_parco_installato.html">
+<i class="bi bi-circle">
+</i>
+<span>Protezione parco installato</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Mail</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_esercente.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Esercente</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_tastiera.html">
+<i class="bi bi-circle">
+</i>
+<span>Tastiera</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_esporta.html">
+<i class="bi bi-circle">
+</i>
+<span>Esporta</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_import_export.html">
+<i class="bi bi-circle">
+</i>
+<span>Import / Export</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_aggiornamento.html" class="active">
+<i class="bi bi-circle">
+</i>
+<span>Aggiornamento</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_disegno.html">
+<i class="bi bi-circle">
+</i>
+<span>Disegno</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_abbonamento.html">
+<i class="bi bi-circle">
+</i>
+<span>Piani di abbonamento</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-faq.html">
+<i class="bi bi-question-circle">
+</i>
+<span>F.A.Q</span>
+</a>
+</li>
+<!-- End F.A.Q Page Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-contact.html">
+<i class="bi bi-envelope">
+</i>
+<span>Supporto</span>
+</a>
+</li>
+<!-- End Contact Page Nav -->
+</ul>
+</aside>
+<!-- End Sidebar-->
+<main id="main" class="main">
+<div class="pagetitle">
+<h1>Aggiornamento</h1>
+<nav>
+<ol class="breadcrumb">
+<li class="breadcrumb-item">
+<a href="index.html">Home</a>
+</li>
+<li class="breadcrumb-item">Configurazioni</li>
+<li class="breadcrumb-item active">Aggiornamento</li>
+</ol>
+</nav>
+</div>
+<section class="section">
+<div class="row">
+<div class="col-12">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Guida operativa</h5>
+<p>Questa sezione aggiorna il software della cassa con un pacchetto firmato <strong>.ecs</strong>. Il percorso locale e quello remoto sono distinti.</p>
+<div class="alert alert-info" role="alert">
+<strong>Nuovo percorso Remoto, preparato il 18 ottobre 2026:</strong> richiede app, servizio cloud e firmware RT aggiornati. Le verifiche offline non sostituiscono il collaudo sulla cassa. Un RT con firmware precedente deve ricevere prima l'aggiornamento abilitante tramite il percorso locale.
+</div>
+<h6>Aggiornamento in Remoto</h6>
+<ol>
+<li>Accorda l'intervento con l'esercente, che deve rimanere davanti alla cassa. Verifica i prerequisiti fiscali previsti, la gestione della lotteria e l'alimentazione. L'aggiornamento non esegue automaticamente una chiusura fiscale.</li>
+<li>Collegati in <strong>Remoto</strong> e apri <strong>Aggiornamento</strong>.</li>
+<li>Leggi la <strong>revisione installata</strong>, comunicata dalla cassa, e l'esito dei <strong>controlli preliminari RT</strong>. Se il controllo non &egrave; disponibile o aggiornato, <strong>AGGIORNA</strong> resta disabilitato.</li>
+<li>Compila <strong>Codice Fiscale Tecnico</strong> (16 caratteri, maiuscolo, struttura italiana anche con omocodia) e <strong>Partita Iva Laboratorio</strong> (11 cifre). I controlli regex verificano il formato, non l'identit&agrave; o l'abilitazione del tecnico.</li>
+<li>Seleziona il file dalla combobox: sono proposti solo gli ECS del modello collegato con <strong>revisione pari o superiore</strong> a quella installata, pubblicati nel catalogo privato. &Egrave; possibile reinstallare la stessa revisione; il downgrade non &egrave; consentito. La revisione viene letta dal pacchetto ECS, non dedotta dal nome file o dal tag della Release. Bozze e prerelease non sono elencate. Nessun firmware disponibile e errore di accesso al catalogo sono condizioni distinte.</li>
+<li><strong>Canale produzione/test:</strong> un nome con <strong>P immediatamente prima di .ECS</strong> identifica produzione (esempio SMEVO26P.ECS); senza la P identifica test (SMEVO26.ECS). Una cassa di produzione (firmware SW_PROD) non vede e non pu&ograve; ricevere da questo percorso file test. Una cassa test (senza SW_PROD) pu&ograve; vedere entrambi, sempre rispettando il divieto di downgrade. Se il RT non comunica il proprio canale, l'aggiornamento resta bloccato.</li>
+<li><strong>Versione visualizzata:</strong> per SMARTY EVO, SMARTY EVO+ e JOLLY la revisione numerica 26 viene mostrata come <strong>2.6</strong> (27 come 2.7). &Egrave; solo una convenzione di visualizzazione: confronti e divieto di downgrade usano sempre il valore intero dell'header ECS. Il nome del file non viene modificato.</li>
+<li>Premi <strong>AGGIORNA</strong> e leggi la conferma: dopo la ricezione del comando, la cassa terminer&agrave; il collegamento con EditRemote e proceder&agrave; autonomamente.</li>
+<li>Attendi la <strong>presa in carico</strong>. Questo messaggio <strong>non certifica l'installazione</strong>. Se l'esito non &egrave; verificabile, non ripetere l'invio alla cieca: contatta l'esercente.</li>
+<li>L'esercente conferma sulla cassa, attende il download e la verifica del pacchetto, quindi segue la conferma prevista dal RT prima dell'installazione. Il firmware mantiene i controlli di modello, boot, revisione e firma.</li>
+<li>L'esercente comunica al tecnico l'esito effettivo e la revisione dopo il riavvio, oppure l'errore o l'annullamento visualizzato/stampato. EditRemote non segue l'avanzamento dopo il distacco; una nuova sessione richiede una nuova connessione.</li>
+</ol>
+<p><strong>Quando si abilita AGGIORNA:</strong> la cassa deve superare gli stessi controlli preliminari dell'aggiornamento firmato locale, senza la richiesta di autorizzazione fiscale e senza la presenza di una chiavetta USB. Il RT verifica alimentazione esterna sui modelli ambulanti, boot almeno 0x30, totali e contatori fiscali azzerati e assenza di scontrini lotteria da gestire. Restano le eccezioni di compilazione previste dal firmware (FOR_DEVELOPMENT per il boot, FORCE_UPGRADE per i controlli fiscali/lotteria). Il motivo di blocco viene mostrato nella vista: risolvilo sulla cassa e attendi il prossimo contatto. Le verifiche scadono dopo 45 secondi e sono rilette automaticamente; servizio e RT le ripetono prima di accettare il comando.</p>
+<div class="alert alert-warning" role="alert">
+Non spegnere la cassa durante download e installazione. Il distacco remoto &egrave; previsto: non tentare di riconnettere o reinviare il comando mentre l'esercente sta completando l'intervento.
+</div>
+<p>Il servizio cloud accede al repository privato e rende disponibile alla cassa un download temporaneo: non occorrono credenziali GitHub nell'app o nel RT. I dati tecnico vengono registrati per l'intervento firmware attraverso il percorso previsto dal RT.</p>
+<h6>Collaudo reale: preliminari superati, ma nessun firmware selezionabile</h6>
+<p>Il 18 ottobre 2026, su SMARTY EVO REV. 2.7 collegata in Remoto, il RT ha comunicato i controlli preliminari superati. Il catalogo non ha proposto pacchetti compatibili e <strong>AGGIORNA era disabilitato</strong>, verificato anche nello stato accessibile del pulsante. Il solo file pubblicato, chiamato SMEVO27.ECS, conteneva ancora la revisione 26 nell'header firmato: il nome non lo rende una versione 2.7. Il test si &egrave; fermato prima dell'invio: <strong>nessun download/installazione firmware avviato sulla cassa</strong>.</p>
+<p>Nella registrazione la dicitura &ldquo;Nessun firmware pubblicato per questo modello&rdquo; appartiene alla build provata: indica un elenco compatibile vuoto, non necessariamente un repository senza Release. Il testo &egrave; stato precisato nei sorgenti successivi.</p>
+<video controls preload="metadata" playsinline class="rounded border mb-3" style="width:100%;max-width:400px" poster="assets/img/editremote/evo-ota-preflight.png" aria-label="OTA remoto: revisione 2.7, preliminari superati e aggiornamento disabilitato senza pacchetti compatibili">
+<source src="assets/video/evo-ota-preflight.mp4" type="video/mp4">
+<track src="assets/video/evo-ota-preflight.vtt" kind="captions" srclang="it" label="Italiano" default>
+Il browser non supporta il video. <a href="assets/video/evo-ota-preflight.mp4">Scarica il video</a>.
+</video>
+<p><a href="assets/img/editremote/evo-ota-preflight.png">Apri la schermata del controllo preliminare</a>. Schermata e video sono ritagliati sulla vista OTA, senza la matricola mostrata nella schermata sottostante.</p>
+<h6>Collaudo reale: comando preso in carico e distacco remoto</h6>
+<p>Con un nuovo ECS avente effettivamente revisione 27, pubblicato come asset della Release smarty-evo-27-test, la cassa 2.7 ha accettato la reinstallazione della stessa revisione. Sono stati usati dati tecnico fittizi, su esplicita autorizzazione per la cassa di test. EditRemote ha mostrato la conferma, atteso l'ACK e riportato <strong>Aggiornamento affidato alla cassa</strong>, tornando disconnessa.</p>
+<video controls preload="metadata" playsinline class="w-100 rounded border mb-3" poster="assets/img/editremote/evo-ota-handoff.png" aria-label="Conferma OTA 2.7 e presa in carico, non conferma dell'installazione">
+<source src="assets/video/evo-ota-handoff.mp4" type="video/mp4">
+<track src="assets/video/evo-ota-handoff.vtt" kind="captions" srclang="it" label="Italiano" default>
+Il browser non supporta il video. <a href="assets/video/evo-ota-handoff.mp4">Scarica il video</a>.
+</video>
+<div class="alert alert-warning" role="alert"><strong>Limite del collaudo:</strong> la presa in carico &egrave; riuscita, ma l'installazione non &egrave; stata confermata. Nel tentativo registrato anche su COM11, dopo l'uscita dal cloud e la conferma fisica si &egrave; verificato un SOFT-INIT prima delle tracce di download. Nei sorgenti &egrave; stato corretto un calcolo della percentuale che divideva per zero prima di conoscere la dimensione del pacchetto. Correzione compilata e verificata con test aritmetici, ma ancora da installare localmente e ricollaudare sul RT. Non usare il video come prova di un aggiornamento completato.</div>
+<h6>Aggiornamento locale con LoadDump</h6>
+<p><strong>Retest del 18 ottobre, ore 15:29:</strong> dopo il caricamento locale della correzione, confermato dall'operatore, il riavvio dopo la conferma si &egrave; ripetuto. La correzione aritmetica non ha risolto il blocco osservato.</p>
+<p><strong>Aggiornamento diagnostico, ore 17:00:</strong> il debugger ha rilevato una violazione dello stack del task principale. Dopo lo spostamento dei buffer temporanei del percorso remoto nel secondo banco RAM esterno, senza aumentare lo stack, l'operatore ha confermato che la riprova ha funzionato. Build e link del firmware Test sono riusciti senza errori o warning. Restano da registrare il margine stack minimo e la verifica separata della revisione installata dopo il riavvio: i video mostrano la presa in carico, non certificano l'installazione completa.</p>
+<div class="alert alert-warning mt-3" role="alert">
+<strong>Solo percorso locale:</strong> al termine del trasferimento rimuovi la USB ed esegui in cassa la funzione <strong>978 MENU</strong>. </div>
+<h6>Come usare la pagina in locale</h6>
+<ol>
+<li>Apri <strong>Aggiornamento</strong> dalla lista Configurazioni.</li>
+<li>Premi <strong>Sfoglia</strong> e seleziona il file <strong>.ecs</strong>.</li>
+<li>Controlla il percorso mostrato nel campo file.</li>
+<li>Premi <strong>Trasmetti</strong> per inviare il pacchetto alla cassa.</li>
+<li>A fine invio, esegui la funzione 978 sulla macchina RT.</li>
+</ol>
+<h6>Significato campi e pulsanti</h6>
+<ul>
+<li>
+<strong>File ECS</strong>: pacchetto di aggiornamento da trasferire.</li>
+<li>
+<strong>Sfoglia</strong>: apre il selettore file per scegliere il pacchetto ECS.</li>
+<li>
+<strong>Trasmetti</strong>: avvia il trasferimento chunked del file verso la cassa.</li>
+<li>
+<strong>Esci</strong>: chiude il dialog senza invio.</li>
+</ul>
+<div class="alert alert-warning" role="alert"> Non interrompere alimentazione o collegamento durante il trasferimento. </div>
+<h6>Controlli finali locali</h6>
+<ul>
+<li>Verifica conferma di fine trasferimento nell'app.</li>
+<li>Esegui 978 MENU sulla cassa e attendi il completamento lato RT.</li>
+<li>Al riavvio, conferma revisione software attesa.</li>
+</ul>
+<h6 class="mt-4">Schermata Aggiornamento locale</h6>
+<img src="assets/img/editremote/aggiornamento.png" class="img-fluid rounded border" alt="Schermata Aggiornamento">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+<div class="copyright"> &copy; Copyright <strong>
+<span>EditRemote Help</span>
+</strong>. All Rights Reserved </div>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ --> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+</div>
+</footer>
+<!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+<i class="bi bi-arrow-up-short">
+</i>
+</a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js">
+</script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>

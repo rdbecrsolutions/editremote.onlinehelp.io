@@ -1,10 +1,303 @@
-<!DOCTYPE html> <html lang="it"> <head> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <title>Piani di abbonamento - EditRemote Help</title> <meta content="" name="description"> <meta content="" name="keywords"> <!-- Favicons --> <link href="assets/img/favicon.png" rel="icon"> <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> <!-- Google Fonts --> <link href="https://fonts.gstatic.com" rel="preconnect"> <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> <!-- Vendor CSS Files --> <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet"> <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet"> <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"> <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> <!-- Template Main CSS File --> <link href="assets/css/style.css" rel="stylesheet"> </head> <body> <!-- ======= Header ======= --> <header id="header" class="header fixed-top d-flex align-items-center"> <div class="d-flex align-items-center justify-content-between"> <a href="index.html" class="logo d-flex align-items-center"> <img src="assets/img/Icon.png" alt=""> <span class="d-none d-lg-block">EditRemote</span> </a> <i class="bi bi-list toggle-sidebar-btn"></i> </div><!-- End Logo --> <nav class="header-nav ms-auto"> <ul class="d-flex align-items-center"> <li class="nav-item d-block d-lg-none"> <a class="nav-link nav-icon search-bar-toggle " href="#"> <i class="bi bi-search"></i> </a> </li><!-- End Search Icon--> <li class="nav-item dropdown"> </header><!-- End Header --> <!-- ======= Sidebar ======= --> <aside id="sidebar" class="sidebar"> <ul class="sidebar-nav" id="sidebar-nav"> <li class="nav-item"> <a class="nav-link collapsed" href="index.html"> <i class="bi bi-grid"></i> <span>Home</span> </a> </li><!-- End Dashboard Nav --> <li class="nav-item"> <a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Panoramica</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav"> <li> <a href="panoramica_app.html"> <i class="bi bi-circle"></i><span>Panoramica</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Configurazioni</span><i class="bi bi-chevron-down ms-auto"></i> </a> <ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav"> <li> <a href="impostazioni_intestazione.html"> <i class="bi bi-circle"></i><span>Intestazione</span> </a> </li> <li> <a href="impostazioni_cortesia.html"> <i class="bi bi-circle"></i><span>Cortesia</span> </a> </li> <li> <a href="impostazioni_prog_iva.html"> <i class="bi bi-circle"></i><span>IVA</span> </a> </li> <li> <a href="impostazioni_prog_reparti.html"> <i class="bi bi-circle"></i><span>Reparti</span> </a> </li> <li> <a href="impostazioni_modificatori.html"> <i class="bi bi-circle"></i><span>Modificatori</span> </a> </li> <li> <a href="impostazioni_pagamenti.html"> <i class="bi bi-circle"></i><span>Pagamenti</span> </a> </li> <li> <a href="impostazioni_prog_articoli.html"> <i class="bi bi-circle"></i><span>Articoli</span> </a> </li> <li> <a href="impostazioni_prog_ateco.html"> <i class="bi bi-circle"></i><span>Ateco</span> </a> </li> <li> <a href="impostazioni_prog_opzioni_app.html"> <i class="bi bi-circle"></i><span>Opzioni</span> </a> </li> <li> <a href="impostazioni_autorizzazioni.html"> <i class="bi bi-circle"></i><span>Autorizzazioni</span> </a> </li> <li> <a href="impostazioni_cassieri.html"> <i class="bi bi-circle"></i><span>Cassieri</span> </a> </li> <li> <a href="impostazioni_clienti.html"> <i class="bi bi-circle"></i><span>Clienti</span> </a> </li> <li> <a href="impostazioni_messaggi_pubblicitari.html"> <i class="bi bi-circle"></i><span>Messaggi Pubblicitari</span> </a> </li> <li> <a href="impostazioni_varie.html"> <i class="bi bi-circle"></i><span>Varie</span> </a> </li> <li> <a href="impostazioni_prog_mail.html"> <i class="bi bi-circle"></i><span>Tx Email</span> </a> </li> <li> <a href="impostazioni_prog_dati_fattura.html"> <i class="bi bi-circle"></i><span>Fatture RT</span> </a> </li> <li> <a href="impostazioni_prog_pos.html"> <i class="bi bi-circle"></i><span>Config POS</span> </a> </li> <li> <a href="impostazioni_protezione_parco_installato.html"> <i class="bi bi-circle"></i><span>Protezione parco installato</span> </a> </li> <li> <a href="impostazioni_report_mail.html"> <i class="bi bi-circle"></i><span>Report Mail</span> </a> </li> <li> <a href="impostazioni_report_esercente.html"> <i class="bi bi-circle"></i><span>Report Esercente</span> </a> </li> <li> <a href="impostazioni_tastiera.html"> <i class="bi bi-circle"></i><span>Tastiera</span> </a> </li> <li> <a href="impostazioni_esporta.html"> <i class="bi bi-circle"></i><span>Esporta</span> </a> </li> <li> <a href="impostazioni_import_export.html"> <i class="bi bi-circle"></i><span>Import / Export</span> </a> </li> <li> <a href="impostazioni_aggiornamento.html"> <i class="bi bi-circle"></i><span>Aggiornamento</span> </a> </li> <li> <a href="impostazioni_disegno.html"> <i class="bi bi-circle"></i><span>Disegno</span> </a> </li>  <li> <a href="impostazioni_abbonamento.html" class="active"> <i class="bi bi-circle"></i><span>Piani di abbonamento</span> </a> </li> </ul> </li><!-- End Components Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>F.A.Q</span> </a> </li><!-- End F.A.Q Page Nav --> <li class="nav-item"> <a class="nav-link collapsed" href="pages-contact.html"> <i class="bi bi-envelope"></i> <span>Supporto</span> </a> </li><!-- End Contact Page Nav --> </ul> </aside><!-- End Sidebar-->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Piani di abbonamento - EditRemote Help</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+<div class="d-flex align-items-center justify-content-between">
+<a href="index.html" class="logo d-flex align-items-center">
+<img src="assets/img/Icon.png" alt="">
+<span class="d-none d-lg-block">EditRemote</span>
+</a>
+<i class="bi bi-list toggle-sidebar-btn">
+</i>
+</div>
+<!-- End Logo -->
+<nav class="header-nav ms-auto">
+<ul class="d-flex align-items-center">
+<li class="nav-item d-block d-lg-none">
+<a class="nav-link nav-icon search-bar-toggle " href="#">
+<i class="bi bi-search">
+</i>
+</a>
+</li>
+<!-- End Search Icon-->
+<li class="nav-item dropdown">
+</header>
+<!-- End Header -->
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+<ul class="sidebar-nav" id="sidebar-nav">
+<li class="nav-item">
+<a class="nav-link collapsed" href="index.html">
+<i class="bi bi-grid">
+</i>
+<span>Home</span>
+</a>
+</li>
+<!-- End Dashboard Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Panoramica</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+<li>
+<a href="panoramica_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Panoramica</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Configurazioni</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+<li>
+<a href="impostazioni_intestazione.html">
+<i class="bi bi-circle">
+</i>
+<span>Intestazione</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cortesia.html">
+<i class="bi bi-circle">
+</i>
+<span>Cortesia</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_iva.html">
+<i class="bi bi-circle">
+</i>
+<span>IVA</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_reparti.html">
+<i class="bi bi-circle">
+</i>
+<span>Reparti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_modificatori.html">
+<i class="bi bi-circle">
+</i>
+<span>Modificatori</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_pagamenti.html">
+<i class="bi bi-circle">
+</i>
+<span>Pagamenti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_articoli.html">
+<i class="bi bi-circle">
+</i>
+<span>Articoli</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_ateco.html">
+<i class="bi bi-circle">
+</i>
+<span>Ateco</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_opzioni_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Opzioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_autorizzazioni.html">
+<i class="bi bi-circle">
+</i>
+<span>Autorizzazioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cassieri.html">
+<i class="bi bi-circle">
+</i>
+<span>Cassieri</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_clienti.html">
+<i class="bi bi-circle">
+</i>
+<span>Clienti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_messaggi_pubblicitari.html">
+<i class="bi bi-circle">
+</i>
+<span>Messaggi Pubblicitari</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_varie.html">
+<i class="bi bi-circle">
+</i>
+<span>Varie</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Tx Email</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_dati_fattura.html">
+<i class="bi bi-circle">
+</i>
+<span>Fatture RT</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_pos.html">
+<i class="bi bi-circle">
+</i>
+<span>Config POS</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_protezione_parco_installato.html">
+<i class="bi bi-circle">
+</i>
+<span>Protezione parco installato</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Mail</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_esercente.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Esercente</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_tastiera.html">
+<i class="bi bi-circle">
+</i>
+<span>Tastiera</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_esporta.html">
+<i class="bi bi-circle">
+</i>
+<span>Esporta</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_import_export.html">
+<i class="bi bi-circle">
+</i>
+<span>Import / Export</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_aggiornamento.html">
+<i class="bi bi-circle">
+</i>
+<span>Aggiornamento</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_disegno.html">
+<i class="bi bi-circle">
+</i>
+<span>Disegno</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_abbonamento.html" class="active">
+<i class="bi bi-circle">
+</i>
+<span>Piani di abbonamento</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-faq.html">
+<i class="bi bi-question-circle">
+</i>
+<span>F.A.Q</span>
+</a>
+</li>
+<!-- End F.A.Q Page Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-contact.html">
+<i class="bi bi-envelope">
+</i>
+<span>Supporto</span>
+</a>
+</li>
+<!-- End Contact Page Nav -->
+</ul>
+</aside>
+<!-- End Sidebar-->
 <main id="main" class="main">
 <div class="pagetitle">
 <h1>Piani di abbonamento</h1>
 <nav>
 <ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item">
+<a href="index.html">Home</a>
+</li>
 <li class="breadcrumb-item">Configurazioni</li>
 <li class="breadcrumb-item active">Piani di abbonamento</li>
 </ol>
@@ -17,8 +310,10 @@
 <p> Da questa sezione puoi verificare stato, rinnovo e validità dei servizi collegati all'app. </p>
 <h6>Piani disponibili</h6>
 <ul>
-<li><strong>Piano mensile</strong>: sottoscrizione con rinnovo mensile.</li>
-<li><strong>Piano annuale</strong>: sottoscrizione a 12 mesi, consigliata per uso continuativo in assistenza.</li>
+<li>
+<strong>Piano mensile</strong>: sottoscrizione con rinnovo mensile.</li>
+<li>
+<strong>Piano annuale</strong>: sottoscrizione a 12 mesi, consigliata per uso continuativo in assistenza.</li>
 </ul>
 <p>Prima di confermare, controlla nella finestra di <strong>Google Play</strong> prezzo, frequenza del rinnovo ed eventuale offerta. Un periodo gratuito &egrave; disponibile soltanto se viene mostrato per il tuo account: non &egrave; garantito a tutti.</p>
 <h6>Ripristino abbonamento</h6>
@@ -36,6 +331,11 @@
 Il browser non supporta il video. Segui i passaggi descritti sopra.
 </video>
 <h6 class="mt-4">Annullamento e scadenza</h6>
+<p>Puoi chiudere il checkout Google Play senza confermare: <strong>Acquisto non completato</strong> riguarda quel tentativo, non annulla automaticamente un piano gia' attivo. Anche selezionare <strong>Nessun piano attivo</strong> nel dialogo non e' una richiesta di annullamento a Google Play. Nelle prove su tablet, in tema chiaro e dark, il ritorno dal checkout annullato conserva la posizione della pagina.</p>
+<figure>
+<img src="assets/img/editremote/evo-abbonamento-dark.png" width="1280" height="480" loading="lazy" class="img-fluid rounded border" alt="Tema dark dopo checkout annuale annullato: mensile ancora memorizzato attivo e posizione iniziale conservata">
+<figcaption>La scelta annuale rimane una selezione nel dialogo: non prova un acquisto. Per lo stato effettivo usa Ripristino abbonamento e controlla la risposta di Google Play.</figcaption>
+</figure>
 <p>Per interrompere il rinnovo apri <strong>Google Play &gt; Profilo &gt; Pagamenti e abbonamenti &gt; Abbonamenti &gt; EditRemote</strong> e segui la procedura di annullamento. Disinstallare l'app o scegliere un'altra voce nel dialogo non annulla il rinnovo nello store.</p>
 <p>Dopo l'annullamento il piano normalmente rimane valido fino alla scadenza del periodo gi&agrave; pagato. Alla scadenza effettiva, dopo la verifica con Google Play, le funzioni che richiedono l'abbonamento non sono pi&ugrave; disponibili. Non &egrave; quindi un errore vedere ancora il piano attivo subito dopo aver annullato il rinnovo.</p>
 <h6>Segnalazione problema</h6>
@@ -55,4 +355,29 @@ Il browser non supporta il video. Segui i passaggi descritti sopra.
 </div>
 </section>
 </main>
-<!-- End #main --> <!-- ======= Footer ======= --> <footer id="footer" class="footer"> <div class="copyright"> &copy; Copyright <strong><span>EditRemote Help</span></strong>. All Rights Reserved </div> <div class="credits"> <!-- All the links in the footer should remain intact. --> <!-- You can delete the links only if you purchased the pro version. --> <!-- Licensing information: https://bootstrapmade.com/license/ --> <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ --> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> </div> </footer><!-- End Footer --> <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> <!-- Vendor JS Files --> <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Template Main JS File --> <script src="assets/js/main.js"></script> </body> </html>
+<!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+<div class="copyright"> &copy; Copyright <strong>
+<span>EditRemote Help</span>
+</strong>. All Rights Reserved </div>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ --> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+</div>
+</footer>
+<!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+<i class="bi bi-arrow-up-short">
+</i>
+</a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js">
+</script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>

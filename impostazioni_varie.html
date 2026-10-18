@@ -311,41 +311,41 @@
 <h5 class="card-title">Guida operativa</h5>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
-<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
+<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> invia le modifiche alla cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
 <ol>
-<li>Apri la sezione dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
-<li>Applica solo le modifiche necessarie.</li>
-<li>Salva e verifica l'esito operativo.</li>
+<li>Apri la sezione dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Importa</strong> per leggere i dati attuali dalla cassa.</li>
+<li>Modifica solo le impostazioni che ti servono.</li>
+<li>Premi <strong>Salva</strong> e verifica l'esito dell'operazione.</li>
 </ol>
-<h6>Significato campi</h6>
+<h6>Significato dei campi</h6>
 <ul>
 <li>
-<strong>Chiusura fiscale in automatico</strong>: imposta abilitazione, modalita' e orario di chiusura fiscale automatica.</li>
+<strong>Chiusura fiscale in automatico</strong>: imposta se la chiusura fiscale parte da sola, con quale modalità e a che ora.</li>
 <li>
-<strong>Spegnimento automatico</strong>: definisce modalita' e tempo di spegnimento del registratore in assenza di attivita'.</li>
+<strong>Spegnimento automatico</strong>: imposta come e dopo quanto tempo la cassa si spegne quando non viene usata.</li>
 <li>
-<strong>Retroilluminazione</strong>: regola modalita' e timer solo sui modelli che espongono questi parametri. Se i controlli sono disabilitati con una spiegazione, il firmware collegato non li rende disponibili.</li>
+<strong>Retroilluminazione</strong>: regola la modalità e il timer della luce dello schermo, solo sui modelli che la prevedono. Se i controlli sono disabilitati con una spiegazione, la cassa collegata non li rende disponibili.</li>
 <li>
 <strong>Periodo di non trasmissione</strong>: imposta la fascia oraria in cui le trasmissioni telematiche non devono partire.</li>
 <li>
-<strong>Giorni massimi mancata trasmissione</strong>: imposta la soglia di blocco esposta dal registratore; non confonderla con eventuali giorni di preavviso non disponibili in questa schermata.</li>
+<strong>Giorni massimi mancata trasmissione</strong>: imposta il numero di giorni senza trasmissione oltre il quale la cassa si blocca. Non confonderlo con eventuali giorni di preavviso, che in questa schermata non sono disponibili.</li>
 <li>
 <strong>Torretta esterna</strong>: abilita o disabilita la gestione della torretta, se prevista dal modello.</li>
 <li>
-<strong>Tipo carta</strong>: seleziona il formato/profilo carta usato dalla stampante.</li>
+<strong>Tipo carta</strong>: seleziona il formato della carta usato dalla stampante.</li>
 <li>
-<strong>Trasmissione automatica</strong>: abilita la pianificazione e ne definisce modalita' e ora. E' distinta sia dalla chiusura automatica sia dal periodo di non trasmissione. Non abilitarla soltanto per provare i campi.</li>
+<strong>Trasmissione automatica</strong>: abilita la trasmissione programmata e ne imposta modalità e ora. È diversa sia dalla chiusura automatica sia dal periodo di non trasmissione. Non attivarla solo per vedere come funzionano i campi.</li>
 </ul>
 <div class="alert alert-warning mt-3" role="alert">
-<strong>Avviso Specifiche RT 11.2:</strong> a partire dalle Specifiche RT <strong>11.2</strong> la chiusura automatica alle <strong>00:00</strong> e' prevista come comportamento attivo a prescindere dalla configurazione locale. Riferimento: documento ufficiale <em>"Specifiche tecniche per la memorizzazione elettronica e la trasmissione telematica dei corrispettivi"</em> (versione 11.2). </div>
+<strong>Attenzione alla chiusura alle 00:00:</strong> dalla versione 11.2 delle regole ufficiali (documento <em>"Specifiche tecniche per la memorizzazione elettronica e la trasmissione telematica dei corrispettivi"</em>), la chiusura automatica alle <strong>00:00</strong> è sempre attiva, anche se la configurazione locale dice diversamente. </div>
 <div class="alert alert-secondary mt-3" role="alert">
-<strong>Modifica descrizione:</strong> nei campi descrittivi (*) usa <strong>doppio clic</strong> su Windows oppure <strong>doppio tap</strong> su Android per aprire l'editor. </div>
+<strong>Modifica descrizione:</strong> nei campi descrittivi contrassegnati con (*) fai <strong>doppio clic</strong> su Windows oppure <strong>doppio tocco</strong> su Android per aprire l'editor. </div>
 <h6>Controlli finali consigliati</h6>
 <ul>
-<li>Conferma su cassa dei valori programmati.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Verifica compatibilità modello/revisione se una voce non è disponibile.</li>
+<li>Controlla sulla cassa che i valori programmati siano quelli voluti.</li>
+<li>Salva una copia di sicurezza dei dati dopo la modifica.</li>
+<li>Se una voce non è disponibile, verifica che il modello della cassa e la sua versione la supportino.</li>
 </ul>
 <img src="assets/img/editremote/varie.png" class="img-fluid rounded border" alt="Programmazione varie">
 </div>
@@ -356,30 +356,20 @@
 <section class="section" aria-labelledby="tablet-varie">
 <div class="card">
 <div class="card-body">
-<h2 id="tablet-varie" class="card-title">Sul tablet: modifica e rilettura</h2>
-<div class="alert alert-warning" role="alert"><strong>Limite rilevato su SMARTY EVO REV. 2.7:</strong> la scrittura dell'orario/modalita' di trasmissione automatica (VR8), mantenuta disabilitata, ha prodotto un timeout anche al tentativo successivo. Dopo riconnessione tutti e sette i record sono stati riletti identici agli originali. Il video precedente sotto non dimostra il supporto di VR8 su questa revisione. La retroilluminazione non e' restituita dalla cassa: i relativi controlli rimangono disabilitati.</div>
-<h3 class="h6">Esempio verificato sulla EVO: timer di spegnimento</h3>
-<p>Con lo spegnimento automatico lasciato disabilitato, il tempo e' stato modificato da 120 a 121 secondi, salvato e riletto dalla cassa. Il video mostra il ritorno a 120 secondi e la nuova importazione. Non abilita lo spegnimento e non esegue chiusure o trasmissioni fiscali.</p>
-<video controls preload="metadata" playsinline class="w-100 rounded border mb-3" poster="assets/img/editremote/evo-varie-timer.png" aria-label="Ripristino e rilettura del timer di spegnimento sulla EVO">
-<source src="assets/video/evo-varie-timer.mp4" type="video/mp4">
-<track src="assets/video/evo-varie-timer.vtt" kind="captions" srclang="it" label="Italiano" default>
-Il browser non supporta il video. <a href="assets/video/evo-varie-timer.mp4">Scarica il video</a>.
-</video>
+<h5 id="tablet-varie" class="card-title">Sul tablet: modifica e rilettura</h5>
+<div class="alert alert-warning" role="alert"><strong>Attenzione:</strong> sulla cassa SMARTY EVO la scrittura della <strong>Trasmissione automatica</strong> può andare in errore (la cassa non risponde in tempo), anche al secondo tentativo. Dopo la riconnessione, verifica con <strong>Importa</strong> che i valori siano quelli voluti. La <strong>Retroilluminazione</strong> non viene letta dalla cassa: i suoi controlli restano disabilitati.</div>
 <ol>
 <li>Premi <strong>Importa</strong> e attendi la fine della lettura.</li>
 <li>Modifica solo i parametri necessari. Nei campi orario controlla separatamente ore e minuti.</li>
 <li>Nascondi la tastiera Android prima di scorrere o usare i pulsanti inferiori.</li>
-<li>Premi <strong>Salva</strong>, attendi il completamento e premi nuovamente <strong>Importa</strong>.</li>
-<li>Confronta i valori riletti: la sola visualizzazione della bozza non conferma la programmazione.</li>
+<li>Premi <strong>Salva</strong>, attendi il completamento e premi di nuovo <strong>Importa</strong>.</li>
+<li>Confronta i valori riletti con quelli che hai impostato: guardare soltanto la bozza non conferma che la cassa sia stata programmata.</li>
 </ol>
-<p>Le catture provengono da un tablet Android 1280 &times; 800 collegato via BLE. Nella dimostrazione la trasmissione rimane <strong>disabilitata</strong>: cambiano solo modalita' e orario. La disponibilita' dei campi dipende da modello e firmware.</p>
+<p>La disponibilità dei campi dipende dal modello e dalla versione della cassa.</p>
 <figure>
 <img src="assets/img/editremote/tablet-varie.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="Varie su tablet: controlli di spegnimento, retroilluminazione e trasmissione">
-<figcaption>Schermata reale del tablet; i controlli non supportati sono disabilitati.</figcaption>
+<figcaption>Schermata del tablet con la sezione Varie; i controlli non supportati sono disabilitati.</figcaption>
 </figure>
-<video controls preload="metadata" playsinline class="w-100 rounded border" aria-label="Dimostrazione della programmazione Varie su tablet">
-<source src="assets/video/tablet-varie.mp4" type="video/mp4"> Il browser non supporta il video. <a href="assets/video/tablet-varie.mp4">Scarica la registrazione MP4</a>. </video>
-<p class="text-muted mt-2">Registrazione della prova: non esegue una trasmissione telematica. Usa sempre i parametri concordati per la tua attivita'.</p>
 </div>
 </div>
 </section>

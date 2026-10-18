@@ -308,53 +308,51 @@
 <div class="col-12">
 <div class="card">
 <div class="card-body">
-<div class="alert alert-warning mt-3" role="alert"><strong>Salvataggio remoto non certificato sul RT.</strong> Nella versione collaudata il 17 ottobre 2026 mancava il relativo invio remoto. Il percorso e' stato corretto nei sorgenti e verificato offline; aggiornamento e prova sulla cassa restano necessari. Attendi la conferma di applicazione e riapri per rileggere; se l'invio fallisce, la bozza non diventa una programmazione confermata. La prova T1/T2 qui riportata riguarda BLE: non confonderla con il RAW remoto, che restituisce anche il regime fiscale. <a href="panoramica_app.html#collegamento-remoto">Verifica della sessione remota</a>.</div>
 <h5 class="card-title">Guida operativa</h5>
-<div class="alert alert-warning" role="alert"><strong>Prima di salvare controlla il regime fiscale.</strong> Nella prova su SMARTY EVO REV. 2.7 del 17 ottobre 2026 i record T1/T2 sono stati letti, ma il regime fiscale non e' stato restituito dalla cassa. Lo 0 locale non prova quale sia il valore originale. L'app richiede una conferma esplicita prima di scrivere in questa situazione: non confermarla senza conoscere il regime corretto. Il collaudo su questa revisione e' rimasto in sola lettura per non sovrascrivere un valore sconosciuto.</div>
-<p> Questa programmazione equivale al comando <strong>806 MENU</strong> sul registratore RT.</p>
+<p>Questa sezione serve a inserire i dati dell'esercente (la tua attività) che la cassa usa per emettere le fatture e i documenti. Questa programmazione corrisponde al comando <strong>806 MENU</strong> sulla cassa.</p>
+<div class="alert alert-warning" role="alert"><strong>Prima di salvare controlla il regime fiscale.</strong> L'app chiede una conferma prima di scrivere i dati sulla cassa. Non confermare se non sai qual è il regime fiscale corretto dell'attività: chiedilo al commercialista.</div>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
-<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
+<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale.</div>
 <ol>
-<li>Apri la sezione dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
-<li>Applica solo le modifiche necessarie.</li>
-<li>Salva e verifica l'esito operativo.</li>
+<li>Apri la sezione dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Import</strong> per leggere i dati attuali dalla cassa.</li>
+<li>Modifica solo i campi che devono cambiare.</li>
+<li>Premi <strong>Salva</strong>, attendi la conferma e controlla che l'esito sia positivo.</li>
 </ol>
 <h6>Controlli finali consigliati</h6>
 <ul>
-<li>Conferma su cassa dei valori programmati.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Verifica compatibilità modello/revisione se una voce non è disponibile.</li>
+<li>Verifica sulla cassa che i valori salvati siano quelli corretti.</li>
+<li>Salva una copia di sicurezza (file di salvataggio della configurazione) dopo la modifica.</li>
+<li>Se una voce non è disponibile, verifica con l'assistenza che il modello della cassa sia compatibile.</li>
 </ul>
-<h6 class="mt-4">Campi della programmazione dati fattura </h6>
-<p> I campi sotto corrispondono alla configurazione del <strong>Cedente/Prestatore (Esercente)</strong> usata dal registratore RT per emissione documento autocertificante e fattura elettronica. </p>
+<p>I campi sotto servono a indicare chi è l'esercente (il titolare o la società) e dove si trova l'attività. Sono usati dalla cassa per emettere scontrini, documenti e fatture elettroniche.</p>
 <ul>
 <li>
-<strong>Persona fisica (SI/NO)</strong>: definisce se compilare campi persona (cognome/nome) o ditta (denominazioni).</li>
+<strong>Persona fisica (SI/NO)</strong>: indica se l'esercente è una persona (SI) oppure una ditta o società (NO). Con SI compili Cognome e Nome; con NO compili le Denominazioni.</li>
 <li>
-<strong>Cognome / Nome</strong>: identificazione esercente quando persona fisica.</li>
+<strong>Cognome / Nome</strong>: il nome e il cognome del titolare, da usare solo se è una persona fisica. Riportali come compaiono sul codice fiscale.</li>
 <li>
-<strong>Denominazione 1 / Denominazione 2</strong>: ragione sociale quando persona fisica = NO.</li>
+<strong>Denominazione 1 / Denominazione 2</strong>: il nome della ditta o società (ragione sociale), come risulta dalla visura camerale o dall'atto di apertura. Se serve una seconda riga, usa Denominazione 2.</li>
 <li>
-<strong>C.F.</strong>: codice fiscale dell'esercente.</li>
+<strong>C.F.</strong>: il codice fiscale dell'esercente, indicato sulla tessera sanitaria o sul certificato di attribuzione del codice fiscale.</li>
 <li>
-<strong>P.IVA</strong>: partita IVA dell'esercente (usata anche nelle funzioni di attivazione/stato RT).</li>
+<strong>P.IVA</strong>: il numero di partita IVA dell'attività, che trovi sulla fattura di apertura o sul cassetto fiscale dell'Agenzia delle Entrate.</li>
 <li>
-<strong>Indirizzo</strong>: via/piazza e numero civico sede esercente.</li>
+<strong>Indirizzo</strong>: la via o piazza della sede dell'attività, con il numero civico.</li>
 <li>
-<strong>CAP</strong>: codice avviamento postale.</li>
+<strong>CAP</strong>: il codice di avviamento postale della sede, che trovi su un sito postale o sulla bolletta.</li>
 <li>
-<strong>Comune</strong>: comune sede esercente.</li>
+<strong>Comune</strong>: il nome del comune in cui si trova la sede.</li>
 <li>
-<strong>Provincia</strong>: sigla provincia (2 caratteri).</li>
+<strong>Provincia</strong>: la sigla della provincia di due lettere (ad esempio MI per Milano).</li>
 <li>
-<strong>Regime fiscale (RFxx)</strong>: codice regime usato nella struttura dati fattura XML.</li>
+<strong>Regime fiscale (RFxx)</strong>: il codice del regime fiscale dell'attività (ad esempio RF01 per il regime ordinario). Chiedilo al commercialista se non sei sicuro.</li>
 <li>
-<strong>CF_Trasmittente</strong>: CF o P.IVA del soggetto delegato alla trasmissione fatture a SDI.</li>
+<strong>CF_Trasmittente</strong>: il codice fiscale o la partita IVA del soggetto che invia le fatture elettroniche al Sistema di Interscambio (SdI) per tuo conto. Se non invii le fatture tramite un intermediario, chiedi al commercialista quale valore usare.</li>
 </ul>
-<div class="alert alert-warning" role="alert"> Campi minimi obbligatori per evitare errori in emissione fattura: anagrafica esercente (denominazione oppure cognome/nome), CF o P.IVA, indirizzo, CAP, comune e provincia. </div>
-<p> Riferimento operativo: menu <strong>menu della cassa</strong> per la configurazione dati esercente. </p>
+<div class="alert alert-warning" role="alert">Per evitare errori nell'emissione delle fatture devi compilare almeno: nome dell'esercente (Denominazione oppure Cognome e Nome), CF o P.IVA, indirizzo, CAP, comune e provincia.</div>
+<p>Per gli stessi dati puoi anche usare il menu della cassa dedicato ai dati dell'esercente.</p>
 <h6 class="mt-4">Programmazione dati fattura</h6>
 <img src="assets/img/editremote/dati_fattura.png" class="img-fluid rounded border" alt="Programmazione dati fattura">
 </div>

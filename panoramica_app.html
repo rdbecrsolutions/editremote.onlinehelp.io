@@ -306,60 +306,58 @@
 <section class="section">
 <div class="card">
 <div class="card-body">
-<h5 class="card-title">schermata principale: campi e funzioni</h5>
-<p> La schermata principale raccoglie tutti i controlli necessari per collegarsi alla cassa, leggere i dati e aprire le sezioni di programmazione. </p>
+<h5 class="card-title">Schermata principale: campi e funzioni</h5>
+<p>La schermata principale raccoglie tutti i comandi necessari per collegarsi alla cassa, leggere i dati e aprire le sezioni di programmazione.</p>
 <h6>Area connessione</h6>
 <ul>
 <li>
-<strong>Modalità connessione</strong>: Wifi (Locale), Bluetooth (solo per Android), Offline, Seriale (su Windows); Remoto (maggiori info <a href="#collegamento-remoto">qui</a>). Sul registratore telematico, per abilitare la modalità Wifi / BLE (bluetooth) / Seriale (Locale), attiva la funzione <strong>720 MENU</strong>.</li>
+<strong>Modalità connessione</strong>: Wifi (Locale), Bluetooth (solo Android), Offline, Seriale (solo Windows), Remoto (maggiori informazioni <a href="#collegamento-remoto">qui</a>). Per abilitare sulla cassa le modalità Wifi, Bluetooth e Seriale, attiva la funzione <strong>720 MENU</strong>.</li>
 <li>
-<strong>Indirizzo IP</strong>: usato in modalità Locale per raggiungere la cassa in rete.</li>
+<strong>Indirizzo IP</strong>: il numero che identifica la cassa sulla rete del negozio. Serve nella modalità Wifi.</li>
 <li>
-<strong>Cerca</strong>: tenta discovery IP automatico sulla LAN.</li>
+<strong>Cerca</strong>: prova a trovare da solo l'indirizzo IP della cassa sulla rete.</li>
 <li>
-<strong>Porta COM</strong>: visibile in Seriale per collegamento diretto RS/USB.</li>
+<strong>Porta COM</strong>: compare in modalità Seriale. Serve per il collegamento diretto con cavo.</li>
 <li>
-<strong>Pulsante Connetti/Disconnetti</strong>: avvia o chiude la sessione con la cassa.</li>
+<strong>Connetti / Disconnetti</strong>: avvia o chiude il collegamento con la cassa.</li>
 </ul>
 <div class="alert alert-info mt-3" role="alert">
-<strong>Nota Connessione Bluetooth:</strong> Il collegamento tramite Bluetooth (disponibile solo su Android) è supportato esclusivamente sui modelli <strong>Smarty EVO</strong> e <strong>Jolly</strong> a partire dalla revisione software <strong>2.7</strong> in poi, e sulla gamma <strong>Plus</strong> (Smarty Plus, Zero Plus, Tour Plus, Smarty EVO Plus) dalla revisione software <strong>23</strong> in poi (se è presente il dongle Wi-Fi/Bluetooth). <div class="mt-3 text-center">
+<strong>Nota Connessione Bluetooth:</strong> Il collegamento tramite Bluetooth (disponibile solo su Android) è supportato esclusivamente sui modelli <strong>Smarty EVO</strong> e <strong>Jolly</strong> a partire dalla versione <strong>2.7</strong> in poi, e sulla gamma <strong>Plus</strong> (Smarty Plus, Zero Plus, Tour Plus, Smarty EVO Plus) dalla versione <strong>23</strong> in poi (se è presente la chiavetta Wi-Fi/Bluetooth). <div class="mt-3 text-center">
 <img src="assets/img/editremote/main_new.png" class="img-fluid rounded border shadow-sm" alt="Connessione Bluetooth Android" style="max-height: 480px;">
 </div>
 </div>
 <h6>Area identificazione dispositivo</h6>
 <ul>
 <li>
-<strong>Matricola</strong>: identificativo RT letto dalla cassa (o impostato in offline).</li>
+<strong>Matricola</strong>: il numero che identifica la cassa. Viene letto dalla cassa oppure inserito a mano in modalità Offline.</li>
 <li>
-<strong>Modello</strong>: modello riconosciuto da matricola/revisione o selezionato in offline.</li>
+<strong>Modello</strong>: il modello di cassa, riconosciuto dall'app oppure scelto a mano in modalità Offline.</li>
 <li>
-<strong>Immagine modello</strong>: riferimento visuale del modello RT operativo.</li>
+<strong>Immagine modello</strong>: immagine del modello di cassa che stai usando.</li>
 </ul>
 <h6>Area Configurazioni</h6>
 <ul>
-<li>Elenco sezioni programmabili: Reparti, IVA, Articoli, Pagamenti, Clienti, POS, ecc.</li>
-<li>Le voci non compatibili con modello/revisione vengono disabilitate automaticamente.</li>
-<li>Abbonamento App resta sempre accessibile per controllo stato piano.</li>
+<li>Elenco delle sezioni che puoi programmare: Reparti, IVA, Articoli, Pagamenti, Clienti, POS e altre.</li>
+<li>Le voci non compatibili con il modello o la versione della cassa restano disattivate automaticamente.</li>
+<li>La voce <strong>Abbonamento App</strong> resta sempre accessibile, per controllare lo stato del piano.</li>
 </ul>
 <h6>Come ci si connette alla cassa (Locale)</h6>
 <ol>
 <li>Seleziona la modalità desiderata: <strong>Wifi</strong>, <strong>Bluetooth</strong> (solo Android) oppure <strong>Seriale</strong> (solo Windows).</li>
-<li>In base alla modalità: in <strong>Wifi</strong> inserisci l'indirizzo IP oppure usa <strong>Cerca</strong>; in <strong>Bluetooth</strong> seleziona il dispositivo oppure usa <strong>Scansiona</strong>; in <strong>Seriale</strong> seleziona la porta COM.</li>
+<li>In base alla modalità: in <strong>Wifi</strong> inserisci l'indirizzo IP oppure usa <strong>Cerca</strong>; in <strong>Bluetooth</strong> seleziona il dispositivo; in <strong>Seriale</strong> seleziona la porta COM.</li>
 <li>Premi <strong>Connetti</strong>.</li>
-<li>Attendi lo stato connesso, poi apri una sezione e importa i dati.</li>
+<li>Attendi che l'app indichi che sei connesso, poi apri una sezione e importa i dati.</li>
 </ol>
-<div class="alert alert-warning mt-3" role="alert">
-<strong>Nota la versione Windows:</strong> La versione dell'applicazione per Windows è <strong>Coming soon</strong>. </div>
 <h2 id="collegamento-remoto" class="card-title" style="scroll-margin-top: 90px;">Collegamento remoto</h2>
-<p>La modalità <strong>Remoto</strong> permette di collegare EditRemote alla cassa attraverso Internet, senza che app e registratore si trovino sulla stessa rete locale. Entrambi devono avere una connessione Internet attiva.</p>
+<p>La modalità <strong>Remoto</strong> permette di collegare EditRemote alla cassa tramite la rete internet, anche se app e cassa non si trovano sulla stessa rete. Entrambi devono essere collegati a internet.</p>
 <div class="alert alert-info" role="alert">
-<strong>Modelli e revisioni supportati:</strong> il collegamento remoto è disponibile sui modelli <strong>Smarty EVO</strong> e <strong>Jolly</strong> dalla revisione software <strong>2.7</strong> in poi, e sulla gamma <strong>Plus</strong> (<strong>Smarty Plus, Zero Plus, Tour Plus, Smarty EVO Plus</strong>) dalla revisione software <strong>23</strong> in poi.
+<strong>Modelli e versioni supportati:</strong> il collegamento remoto è disponibile sui modelli <strong>Smarty EVO</strong> e <strong>Jolly</strong> dalla versione <strong>2.7</strong> in poi, e sulla gamma <strong>Plus</strong> (<strong>Smarty Plus, Zero Plus, Tour Plus, Smarty EVO Plus</strong>) dalla versione <strong>23</strong> in poi.
 </div>
 <h3 class="h6">1. Avvia il collegamento sulla cassa</h3>
 <ol>
-<li>Verifica che la cassa sia collegata a Internet e annota la sua <strong>matricola completa</strong>.</li>
-<li>Avvia la funzione <strong>858 MENU</strong> (<strong>COLLEG.CLOUD ATT.</strong>). Per il collegamento remoto usa questa funzione, non la <strong>720 MENU</strong> prevista per il collegamento locale.</li>
-<li>Attendi il collegamento al cloud: il display mostra <strong>COLLEG.CLOUD ATT.</strong>. La richiesta successiva dipende dalla presenza della Protezione Parco.</li>
+<li>Verifica che la cassa sia collegata a internet e annota la sua <strong>matricola completa</strong>.</li>
+<li>Avvia la funzione <strong>858 MENU</strong> sulla cassa. Per il collegamento remoto usa questa funzione, non la <strong>720 MENU</strong> usata per il collegamento locale.</li>
+<li>Attendi che la cassa si colleghi a internet: il display mostra <strong>COLLEG.CLOUD ATT.</strong>. Quello che succede dopo dipende dalla presenza della Protezione Parco.</li>
 </ol>
 <h3 class="h6">2A. Cassa senza Protezione Parco</h3>
 <ol>
@@ -369,7 +367,7 @@
 </ol>
 <h3 class="h6">2B. Cassa con Protezione Parco</h3>
 <ol>
-<li>La cassa non mostra un nuovo codice casuale: richiede il <strong>codice di Protezione Parco già configurato</strong> (password tecnica di 5 cifre), da inserire nell'app.</li>
+<li>La cassa non mostra un nuovo codice casuale: richiede il <strong>codice di Protezione Parco già configurato</strong> (codice di 5 cifre), da inserire nell'app.</li>
 <li>Sui display a una riga si alternano <strong>PROTEZIONE PARCO</strong> e <strong>CODICE IN APP</strong>. Sui display a due righe compaiono <strong>PROT. PARCO</strong> e <strong>CODICE IN APP</strong>.</li>
 <li>Richiedi il codice al tecnico o al gestore autorizzato del parco e inseriscilo in EditRemote. Anche in questo caso completa l'associazione entro <strong>5 minuti</strong> dall'avvio della funzione.</li>
 </ol>
@@ -399,42 +397,24 @@
 <li>Nella schermata principale seleziona <strong>Remoto</strong> come modalità di connessione.</li>
 <li>Inserisci la <strong>matricola completa della cassa</strong> nell'area Dispositivo ECR. Non serve inserire l'indirizzo IP.</li>
 <li>Premi <strong>Connetti</strong>.</li>
-<li>Alla richiesta <strong>Inserire il codice richiesto dalla cassa (OTP o codice Park Protection)</strong>, digita il codice temporaneo mostrato dalla cassa oppure il codice di Protezione Parco, in base al caso, e premi <strong>Conferma</strong>.</li>
+<li>Quando compare il messaggio <strong>Inserire il codice richiesto dalla cassa (OTP o codice Park Protection)</strong>, digita il codice temporaneo mostrato dalla cassa oppure il codice di Protezione Parco, in base al caso, e premi <strong>Conferma</strong>. OTP è il codice di conferma usa e getta.</li>
 <li>Attendi il messaggio <strong>Sessione remota pronta</strong>: l'app riconosce il modello e il pulsante diventa <strong>Disconnetti</strong>. Sulla cassa può comparire brevemente <strong>OPRZ. COMPLETATA</strong>, seguito da <strong>COLLEG.CLOUD ATT.</strong> con il tempo trascorso.</li>
-<li>Apri una funzione disponibile, ad esempio <strong>Info RT</strong> o una sezione di programmazione. Durante la lettura attendi la richiesta di export della configurazione dalla cassa; durante il salvataggio attendi la conferma di applicazione. Le funzioni disponibili dipendono dal modello, dalla revisione e dal piano dell'app.</li>
+<li>Apri una funzione disponibile, ad esempio <strong>Info RT</strong> o una sezione di programmazione. Durante la lettura attendi che la cassa invii la configurazione; durante il salvataggio attendi la conferma di applicazione. Le funzioni disponibili dipendono dal modello, dalla versione della cassa e dal piano dell'app.</li>
 <li>Al termine premi <strong>Disconnetti</strong> nell'app per chiudere la sessione.</li>
 </ol>
 <div class="alert alert-warning" role="alert">
-<strong>Se il collegamento non riesce:</strong> verifica Internet su entrambi i dispositivi, matricola, codice e revisione software. Se il codice è scaduto o l'associazione è stata interrotta, riavvia <strong>858 MENU</strong> sulla cassa e ripeti la connessione nell'app. In caso di mancata associazione la cassa può segnalare un errore di trasmissione o un'operazione interrotta e stampare un avviso relativo all'app EditRemote.
+<strong>Se il collegamento non riesce:</strong> verifica la connessione internet su entrambi i dispositivi, la matricola, il codice e la versione della cassa. Se il codice è scaduto, riavvia <strong>858 MENU</strong> sulla cassa e ripeti la connessione nell'app. Se il problema continua, contatta il tecnico.
 </div>
 <div class="alert alert-warning" role="alert">
-<strong>Durata e verifica della sessione su EVO 2.7.</strong> La versione provata il 17 ottobre 2026 interrompe la sessione dopo 15 minuti dalla partenza, anche durante l'uso. La correzione firmware aggiornata il 18 ottobre usa invece <strong>5 minuti di inattivit&agrave; operativa</strong> (120 minuti nelle build con <code>FOR_DEVELOPMENT</code>): una lettura o una programmazione rinnova il termine, il semplice polling no. Il termine riparte anche al completamento di un'operazione lunga. Il polling avviene ogni 5 secondi nei primi 30 secondi senza operazioni, poi ogni 15 secondi fino a 2 minuti e quindi ogni 30 secondi. Alla prima lettura o programmazione ricevuta torna a 5 secondi; dopo una pausa, la ripresa pu&ograve; quindi richiedere circa 30 secondi oltre ai tempi di rete. Occorre compilare e installare il firmware corretto; non basta aggiornare l'app. I 5 minuti per inserire il codice restano un limite distinto.
+<strong>Attenzione agli invii alla cassa.</strong> Dopo un invio, attendi la conferma di applicazione. Se la conferma non arriva, non ripetere l'invio alla cieca: controlla prima il valore effettivo sulla cassa. Poi esci e riapri la sezione per rileggere i dati. Se il problema continua, contatta il tecnico.
 </div>
-<div class="alert alert-info" role="alert">
-<strong>Rilevamento della disconnessione: aggiornamento coordinato.</strong> Nell'app corretta, una sessione dichiarata chiusa o non pi&ugrave; valida azzera lo stato di connessione. Con il backend aggiornato viene verificato anche l'ultimo polling della cassa: dopo almeno 3 minuti senza contatti, l'app richiede una nuova connessione. Un heartbeat ricevuto dal servizio non dimostra che il RT sia online. Servono aggiornamento dell'app e distribuzione del backend; sulla versione gi&agrave; installata non dare per presente questo controllo. Durante una lettura o un invio l'attesa ha un proprio limite e non prova l'esito della scrittura.
-</div>
-<div class="alert alert-warning" role="alert">
-<strong>Limite rilevato nel collaudo remoto del 17 ottobre 2026.</strong> Sulla versione provata alcune scritture si fermano con <strong>Errore export configurazione raw.</strong>, prima dell'invio. Tx Email non ha aggiornato la cassa; mancavano inoltre i percorsi remoti di Wifi, Fatture RT e Report Mail. Nei sorgenti corretti questi quattro invii sono collegati e il RAW remoto viene caricato direttamente dalla memoria, senza dipendere dal file pubblico Android. Le regressioni offline verificano invio e gestione dell'errore con un servizio simulato: <strong>non sono ancora un collaudo sulla cassa</strong>. Dopo l'aggiornamento attendi la conferma di applicazione, esci e riapri la sezione per una nuova lettura. Se l'esito non &egrave; confermato, non ripetere l'invio alla cieca: verifica prima il valore effettivo sul RT. Gli esempi BLE restano prove del collegamento locale, non del Remoto.
-</div>
-<p><strong>Aggiornamento firmware in Remoto.</strong> Il nuovo percorso preparato il 18 ottobre richiede CF tecnico, PIVA laboratorio e scelta di un ECS per il modello collegato. Dopo la presa in carico il RT termina il collegamento e prosegue con le conferme dell'esercente. Quel riscontro non certifica l'installazione: l'esito finale viene comunicato dall'esercente al tecnico. Richiede firmware abilitante, app e backend aggiornati, ancora da collaudare insieme sul RT. Il percorso locale LoadDump resta distinto. Vedi <a href="impostazioni_aggiornamento.html">Aggiornamento</a>.</p>
-<figure class="mb-4">
-<img src="assets/img/editremote/evo-remoto-errore-raw.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="Cortesia in Remoto: la modifica alla doppia altezza resta in bozza e Salva mostra Errore export configurazione raw">
-<figcaption class="small text-muted mt-2">Errore riprodotto prima dell'upload: non e' una conferma di applicazione sulla cassa. Nella prova la spunta e' stata riportata al valore iniziale senza nuovo invio.</figcaption>
-</figure>
-<h3 class="h6">Video: collegamento remoto nell'app</h3>
-<p>Il video mostra la scelta di Remoto, l'inserimento di matricola e codice, la connessione e l'apertura di Info RT. Le attese sono state accorciate; i dati e il codice mostrati sono dimostrativi.</p>
-<div class="text-center mb-4">
-<video controls playsinline preload="metadata" class="rounded border" style="width: 100%; max-width: 380px; height: auto;" aria-label="Guida video al collegamento remoto con EditRemote">
-<source src="assets/video/remote-connection.mp4" type="video/mp4">
-Il browser non supporta la riproduzione del video. <a href="assets/video/remote-connection.mp4">Apri il video del collegamento remoto</a>.
-</video>
-</div>
+<p><strong>Aggiornamento della cassa da remoto.</strong> Per questo aggiornamento servono il <strong>codice fiscale del tecnico</strong>, la <strong>partita IVA del laboratorio</strong> e il file <strong>.ecs</strong> per il modello collegato. Dopo la presa in carico la cassa termina il collegamento e prosegue con le conferme dell'esercente. L'esito finale viene comunicato dall'esercente al tecnico. Per l'aggiornamento locale vedi <a href="impostazioni_aggiornamento.html">Aggiornamento</a>.</p>
 <h6>Come si opera in offline</h6>
 <ol>
 <li>Seleziona <strong>Offline</strong>.</li>
-<li>Scegli il modello offline.</li>
-<li>Apri le sezioni e prepara/modifica la configurazione.</li>
-<li>Esporta XML per backup o per successiva sincronizzazione.</li>
+<li>Scegli il modello di cassa.</li>
+<li>Apri le sezioni e prepara o modifica la configurazione.</li>
+<li>Salva la configurazione in un file di salvataggio, per tenerne una copia di sicurezza o per caricarla in seguito.</li>
 </ol>
 <div class="row g-3">
 <div class="col-lg-6">

@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Protezione parco installato - EditRemote Help</title>
   <meta name="description" content="Guida programmazione Protezione parco installato">
-  <meta name="keywords" content="EditRemote, Park Protection, OTP, Tecnico.dat">
+  <meta name="keywords" content="EditRemote, Park Protection, codice di conferma, Tecnico.dat">
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -82,48 +82,49 @@
 
           <div class="hero-note">
             <i class="bi bi-exclamation-triangle me-2"></i>
-            Rimuovere eventuali chiavette USB con Tecnico.dat esteso dalla cassa / RT prima di programmare.
-            Altrimenti la programmazione viene immediatamente sovrascritta.
+            Prima di programmare, togli dalla cassa eventuali chiavette USB con il file <strong>Tecnico.dat esteso</strong>.
+            Se restano inserite, la programmazione viene subito sovrascritta dai dati della chiavetta.
           </div>
 
           <ol class="step-list">
             <li>
-              <strong>Rimuovere USB dalla cassa con Tecnico.dat esteso</strong>
+              <strong>Togliere la chiavetta USB dalla cassa</strong>
               <br>
-              Se la chiavetta resta inserita, i dati appena programmati vengono sovrascritti subito.
+              Se la chiavetta con <strong>Tecnico.dat esteso</strong> resta inserita, i dati che hai appena programmato vengono cancellati.
             </li>
             <li>
-              <strong>Programmare i campi</strong>
+              <strong>Compilare i campi</strong>
               <br>
-              Compilare i campi richiesti nella schermata (mail, password tecnica, partita IVA, regione e lock cfg).
+              Inserisci i dati richiesti nella schermata: <strong>mail</strong>, <strong>password tecnica</strong>, <strong>partita IVA</strong>, <strong>regione</strong> e <strong>lock cfg</strong>.
+              <br>
+              La <strong>partita IVA</strong> è quella dell'attività in cui è installata la cassa. La <strong>regione</strong> è quella in cui si trova l'attività. La <strong>password tecnica</strong> è la password che protegge le impostazioni tecniche della cassa.
+              <br>
+              I campi <strong>mail</strong> sono gli indirizzi di posta indicati nella schermata. Verifica che siano corretti prima di salvare.
             </li>
             <li>
-              <strong>Gestione OTP quando si sovrascrivono dati sensibili</strong>
+              <strong>Confermare con il codice di conferma (OTP), se richiesto</strong>
               <br>
-              Se si modifica una delle mail, la partita IVA o la password tecnica, occorre inserire OTP:
-              premere <em>Invia OTP</em>, attendere il codice e inserirlo nel campo OTP.
+                            Se modifichi una delle mail, la partita IVA o la password tecnica, il sistema chiede un codice di conferma (la sigla OTP indica un codice usa e getta).
+              Premi <strong>Invia OTP</strong>, attendi il codice ricevuto e inseriscilo nel campo OTP.
               <br>
-              L'OTP viene inviato all'indirizzo indicato nel campo <em>Email OTP</em>.
+                            Il codice arriva all'indirizzo indicato nel campo <strong>Email OTP</strong> (<em>mail_otp</em>): è l'indirizzo e-mail che riceve il codice di conferma.
             </li>
             <li>
-              <strong>Selezionare i blocchi desiderati</strong>
+              <strong>Scegliere i blocchi da proteggere</strong>
               <br>
-              Checkare le programmazioni che si vogliono bloccare nella sezione lock configurazioni.
+              Spunta le impostazioni che vuoi bloccare nella sezione <strong>lock configurazioni</strong>.
             </li>
             <li>
               <strong>Salvare</strong>
               <br>
-              Premere <em>Salva</em> per inviare la programmazione alla cassa / RT.
+              Premi <strong>Salva</strong> per inviare la programmazione alla cassa.
             </li>
             <li>
-              <strong>Generare il file Tecnico.dat aggiornato</strong>
+              <strong>Creare il file Tecnico.dat aggiornato</strong>
               <br>
-              Dopo una modifica parametri andata a buon fine, usa il pulsante <em>Genera Tecnico.dat</em>
-              per produrre una versione aggiornata del file e inviarla via mail al destinatario
-              configurato nel campo <em>Email OTP (mail_otp)</em>.
+              Dopo aver salvato correttamente, premi <strong>Genera Tecnico.dat</strong>. Il file viene inviato via mail all'indirizzo del campo <strong>Email OTP</strong> (<em>mail_otp</em>).
               <br>
-              Nota: il provider blocca allegati <em>.dat</em>, quindi il file viene inviato come
-              <em>.txt</em>; l'utente deve rinominarlo manualmente in <em>Tecnico.dat</em> prima dell'uso.
+              Il servizio di posta blocca gli allegati con estensione <em>.dat</em>: il file arriva come <em>.txt</em>. Prima di usarlo, rinominalo manualmente in <strong>Tecnico.dat</strong>.
             </li>
           </ol>
 

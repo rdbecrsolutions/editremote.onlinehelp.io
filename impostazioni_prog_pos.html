@@ -302,103 +302,95 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Guida operativa</h5>
-<p> Questa programmazione equivale al comando <strong>834 MENU</strong> sul registratore RT.</p>
+<p>Questa schermata corrisponde alla funzione <strong>834 MENU</strong> della cassa.</p>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
-<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
+<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale.</div>
 <ol>
-<li>Apri Config POS dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
+<li>Apri <strong>Config POS</strong> dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Import</strong> per leggere i dati attuali dalla cassa.</li>
 <li>Seleziona il <strong>tipo POS</strong> corretto.</li>
-<li>Compila solo i parametri richiesti per quel tipo/interfaccia.</li>
-<li>Salva e verifica l'esito operativo con una prova pagamento.</li>
+<li>Compila solo i campi richiesti per quel tipo di POS e di collegamento.</li>
+<li>Premi <strong>Salva</strong>, poi verifica con un pagamento di prova che tutto funzioni.</li>
 </ol>
 <h6>Tipi POS disponibili</h6>
-<div class="alert alert-info" role="alert"><strong>Programmazione verificata su SMARTY EVO REV. 2.7:</strong> partendo da Nessuno, sono stati salvati e riletti <strong>Prot17 / USB</strong> e poi <strong>Prot17 / LAN-WiFi</strong>, con IP di esempio 192.0.2.10 e porta 9100. Al termine e' stato ripristinato Nessuno, USB, IP 0.0.0.0 e porta 0, confermato da una nuova lettura completa del record CP. Questi sono test di configurazione, <strong>non di pagamento o collegamento a un POS reale</strong>. Non copiare l'IP di esempio nella tua installazione.</div>
 <figure>
-<img src="assets/img/editremote/evo-pos-lan.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="Prot17 su tablet con interfaccia LAN-WiFi, indirizzo di esempio e porta 9100">
-<figcaption>Seleziona esplicitamente il campo IP e poi il campo Porta. Dopo aver nascosto la tastiera Android attendi che il layout si stabilizzi prima di toccare il campo successivo.</figcaption>
+<img src="assets/img/editremote/evo-pos-lan.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="POS tipo PROT.17 con collegamento LAN/WiFi">
+<figcaption>Seleziona prima il campo <strong>INDIRIZZO IP</strong> e poi il campo <strong>PORTA TCP</strong>. Dopo aver chiuso la tastiera Android, attendi che la schermata si sistemi prima di toccare il campo successivo. L'indirizzo nell'immagine è solo un esempio: inserisci quello del tuo POS.</figcaption>
 </figure>
 <ul>
 <li>
 <strong>NESSUNO</strong>: POS non collegato.</li>
 <li>
-<strong>NON SUPP.</strong>: POS non supportato (pagamenti gestiti in offline).</li>
+<strong>NON SUPP.</strong>: POS non supportato; i pagamenti vengono gestiti senza collegamento al POS.</li>
 <li>
-<strong>MYPOS</strong>: integrazione myPOS.</li>
+<strong>MYPOS</strong>: terminale myPOS.</li>
 <li>
-<strong>PROT.17</strong>: integrazione Protocol 17 (tipicamente Ingenico Desk/3200).</li>
+<strong>PROT.17</strong>: collegamento con protocollo 17 (di solito terminali Ingenico Desk/3200).</li>
 <li>
-<strong>DOJO</strong>: integrazione terminale Dojo.</li>
+<strong>DOJO</strong>: terminale Dojo.</li>
 <li>
-<strong>SUMUP</strong>: integrazione terminale SumUp (API Key, Merchant ID e Reader ID).</li>
+<strong>SUMUP</strong>: terminale SumUp (servono API Key, Merchant ID e Reader ID; vedi la sezione SumUp in fondo alla pagina).</li>
 </ul>
 <h6>Interfacce e parametri da inserire</h6>
 <ul>
 <li>
-<strong>TIPO CONN.</strong>: USB, LAN/WiFi, SERIALE (MYPOS solo USB).</li>
+<strong>TIPO CONN.</strong> (tipo di collegamento): USB, LAN/WiFi, SERIALE (MYPOS solo USB).</li>
 <li>
-<strong>INDIRIZZO IP</strong>: richiesto solo se interfaccia LAN/WiFi.</li>
+<strong>INDIRIZZO IP</strong> (l'indirizzo che identifica il POS sulla rete del locale): va compilato solo se il collegamento è LAN/WiFi.</li>
 <li>
-<strong>PORTA TCP</strong>: richiesta solo se interfaccia LAN/WiFi.</li>
+<strong>PORTA TCP</strong> (il canale di comunicazione tra cassa e POS sulla rete): va compilata solo se il collegamento è LAN/WiFi.</li>
 <li>
-<strong>STAMPA</strong>: disponibile solo con POS tipo PROT.17 (RT, POS, POS+RT).</li>
+<strong>STAMPA</strong>: disponibile solo con POS tipo PROT.17. Valori: <strong>RT</strong> (la cassa), <strong>POS</strong> o <strong>POS+RT</strong>.</li>
 </ul>
 <h6>Cosa impostare per tipo POS</h6>
 <ul>
 <li>
-<strong>MYPOS</strong>: imposta TIPO POS = MYPOS, connessione USB. Non servono IP/Porta in Config POS.</li>
+<strong>MYPOS</strong>: imposta <strong>TIPO POS</strong> = MYPOS e collegamento USB. In Config POS non servono indirizzo IP né porta.</li>
 <li>
-<strong>PROT.17 / Ingenico</strong>: imposta TIPO POS = PROT.17, scegli interfaccia (USB/LAN/WiFi/SERIALE). Se LAN/WiFi inserisci IP e Porta TCP; configura anche STAMPA.</li>
+<strong>PROT.17 / Ingenico</strong>: imposta <strong>TIPO POS</strong> = PROT.17, poi scegli il collegamento (USB, LAN/WiFi o SERIALE). Se scegli LAN/WiFi inserisci <strong>INDIRIZZO IP</strong> e <strong>PORTA TCP</strong>. Imposta anche <strong>STAMPA</strong>.</li>
 <li>
-<strong>DOJO</strong>: imposta TIPO POS = DOJO e completa la procedura guidata del terminale Dojo.</li>
+<strong>DOJO</strong>: imposta <strong>TIPO POS</strong> = DOJO e completa la procedura guidata del terminale Dojo.</li>
 <li>
-<strong>NON SUPP.</strong>: da usare solo se il POS non e integrato; la cassa non esegue il flusso online POS.</li>
+<strong>NON SUPP.</strong>: da usare solo se il POS non è collegato alla cassa; la cassa non esegue i pagamenti collegati al POS.</li>
 </ul>
 <h6>Dettaglio campi PROT.17 (Ingenico)</h6>
 <ul>
 <li>
-<strong>TIPO POS</strong>: seleziona <strong>PROT.17</strong> per abilitare il protocollo ECR-POS compatibile Ingenico.</li>
+<strong>TIPO POS</strong>: seleziona <strong>PROT.17</strong> per collegare un POS Ingenico (protocollo 17).</li>
 <li>
-<strong>TIPO CONN.</strong>: scegli il canale fisico tra USB, LAN/WiFi o SERIALE in base al cablaggio reale del terminale.</li>
+<strong>TIPO CONN.</strong>: scegli tra USB, LAN/WiFi o SERIALE, in base a come il terminale è collegato alla cassa.</li>
 <li>
-<strong>INDIRIZZO IP</strong>: identifica il POS in rete locale; va compilato solo quando TIPO CONN. e LAN/WiFi.</li>
+<strong>INDIRIZZO IP</strong>: è l'indirizzo che identifica il POS sulla rete locale (il numero che il POS ha sulla rete del locale). Va compilato solo se <strong>TIPO CONN.</strong> è LAN/WiFi.</li>
 <li>
-<strong>PORTA TCP</strong>: porta di ascolto del servizio ECR sul POS; deve coincidere con quella configurata sul terminale.</li>
+<strong>PORTA TCP</strong>: è il canale di comunicazione su cui il POS riceve i comandi dalla cassa. Deve essere uguale a quello impostato sul terminale.</li>
 <li>
-<strong>STAMPA</strong>: definisce dove stampare la ricevuta POS: <strong>RT</strong>, <strong>POS</strong> o <strong>POS+RT</strong>.</li>
+<strong>STAMPA</strong>: decide dove stampare la ricevuta del POS: <strong>RT</strong> (la cassa), <strong>POS</strong> o <strong>POS+RT</strong>.</li>
 </ul>
-<p> In pratica: se il POS Ingenico e su rete, i campi critici sono IP e PORTA TCP; se e su USB/seriale, IP e PORTA non vengono usati e la parte principale da verificare e la modalità STAMPA. </p>
+<p>In pratica: se il POS Ingenico è collegato in rete, i campi da controllare sono <strong>INDIRIZZO IP</strong> e <strong>PORTA TCP</strong>. Se è collegato con USB o seriale, indirizzo IP e porta non vengono usati e il controllo principale riguarda il campo <strong>STAMPA</strong>.</p>
 <h6>Dettaglio configurazione DOJO</h6>
-<p> Quando selezioni <strong>TIPO POS = DOJO</strong> in EditRemote, la configurazione segue il nuovo flusso lato app (allineato a SumUp): </p>
+<p>Quando selezioni <strong>TIPO POS = DOJO</strong>, la configurazione si fa dentro EditRemote, come per SumUp:</p>
 <ul>
 <li>
-<strong>DOJO API KEY</strong>: compilabile manualmente o tramite pulsante <strong>Barcode/QR</strong>.</li>
+<strong>DOJO API KEY</strong>: compilabile a mano oppure con il pulsante <strong>Barcode/QR</strong>.</li>
 <li>
-<strong>DOJO RESELLER ID</strong>: compilabile manualmente o tramite pulsante <strong>Barcode/QR</strong>.</li>
+<strong>DOJO RESELLER ID</strong>: compilabile a mano oppure con il pulsante <strong>Barcode/QR</strong>.</li>
 <li>
-<strong>DOJO TERMINAL ID</strong>: selezionabile dalla lista cloud tramite pulsante <strong>Aggiorna</strong> (o refresh automatico quando API Key e Reseller ID sono validi).</li>
+<strong>DOJO TERMINAL ID</strong>: scegli il terminale dalla lista del servizio online premendo <strong>Aggiorna</strong> (oppure la lista si aggiorna da sola quando API Key e Reseller ID sono validi).</li>
 </ul>
-<p> La ricerca dei terminali Dojo viene eseguita da <strong>EditRemote</strong> e la configurazione POS viene poi salvata in cassa con i valori selezionati in app. Per Dojo non sono richiesti IP/Porta nella schermata Config POS. </p>
-<p> Nota: la procedura da tastiera della cassa resta disponibile, ma nel flusso EditRemote la selezione terminale e gestita in app.</p>
-<h3 class="h6">Video: configurazione Dojo in EditRemote</h3>
-<div class="text-center mb-4">
-<video controls playsinline preload="metadata" class="rounded border" style="width: 100%; max-width: 720px; height: auto;" aria-label="Guida video alla configurazione Dojo in EditRemote">
-<source src="assets/video/dojo-guida.mp4" type="video/mp4">
-Il browser non supporta il video. <a href="assets/video/dojo-guida.mp4">Apri il video di configurazione Dojo</a>.
-</video>
-</div>
+<p>La ricerca dei terminali Dojo è fatta da <strong>EditRemote</strong>. Poi la configurazione POS viene salvata in cassa con i valori scelti nell'app. Per Dojo non servono indirizzo IP né porta nella schermata Config POS.</p>
+<p>Nota: la procedura da tastiera della cassa resta disponibile, ma con EditRemote la scelta del terminale si fa nell'app.</p>
 <h6>Collegamenti con la programmazione pagamenti</h6>
-<p> Dopo la configurazione POS , in <strong>menu della cassa - Pagamenti</strong> va abilitata l'opzione <strong>ABILITA POS</strong> per i metodi elettronici che devono dialogare con il terminale. </p>
-<h6>Riferimenti operativi dai manuali tecnici</h6>
+<p>Dopo la configurazione POS, nel menu <strong>Pagamenti</strong> della cassa attiva l'opzione <strong>ABILITA POS</strong> per i metodi elettronici che devono usare il terminale.</p>
+<h6>Note sui singoli terminali POS</h6>
 <ul>
-<li>myPOS k300: selezione interfaccia all'avvio e profilo <strong>Cash Register</strong> per uso integrato con RT.</li>
-<li>Ingenico Desk/3200: protocollo 17, tipo linea, porta TCP/IP e messaggi di stato lato POS.</li>
-<li>Dojo: nel flusso EditRemote la ricerca terminali e la selezione Terminal ID sono gestite lato app; in cassa vengono programmati D1 (API Key), D2 (Reseller ID), D3 (Terminal ID).</li>
-<li>SumUp: configurazione API Key, Merchant ID e Reader ID; usare il pulsante Aggiorna per allineare/elencare i lettori disponibili.</li>
-<li>Messaggi errore frequenti in esercizio: POS TIMEOUT, POS TX ERROR, OP. POS FALLITA, POS NO CARD, POS DISCONNESSO.</li>
+<li><strong>myPOS K300</strong>: all'avvio scegli il collegamento e il profilo <strong>Cash Register</strong> per usarlo con la cassa.</li>
+<li><strong>Ingenico Desk/3200</strong>: sul terminale controlla il protocollo 17, il tipo di linea, la porta di rete e i messaggi di stato che il terminale mostra.</li>
+<li><strong>Dojo</strong>: con EditRemote la ricerca dei terminali e la scelta del Terminal ID si fanno nell'app. In cassa vengono programmati i campi D1 (API Key), D2 (Reseller ID) e D3 (Terminal ID).</li>
+<li><strong>SumUp</strong>: servono API Key, Merchant ID e Reader ID. Usa il pulsante <strong>Aggiorna</strong> per elencare i lettori disponibili.</li>
+<li>Messaggi di errore frequenti durante l'uso: <strong>POS TIMEOUT</strong> (il POS non ha risposto in tempo), POS TX ERROR, OP. POS FALLITA, POS NO CARD, POS DISCONNESSO. Se compaiono e non sai come risolverli, contatta il tecnico.</li>
 </ul>
-<h6>Per scenario</h6>
+<h6>Schermate di esempio</h6>
 <div class="row g-3">
 <div class="col-12 col-lg-4">
 <p class="mb-2">
@@ -422,7 +414,7 @@ Il browser non supporta il video. <a href="assets/video/dojo-guida.mp4">Apri il 
 <p class="mb-2">
 <strong>Schermata Config POS - Dojo</strong>
 </p>
-<img src="assets/img/editremote/pos_dojo.png" class="img-fluid rounded border" alt="Configurazione POS tipo Dojo in EditRemote (nuovo flusso con API Key, Reseller ID e Terminal ID da lista cloud)">
+<img src="assets/img/editremote/pos_dojo.png" class="img-fluid rounded border" alt="Configurazione POS tipo Dojo in EditRemote (API Key, Reseller ID e Terminal ID)">
 </div>
 <div class="col-12 col-lg-4">
 <p class="mb-2">
@@ -440,54 +432,43 @@ Il browser non supporta il video. <a href="assets/video/dojo-guida.mp4">Apri il 
 <h6 class="mt-4">Controlli finali consigliati</h6>
 <ul>
 <li>Conferma su cassa dei valori programmati e del tipo POS selezionato.</li>
-<li>Prova una transazione per verificare dialogo RT-POS.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Se una voce non è disponibile, verifica modello RT e versione software del dispositivo.</li>
+<li>Fai un pagamento di prova per verificare che cassa e POS comunichino correttamente.</li>
+<li>Dopo la modifica, fai una copia di sicurezza con <strong>Export</strong>.</li>
+<li>Se una voce non è disponibile, controlla il modello della cassa e la sua versione.</li>
 </ul>
-<h2 id="configurazione-sumup" class="card-title" style="scroll-margin-top: 90px;">Programmazione SumUp</h2>
-<p>Collega EditRemote alla cassa, apri <strong>Config POS</strong> e seleziona <strong>SumUp</strong> nel campo Tipo POS. In modalità remota attendi prima la lettura della configurazione corrente; per avviare il collegamento consulta la <a href="panoramica_app.html#collegamento-remoto">guida al collegamento remoto</a>. In locale usa <strong>Importa</strong> per leggere i dati correnti.</p>
-<p> Quando selezioni <strong>TIPO POS = SUMUP</strong>, la configurazione richiede i campi: </p>
+<h6 id="configurazione-sumup" class="mt-4" style="scroll-margin-top: 90px;">Configurazione SumUp</h6>
+<p>Collega EditRemote alla cassa, apri <strong>Config POS</strong> e seleziona <strong>SumUp</strong> nel campo Tipo POS. Se lavori da remoto, attendi che EditRemote legga la configurazione attuale; per avviare il collegamento vedi la <a href="panoramica_app.html#collegamento-remoto">guida al collegamento remoto</a>. Se lavori in locale, premi <strong>Importa</strong> per leggere i dati attuali.</p>
+<p>Quando selezioni <strong>TIPO POS = SUMUP</strong>, devi compilare:</p>
 <ul>
-<li>
-<strong>API KEY</strong> (obbligatoria)</li>
-<li>
-<strong>MERCHANT ID</strong> (obbligatorio)</li>
-<li>
-<strong>READER ID</strong> (selezionabile dalla lista lettori disponibili)</li>
+<li><strong>API KEY</strong> (obbligatoria)</li>
+<li><strong>MERCHANT ID</strong> (obbligatorio)</li>
+<li><strong>READER ID</strong> (scegli dalla lista dei lettori disponibili)</li>
 </ul>
-<p>L'interfaccia SumUp è <strong>Cloud</strong>: non devi impostare IP o porta TCP del POS. Per usare i servizi SumUp devono essere disponibili una connessione Internet e un lettore compatibile con la relativa integrazione Cloud API, acceso e online.</p>
+<p>Con SumUp non devi impostare <strong>INDIRIZZO IP</strong> né <strong>PORTA TCP</strong> del POS. Il lettore deve essere acceso e collegato a internet.</p>
 <h3 class="h6">1. Inserisci API Key e Merchant ID</h3>
 <ol>
-<li>Inserisci la <strong>SumUp API Key</strong> autorizzata per il tuo account e il relativo <strong>SumUp Merchant ID</strong>. La API Key autentica le richieste; il Merchant ID identifica l'esercente. Non confondere questi dati con il codice di connessione remota alla cassa.</li>
-<li>Puoi digitare i dati oppure usare <strong>Barcode/QR</strong>. Un QR contenente soltanto la API Key con prefisso <strong>sup_sk_</strong> viene riconosciuto; sono supportati anche i QR strutturati con <strong>sumup_api_key=...</strong>.</li>
-<li>Nello scanner inquadra il QR e verifica il valore rilevato. Se l'immagine è ruotata usa <strong>Ruota</strong> o <strong>Specchio</strong>; premi <strong>Invia</strong> per riportare il dato nel campo. <strong>Cancella</strong> svuota il campo corrispondente.</li>
+<li>Inserisci la <strong>SumUp API Key</strong> del tuo account e il <strong>SumUp Merchant ID</strong> dell'esercente. La API Key è la chiave che autorizza le richieste; il Merchant ID identifica l'esercente. Non confonderli con il codice di collegamento remoto della cassa.</li>
+<li>Puoi digitare i dati oppure usare <strong>Barcode/QR</strong>. Viene riconosciuto un QR che contiene solo la API Key, con prefisso <strong>sup_sk_</strong>, e un QR con la dicitura <strong>sumup_api_key=...</strong>.</li>
+<li>Nello scanner inquadra il QR e controlla il valore letto. Se l'immagine è ruotata usa <strong>Ruota</strong> o <strong>Specchio</strong>; premi <strong>Invia</strong> per riportare il dato nel campo. <strong>Cancella</strong> svuota il campo.</li>
 </ol>
-<div class="alert alert-warning" role="alert"><strong>Proteggi le credenziali:</strong> la API Key è un dato riservato. Non pubblicare screenshot o QR che la contengono e non usare i dati dimostrativi del video per configurare un esercente.</div>
+<div class="alert alert-warning" role="alert"><strong>Proteggi le credenziali:</strong> la API Key è un dato riservato. Non pubblicare screenshot o QR che la contengono e non usare dati di esempio per configurare un esercente.</div>
 <h3 class="h6">2. Seleziona un lettore già associato</h3>
 <ol>
 <li>Dopo aver compilato API Key e Merchant ID, premi <strong>Aggiorna</strong> accanto al campo <strong>SumUp Reader ID</strong> per recuperare i lettori associati all'esercente.</li>
-<li>Apri l'elenco e scegli il Reader ID del terminale da collegare alla cassa. La scelta di un lettore già presente non richiede un nuovo pairing code.</li>
+<li>Apri l'elenco e scegli il Reader ID del terminale da collegare alla cassa. Per un lettore già presente non serve un nuovo pairing code.</li>
 <li>Premi <strong>Salva</strong> e attendi l'esito della programmazione.</li>
 </ol>
 <h3 class="h6">3. Aggiungi un nuovo terminale</h3>
 <ol>
-<li>Predisponi il terminale SumUp per l'associazione e recupera il <strong>pairing code mostrato dal terminale</strong>.</li>
+<li>Prepara il terminale SumUp per l'associazione e leggi il <strong>pairing code mostrato dal terminale</strong>.</li>
 <li>Nell'elenco <strong>SumUp Reader ID</strong> seleziona <strong>Aggiungi...</strong>.</li>
 <li>Alla richiesta <strong>Nome lettore</strong> inserisci un nome riconoscibile, ad esempio “Negozio”, e conferma.</li>
-<li>Alla richiesta <strong>Pairing code</strong> inserisci il codice del terminale e conferma. Non usare la API Key, il Merchant ID o il codice OTP della cassa in questo campo.</li>
-<li>Attendi la risposta SumUp. Se l'associazione riesce, il nuovo Reader ID viene aggiunto e selezionato e l'app avvia il salvataggio della configurazione POS. Attendi anche la conferma della cassa; se l'invio non riesce, ripeti il salvataggio senza creare nuovamente il lettore.</li>
+<li>Alla richiesta <strong>Pairing code</strong> (il codice che il terminale mostra per farsi riconoscere) inserisci il codice del terminale e conferma. In questo campo non inserire la API Key, il Merchant ID o altri codici della cassa.</li>
+<li>Attendi la risposta di SumUp. Se l'associazione riesce, il nuovo Reader ID viene aggiunto e selezionato e il programma salva la configurazione POS. Attendi anche la conferma della cassa; se l'invio non riesce, ripeti il salvataggio senza creare di nuovo il lettore.</li>
 </ol>
-<p>L'aggiunta è disponibile anche in <strong>modalità remota</strong>: EditRemote effettua il pairing tramite API SumUp e invia poi il Reader ID alla cassa. In locale l'associazione passa attraverso la cassa. Se API Key, Merchant ID o pairing code non sono validi, oppure manca la connessione, viene mostrato un errore: verifica i dati prima di riprovare.</p>
+<p>L'aggiunta funziona anche in <strong>modalità remota</strong>: EditRemote collega il lettore a SumUp e poi invia il Reader ID alla cassa. In locale l'associazione passa dalla cassa. Se API Key, Merchant ID o pairing code non sono validi, oppure manca la connessione, compare un errore: controlla i dati prima di riprovare.</p>
 <h3 class="h6">4. Abilita il pagamento e verifica</h3>
-<p>Dopo il salvataggio abilita <strong>ABILITA POS</strong> nei <a href="impostazioni_pagamenti.html">pagamenti</a> elettronici che devono usare il terminale, quindi verifica il funzionamento con una prova pagamento. Il solo inserimento delle credenziali non abilita automaticamente tutti i metodi di pagamento.</p>
-<h3 class="h6">Video: configurazione SumUp in EditRemote</h3>
-<p>Il video mostra l'apertura di Config POS in remoto, la selezione SumUp, i campi API Key e Merchant ID, l'uso dello scanner e dell'elenco lettori, quindi le richieste di nome e pairing code per <strong>Aggiungi...</strong>. I codici mostrati non sono validi e sono usati solo per test, come indicato dalla scritta in sovraimpressione. Nel filmato la richiesta termina con un errore di creazione lettore, non con un'associazione riuscita. In questo caso verifica credenziali, esercente e codice prima di riprovare. Le attese sono state tagliate per rendere più rapida la dimostrazione, mantenendo visibili i campi e i passaggi della procedura.</p>
-<div class="text-center mb-4">
-<video controls playsinline preload="metadata" class="rounded border" style="width: 100%; max-width: 380px; height: auto;" aria-label="Guida video alla programmazione SumUp in EditRemote">
-<source src="assets/video/sumup-guida.mp4" type="video/mp4">
-Il browser non supporta il video. <a href="assets/video/sumup-guida.mp4">Apri il video di configurazione SumUp</a>.
-</video>
-</div>
+<p>Dopo il salvataggio attiva <strong>ABILITA POS</strong> nei <a href="impostazioni_pagamenti.html">pagamenti</a> elettronici che devono usare il terminale, poi verifica il funzionamento con un pagamento di prova. Inserire le credenziali non attiva da sola tutti i metodi di pagamento.</p>
 </div>
 </div>
 </div>

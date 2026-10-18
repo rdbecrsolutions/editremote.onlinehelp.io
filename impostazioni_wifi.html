@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wifi - EditRemote Help</title>
 <meta name="description" content="Guida alla programmazione della tabella WiFi interna della cassa o RT tramite EditRemote">
-<meta name="keywords" content="EditRemote, WiFi, SSID, password, programmazione RT">
+<meta name="keywords" content="EditRemote, WiFi, SSID, password, programmazione cassa">
 <link href="assets/img/favicon.png" rel="icon">
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -264,41 +264,37 @@
 <div class="card">
 <div class="card-body pt-4">
 <h5 class="card-title">Tabella reti WiFi</h5>
-<div class="alert alert-warning" role="alert"><strong>Salvataggio remoto da ricollaudare sul RT.</strong> Nella versione provata il 17 ottobre 2026 mancava l'invio remoto Wifi. Il percorso e' stato corretto nei sorgenti e verificato offline, non ancora sulla cassa. Nell'app corretta un errore di invio lascia il dialogo aperto con la bozza; la chiusura dopo il salvataggio non sostituisce una nuova lettura. L'esempio con cinque record WF e ripristino e' stato verificato solo via BLE. Cambiare la rete utilizzata dal RT puo' interrompere la sessione: controlla la cassa prima di ripetere l'invio. <a href="panoramica_app.html#collegamento-remoto">Versioni e verifica della sessione remota</a>.</div>
-<p>EditRemote consente di programmare fino a cinque coppie <strong>Nome rete</strong> e <strong>Password</strong> nella tabella interna della cassa / RT.</p>
+<div class="alert alert-warning" role="alert"><strong>Attenzione alla rete della cassa.</strong> Se cambi la rete che la cassa usa, il collegamento può interrompersi: controlla la cassa prima di ripetere l'invio. Se l'invio non riesce, la finestra resta aperta con i dati inseriti. Chiudere la finestra dopo il salvataggio non sostituisce una nuova lettura.</div>
+<p>Con EditRemote puoi programmare fino a cinque coppie <strong>Nome rete</strong> e <strong>Password</strong> nella cassa.</p>
 <div class="hero-note">
 <i class="bi bi-info-circle me-2">
-</i>In EditRemote nome rete e password possono contenere al massimo <strong>39 caratteri</strong>. Il buffer firmware di 40 byte comprende il terminatore: non equivale a 40 caratteri digitabili.</div>
+</i>Nome rete e password possono avere al massimo <strong>39 caratteri</strong>. Non puoi scriverne di più.</div>
 <h6 class="mt-4">Disponibilità</h6>
 <p>La funzione è disponibile per:</p>
 <ul>
-<li>Evo, Evo+ e Jolly a partire dalla revisione 2.7.</li>
-<li>Gamma Plus a partire dalla revisione 23.</li>
+<li>Evo, Evo+ e Jolly a partire dalla versione 2.7.</li>
+<li>Gamma Plus a partire dalla versione 23.</li>
 </ul>
 <h6 class="mt-4">Compilazione</h6>
 <ol class="step-list">
-<li>Aprire <strong>Wifi</strong> nella sezione Configurazioni.</li>
-<li>Inserire il nome della rete e la password in una delle cinque righe disponibili.</li>
-<li>Usare <strong>Scansiona</strong> accanto al nome rete per scegliere una rete WiFi visibile.</li>
-<li>Usare <strong>Scansiona</strong> accanto alla password per acquisire la password da un QR code.</li>
-<li>Premere <strong>Salva</strong> per programmare la tabella interna della cassa / RT.</li>
-<li>Dopo il salvataggio il dialogo si chiude. Riaprire <strong>Wifi</strong> per ottenere una nuova lettura dalla cassa e controllare tutte e cinque le righe.</li>
+<li>Apri <strong>Wifi</strong> nella sezione Configurazioni.</li>
+<li>Inserisci il nome della rete e la password in una delle cinque righe disponibili.</li>
+<li>Premi <strong>Scansiona</strong> accanto al nome rete per scegliere una rete WiFi visibile.</li>
+<li>Premi <strong>Scansiona</strong> accanto alla password per leggere la password da un codice QR (il quadrato con i puntini).</li>
+<li>Premi <strong>Salva</strong> per inviare i dati alla cassa.</li>
+<li>Dopo il salvataggio la finestra si chiude. Riapri <strong>Wifi</strong> per leggere di nuovo i dati dalla cassa e controllare tutte e cinque le righe.</li>
 </ol>
-<h6 class="mt-4">Esempio verificato via BLE: quinta rete e limite dei campi</h6>
-<p>Nel collaudo su SMARTY EVO REV. 2.7 sono stati letti tutti i cinque record WF prima della scrittura. Nella quinta riga vuota sono stati inseriti SSID e password di prova di 40 caratteri: l'editor li ha limitati a 39, come previsto, e la nuova lettura dalla cassa ha confermato entrambi i valori di 39 caratteri.</p>
-<p>Provati anche <strong>Mostra/Nascondi</strong> della password e lo scorrimento fino alla quinta riga. Al termine la riga e' stata svuotata e tutti e cinque i record sono risultati identici alla baseline. Non sono stati collaudati in questa prova scansione delle reti, acquisizione QR o collegamento a un access point.</p>
-<img src="assets/img/editremote/evo-wifi-slot5.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="Quinta riga WiFi riletta dalla EVO con SSID di prova al limite dei 39 caratteri e password nascosta">
 <div class="shot-wrap mt-4">
 <img src="assets/img/editremote/wifi.png" class="img-fluid rounded border" alt="Schermata di programmazione WiFi EditRemote">
 <div class="shot-caption">Schermata di programmazione WiFi.</div>
 </div>
 <h6 class="mt-4">Cambio della rete utilizzata</h6>
-<p>La programmazione aggiorna la tabella interna della cassa / RT, ma non cambia automaticamente la rete attiva.</p>
-<p>Per cambiare effettivamente rete, eseguire sulla cassa i seguenti passaggi:</p>
+<p>La programmazione aggiorna i dati nella cassa, ma non cambia da sola la rete che la cassa usa.</p>
+<p>Per cambiare rete, esegui sulla cassa questi passaggi:</p>
 <div class="hero-note">
-<strong>833 [MENU] &rarr; WiFi &rarr; selezionare la rete di interesse &rarr; CAMBIO PSW: No</strong>
+<strong>833 [MENU] &rarr; WiFi &rarr; seleziona la rete che ti serve &rarr; CAMBIO PSW: No</strong>
 </div>
-<p class="mt-3">Impostare <strong>CAMBIO PSW</strong> su <strong>No</strong> perché la password è stata appena programmata tramite EditRemote.</p>
+<p class="mt-3">Imposta <strong>CAMBIO PSW</strong> su <strong>No</strong>, perché la password è appena stata programmata con EditRemote.</p>
 <div class="mt-4">
 <a class="btn btn-outline-primary" href="index.html">
 <i class="bi bi-arrow-left">

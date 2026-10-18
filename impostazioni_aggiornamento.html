@@ -309,78 +309,61 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Guida operativa</h5>
-<p>Questa sezione aggiorna il software della cassa con un pacchetto firmato <strong>.ecs</strong>. Il percorso locale e quello remoto sono distinti.</p>
+<p>Questa sezione aggiorna il software della cassa con un file <strong>.ecs</strong> fornito dal tecnico. Esistono due modi:</p>
+<ul>
+<li><strong>Remoto</strong>: l'aggiornamento avviene a distanza, senza chiavetta USB.</li>
+<li><strong>Locale</strong>: il file viene portato sulla cassa con una chiavetta USB (vedi la sezione in fondo alla pagina).</li>
+</ul>
 <div class="alert alert-info" role="alert">
-<strong>Nuovo percorso Remoto, preparato il 18 ottobre 2026:</strong> richiede app, servizio cloud e firmware RT aggiornati. Le verifiche offline non sostituiscono il collaudo sulla cassa. Un RT con firmware precedente deve ricevere prima l'aggiornamento abilitante tramite il percorso locale.
+<strong>Prima di usare Remoto:</strong> servono EditRemote aggiornato, il collegamento online attivo e il software della cassa aggiornato. Se la cassa ha un software precedente, aggiornala prima con il metodo <strong>Locale</strong>.
 </div>
-<h6>Aggiornamento in Remoto</h6>
+<h6>Aggiornamento da Remoto</h6>
 <ol>
-<li>Accorda l'intervento con l'esercente, che deve rimanere davanti alla cassa. Verifica i prerequisiti fiscali previsti, la gestione della lotteria e l'alimentazione. L'aggiornamento non esegue automaticamente una chiusura fiscale.</li>
+<li>Accordati con l'esercente: deve restare davanti alla cassa per tutto l'intervento. Verifica i requisiti fiscali previsti, la gestione della lotteria e l'alimentazione elettrica. L'aggiornamento non chiude automaticamente la giornata fiscale.</li>
 <li>Collegati in <strong>Remoto</strong> e apri <strong>Aggiornamento</strong>.</li>
-<li>Leggi la <strong>revisione installata</strong>, comunicata dalla cassa, e l'esito dei <strong>controlli preliminari RT</strong>. Se il controllo non &egrave; disponibile o aggiornato, <strong>AGGIORNA</strong> resta disabilitato.</li>
-<li>Compila <strong>Codice Fiscale Tecnico</strong> (16 caratteri, maiuscolo, struttura italiana anche con omocodia) e <strong>Partita Iva Laboratorio</strong> (11 cifre). I controlli regex verificano il formato, non l'identit&agrave; o l'abilitazione del tecnico.</li>
-<li>Seleziona il file dalla combobox: sono proposti solo gli ECS del modello collegato con <strong>revisione pari o superiore</strong> a quella installata, pubblicati nel catalogo privato. &Egrave; possibile reinstallare la stessa revisione; il downgrade non &egrave; consentito. La revisione viene letta dal pacchetto ECS, non dedotta dal nome file o dal tag della Release. Bozze e prerelease non sono elencate. Nessun firmware disponibile e errore di accesso al catalogo sono condizioni distinte.</li>
-<li><strong>Canale produzione/test:</strong> un nome con <strong>P immediatamente prima di .ECS</strong> identifica produzione (esempio SMEVO26P.ECS); senza la P identifica test (SMEVO26.ECS). Una cassa di produzione (firmware SW_PROD) non vede e non pu&ograve; ricevere da questo percorso file test. Una cassa test (senza SW_PROD) pu&ograve; vedere entrambi, sempre rispettando il divieto di downgrade. Se il RT non comunica il proprio canale, l'aggiornamento resta bloccato.</li>
-<li><strong>Versione visualizzata:</strong> per SMARTY EVO, SMARTY EVO+ e JOLLY la revisione numerica 26 viene mostrata come <strong>2.6</strong> (27 come 2.7). &Egrave; solo una convenzione di visualizzazione: confronti e divieto di downgrade usano sempre il valore intero dell'header ECS. Il nome del file non viene modificato.</li>
-<li>Premi <strong>AGGIORNA</strong> e leggi la conferma: dopo la ricezione del comando, la cassa terminer&agrave; il collegamento con EditRemote e proceder&agrave; autonomamente.</li>
-<li>Attendi la <strong>presa in carico</strong>. Questo messaggio <strong>non certifica l'installazione</strong>. Se l'esito non &egrave; verificabile, non ripetere l'invio alla cieca: contatta l'esercente.</li>
-<li>L'esercente conferma sulla cassa, attende il download e la verifica del pacchetto, quindi segue la conferma prevista dal RT prima dell'installazione. Il firmware mantiene i controlli di modello, boot, revisione e firma.</li>
-<li>L'esercente comunica al tecnico l'esito effettivo e la revisione dopo il riavvio, oppure l'errore o l'annullamento visualizzato/stampato. EditRemote non segue l'avanzamento dopo il distacco; una nuova sessione richiede una nuova connessione.</li>
+<li>Controlla la <strong>versione installata</strong>, mostrata dalla cassa, e lo stato dei <strong>controlli preliminari</strong>. Se lo stato non è disponibile o non è aggiornato, <strong>AGGIORNA</strong> resta disabilitato.</li>
+<li>Inserisci il <strong>Codice Fiscale Tecnico</strong> (16 caratteri, tutti maiuscoli) e la <strong>Partita IVA Laboratorio</strong> (11 cifre). Il programma controlla solo che il formato sia corretto: non verifica chi sei né se sei abilitato.</li>
+<li>Scegli il file dalla casella a discesa. Vengono proposti solo gli aggiornamenti compatibili con il modello di cassa collegato e con versione uguale o superiore a quella installata. Puoi reinstallare la stessa versione, ma non tornare a una versione precedente. Le bozze e le versioni in anteprima non compaiono nell'elenco. Se la casella è vuota, può significare che non ci sono aggiornamenti disponibili oppure che l'elenco non si è caricato per un problema di collegamento: in quest'ultimo caso contatta il tecnico. Non basarti solo sul nome del file per capire la versione.</li>
+<li><strong>Cassa in uso o cassa di prova:</strong> il nome del file indica il tipo. Se la cassa è in uso, scegli il file con la <strong>P</strong> subito prima di <strong>.ECS</strong> (esempio SMEVO26P.ECS). Il file senza la P (esempio SMEVO26.ECS) è quello per le casse di prova. Una cassa in uso non vede i file di prova e non può riceverli. Una cassa di prova può vederli entrambi, sempre nel rispetto del divieto di tornare a versioni precedenti. Se la cassa non comunica il proprio tipo, l'aggiornamento resta bloccato.</li>
+<li><strong>Numero di versione:</strong> su SMARTY EVO, SMARTY EVO+ e JOLLY la versione 26 è mostrata come <strong>2.6</strong> e la 27 come <strong>2.7</strong>. È solo un modo diverso di scrivere il numero: il confronto con la versione installata e il divieto di tornare indietro restano invariati. Il nome del file non cambia.</li>
+<li>Premi <strong>AGGIORNA</strong> e leggi la conferma. Quando la cassa ha ricevuto il comando, si scollega da EditRemote e prosegue da sola.</li>
+<li>Attendi il messaggio <strong>presa in carico</strong>. Significa che la cassa ha ricevuto il comando, <strong>non che l'aggiornamento è stato installato</strong>. Se non riesci a verificare l'esito, non inviare di nuovo il comando alla cieca: contatta l'esercente e il tecnico.</li>
+<li>L'esercente conferma sulla cassa, attende lo scaricamento del file, quindi segue le istruzioni che compaiono sulla cassa prima dell'installazione. Prima di installare, la cassa esegue i propri controlli di sicurezza su modello, versione e autenticità del file.</li>
+<li>L'esercente comunica al tecnico la versione mostrata dopo il riavvio, oppure l'errore o l'annullamento visualizzato o stampato. Dopo il distacco EditRemote non segue più l'avanzamento: per riprendere serve una nuova connessione.</li>
 </ol>
-<p><strong>Quando si abilita AGGIORNA:</strong> la cassa deve superare gli stessi controlli preliminari dell'aggiornamento firmato locale, senza la richiesta di autorizzazione fiscale e senza la presenza di una chiavetta USB. Il RT verifica alimentazione esterna sui modelli ambulanti, boot almeno 0x30, totali e contatori fiscali azzerati e assenza di scontrini lotteria da gestire. Restano le eccezioni di compilazione previste dal firmware (FOR_DEVELOPMENT per il boot, FORCE_UPGRADE per i controlli fiscali/lotteria). Il motivo di blocco viene mostrato nella vista: risolvilo sulla cassa e attendi il prossimo contatto. Le verifiche scadono dopo 45 secondi e sono rilette automaticamente; servizio e RT le ripetono prima di accettare il comando.</p>
+<p><strong>Quando si attiva AGGIORNA:</strong> il pulsante si attiva solo se la cassa supera gli stessi controlli preliminari previsti per l'aggiornamento Locale. In particolare: nessuna richiesta di autorizzazione fiscale a display, nessuna chiavetta USB inserita, alimentazione esterna collegata sui modelli portatili, totali e contatori fiscali azzerati, nessuno scontrino lotteria da gestire. Il motivo del blocco viene mostrato nella schermata: risolvilo sulla cassa, poi attendi il contatto successivo. Le verifiche si ripetono automaticamente e vengono ricontrollate prima che la cassa accetti il comando.</p>
 <div class="alert alert-warning" role="alert">
-Non spegnere la cassa durante download e installazione. Il distacco remoto &egrave; previsto: non tentare di riconnettere o reinviare il comando mentre l'esercente sta completando l'intervento.
+Non spegnere la cassa durante lo scaricamento e l'installazione. Il distacco da EditRemote è previsto: non tentare di riconnettere o reinviare il comando mentre l'esercente sta completando l'intervento.
 </div>
-<p>Il servizio cloud accede al repository privato e rende disponibile alla cassa un download temporaneo: non occorrono credenziali GitHub nell'app o nel RT. I dati tecnico vengono registrati per l'intervento firmware attraverso il percorso previsto dal RT.</p>
-<h6>Collaudo reale: preliminari superati, ma nessun firmware selezionabile</h6>
-<p>Il 18 ottobre 2026, su SMARTY EVO REV. 2.7 collegata in Remoto, il RT ha comunicato i controlli preliminari superati. Il catalogo non ha proposto pacchetti compatibili e <strong>AGGIORNA era disabilitato</strong>, verificato anche nello stato accessibile del pulsante. Il solo file pubblicato, chiamato SMEVO27.ECS, conteneva ancora la revisione 26 nell'header firmato: il nome non lo rende una versione 2.7. Il test si &egrave; fermato prima dell'invio: <strong>nessun download/installazione firmware avviato sulla cassa</strong>.</p>
-<p>Nella registrazione la dicitura &ldquo;Nessun firmware pubblicato per questo modello&rdquo; appartiene alla build provata: indica un elenco compatibile vuoto, non necessariamente un repository senza Release. Il testo &egrave; stato precisato nei sorgenti successivi.</p>
-<video controls preload="metadata" playsinline class="rounded border mb-3" style="width:100%;max-width:400px" poster="assets/img/editremote/evo-ota-preflight.png" aria-label="OTA remoto: revisione 2.7, preliminari superati e aggiornamento disabilitato senza pacchetti compatibili">
-<source src="assets/video/evo-ota-preflight.mp4" type="video/mp4">
-<track src="assets/video/evo-ota-preflight.vtt" kind="captions" srclang="it" label="Italiano" default>
-Il browser non supporta il video. <a href="assets/video/evo-ota-preflight.mp4">Scarica il video</a>.
-</video>
-<p><a href="assets/img/editremote/evo-ota-preflight.png">Apri la schermata del controllo preliminare</a>. Schermata e video sono ritagliati sulla vista OTA, senza la matricola mostrata nella schermata sottostante.</p>
-<h6>Collaudo reale: comando preso in carico e distacco remoto</h6>
-<p>Con un nuovo ECS avente effettivamente revisione 27, pubblicato come asset della Release smarty-evo-27-test, la cassa 2.7 ha accettato la reinstallazione della stessa revisione. Sono stati usati dati tecnico fittizi, su esplicita autorizzazione per la cassa di test. EditRemote ha mostrato la conferma, atteso l'ACK e riportato <strong>Aggiornamento affidato alla cassa</strong>, tornando disconnessa.</p>
-<video controls preload="metadata" playsinline class="w-100 rounded border mb-3" poster="assets/img/editremote/evo-ota-handoff.png" aria-label="Conferma OTA 2.7 e presa in carico, non conferma dell'installazione">
-<source src="assets/video/evo-ota-handoff.mp4" type="video/mp4">
-<track src="assets/video/evo-ota-handoff.vtt" kind="captions" srclang="it" label="Italiano" default>
-Il browser non supporta il video. <a href="assets/video/evo-ota-handoff.mp4">Scarica il video</a>.
-</video>
-<div class="alert alert-warning" role="alert"><strong>Limite del collaudo:</strong> la presa in carico &egrave; riuscita, ma l'installazione non &egrave; stata confermata. Nel tentativo registrato anche su COM11, dopo l'uscita dal cloud e la conferma fisica si &egrave; verificato un SOFT-INIT prima delle tracce di download. Nei sorgenti &egrave; stato corretto un calcolo della percentuale che divideva per zero prima di conoscere la dimensione del pacchetto. Correzione compilata e verificata con test aritmetici, ma ancora da installare localmente e ricollaudare sul RT. Non usare il video come prova di un aggiornamento completato.</div>
-<h6>Aggiornamento locale con LoadDump</h6>
-<p><strong>Retest del 18 ottobre, ore 15:29:</strong> dopo il caricamento locale della correzione, confermato dall'operatore, il riavvio dopo la conferma si &egrave; ripetuto. La correzione aritmetica non ha risolto il blocco osservato.</p>
-<p><strong>Aggiornamento diagnostico, ore 17:00:</strong> il debugger ha rilevato una violazione dello stack del task principale. Dopo lo spostamento dei buffer temporanei del percorso remoto nel secondo banco RAM esterno, senza aumentare lo stack, l'operatore ha confermato che la riprova ha funzionato. Build e link del firmware Test sono riusciti senza errori o warning. Restano da registrare il margine stack minimo e la verifica separata della revisione installata dopo il riavvio: i video mostrano la presa in carico, non certificano l'installazione completa.</p>
-<div class="alert alert-warning mt-3" role="alert">
-<strong>Solo percorso locale:</strong> al termine del trasferimento rimuovi la USB ed esegui in cassa la funzione <strong>978 MENU</strong>. </div>
-<h6>Come usare la pagina in locale</h6>
+<p>Non servono password o account aggiuntivi nell'app o nella cassa. I dati del tecnico vengono registrati per l'intervento.</p>
+<h6>Aggiornamento Locale (con chiavetta USB)</h6>
+<p>Usa questo metodo per portare la cassa a una versione compatibile con Remoto, oppure quando il tecnico lo indica.</p>
+<div class="alert alert-warning" role="alert">
+Usa il metodo Locale solo su indicazione del tecnico. Al termine del trasferimento rimuovi la chiavetta USB ed esegui in cassa la funzione <strong>978 MENU</strong>.
+</div>
+<h6>Come usare la pagina in Locale</h6>
 <ol>
 <li>Apri <strong>Aggiornamento</strong> dalla lista Configurazioni.</li>
 <li>Premi <strong>Sfoglia</strong> e seleziona il file <strong>.ecs</strong>.</li>
 <li>Controlla il percorso mostrato nel campo file.</li>
-<li>Premi <strong>Trasmetti</strong> per inviare il pacchetto alla cassa.</li>
-<li>A fine invio, esegui la funzione 978 sulla macchina RT.</li>
+<li>Premi <strong>Trasmetti</strong> per inviare il file alla cassa.</li>
+<li>Quando l'invio è terminato, rimuovi la chiavetta USB ed esegui in cassa la funzione <strong>978 MENU</strong>.</li>
 </ol>
-<h6>Significato campi e pulsanti</h6>
+<h6>Significato dei campi e dei pulsanti</h6>
 <ul>
-<li>
-<strong>File ECS</strong>: pacchetto di aggiornamento da trasferire.</li>
-<li>
-<strong>Sfoglia</strong>: apre il selettore file per scegliere il pacchetto ECS.</li>
-<li>
-<strong>Trasmetti</strong>: avvia il trasferimento chunked del file verso la cassa.</li>
-<li>
-<strong>Esci</strong>: chiude il dialog senza invio.</li>
+<li><strong>File .ecs</strong>: il file di aggiornamento da inviare alla cassa.</li>
+<li><strong>Sfoglia</strong>: apre la finestra per scegliere il file .ecs.</li>
+<li><strong>Trasmetti</strong>: invia il file alla cassa.</li>
+<li><strong>Esci</strong>: chiude la finestra senza inviare nulla.</li>
 </ul>
-<div class="alert alert-warning" role="alert"> Non interrompere alimentazione o collegamento durante il trasferimento. </div>
-<h6>Controlli finali locali</h6>
+<div class="alert alert-warning" role="alert">Non spegnere la cassa e non scollegare la chiavetta durante l'invio.</div>
+<h6>Controlli finali</h6>
 <ul>
-<li>Verifica conferma di fine trasferimento nell'app.</li>
-<li>Esegui 978 MENU sulla cassa e attendi il completamento lato RT.</li>
-<li>Al riavvio, conferma revisione software attesa.</li>
+<li>Verifica che l'app confermi la fine dell'invio.</li>
+<li>Esegui 978 MENU sulla cassa e attendi che la cassa completi l'operazione.</li>
+<li>Al riavvio, verifica che la versione della cassa sia quella prevista.</li>
 </ul>
-<h6 class="mt-4">Schermata Aggiornamento locale</h6>
+<h6 class="mt-4">Schermata Aggiornamento</h6>
 <img src="assets/img/editremote/aggiornamento.png" class="img-fluid rounded border" alt="Schermata Aggiornamento">
 </div>
 </div>

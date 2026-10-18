@@ -309,50 +309,50 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Procedura</h5>
-<p> Questa programmazione equivale al comando <strong>818 MENU</strong> sul registratore RT.</p>
+<p>Questa programmazione corrisponde al comando <strong>818 MENU</strong> sulla cassa.</p>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
 <strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
 <ol>
-<li>Apri la sezione dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
-<li>Applica solo le modifiche necessarie.</li>
-<li>Salva e verifica l'esito operativo.</li>
+<li>Apri la sezione dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Import</strong> per leggere i dati attuali dalla cassa.</li>
+<li>Modifica solo i campi necessari.</li>
+<li>Premi <strong>Salva</strong> e verifica l'esito, come indicato alla fine di questa pagina.</li>
 </ol>
 <h6>Quando usare ATECO</h6>
 <ul>
-<li>I codici ATECO servono solo se il cliente lavora in <strong>contabilita separata</strong>.</li>
-<li>Se non usi contabilita separata, lascia i codici a <strong>0</strong> (disabilitati).</li>
+<li>I codici ATECO (il numero che indica il tipo di attività) servono solo se il cliente lavora in <strong>contabilità separata</strong>.</li>
+<li>Se non usi contabilità separata, lascia i codici a <strong>0</strong> (disabilitati).</li>
 </ul>
 <h6>Regole importanti di compilazione</h6>
 <ul>
 <li>
 <strong>ATECO = 0</strong> significa codice non attivo/disabilitato.</li>
-<li>Non inserire zeri iniziali: il codice va scritto come numero naturale (esempio: 012400 va inserito come 12400).</li>
-<li>L'app controlla solo che il valore sia numerico nel range consentito, ma <strong>non verifica l'esistenza reale del codice ATECO</strong>.</li>
-<li>Se inserisci un ATECO errato o inesistente, la chiusura può essere scartata in fase di invio dal server Agenzia Entrate.</li>
+<li>Non scrivere zeri iniziali: il codice va inserito come numero, senza zeri davanti (esempio: 012400 va inserito come 12400).</li>
+<li>L'app controlla solo che il valore sia un numero nell'intervallo consentito. <strong>Non verifica che il codice ATECO esista davvero</strong>: controllalo con il consulente.</li>
+<li>Se inserisci un codice ATECO errato o inesistente, la chiusura può essere scartata quando viene inviata all'Agenzia delle Entrate.</li>
 </ul>
-<h6>Significato campi della view</h6>
+<h6>Significato dei campi</h6>
 <ul>
 <li>
-<strong>Codice 1 / Codice 2 / Codice 3</strong>: fino a tre codici ATECO configurabili per l'attività.</li>
+<strong>Codice 1 / Codice 2 / Codice 3</strong>: fino a tre codici ATECO per l'attività.</li>
 <li>
-<strong>Ateco Default</strong>: seleziona quale ATECO usare come predefinito nelle operazioni che richiedono un ATECO attivo.</li>
+<strong>Ateco Default</strong>: indica quale codice ATECO usare di default nelle operazioni che richiedono un codice attivo.</li>
 <li>
-<strong>Modalità</strong>: definisce il comportamento della selezione ATECO: Disabilitato = nessuna selezione ATECO operativa; Selezione stabile = rimane attivo il codice selezionato; Selezione one-shot = selezione temporanea per la singola operazione.</li>
+<strong>Modalità</strong>: indica come viene scelto il codice ATECO. <strong>Disabilitato</strong>: nessun codice ATECO attivo. <strong>Selezione stabile</strong>: il codice scelto resta attivo. <strong>Selezione one-shot</strong>: il codice viene scelto solo per la singola operazione.</li>
 </ul>
-<p> In <strong>Selezione one-shot</strong>, se selezioni ad esempio <strong>ATECO 2</strong> mentre il <strong>Default</strong> e impostato su <strong>ATECO 3</strong>, dopo la chiusura del documento commerciale l'ATECO corrente torna automaticamente ad <strong>ATECO 3</strong>. </p>
-<h6>Dipendenze tra ATECO1, ATECO2, ATECO3</h6>
+<p>In <strong>Selezione one-shot</strong>, se selezioni ad esempio <strong>ATECO 2</strong> mentre il <strong>Default</strong> è impostato su <strong>ATECO 3</strong>, dopo la chiusura del documento commerciale il codice attivo torna automaticamente ad <strong>ATECO 3</strong>.</p>
+<h6>Ordine di abilitazione dei codici</h6>
 <ul>
 <li>Per usare <strong>ATECO 2</strong>, deve essere prima abilitato <strong>ATECO 1</strong>.</li>
 <li>Per usare <strong>ATECO 3</strong>, devono essere prima abilitati <strong>ATECO 1</strong> e <strong>ATECO 2</strong>.</li>
-<li>Se il Default punta a un codice disabilitato (0), la configurazione non e coerente e va corretta.</li>
+<li>Se il <strong>Default</strong> punta a un codice disabilitato (0), la configurazione non è corretta e va sistemata.</li>
 </ul>
 <h6>Controlli finali consigliati</h6>
 <ul>
-<li>Conferma su cassa dei valori programmati.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Verifica compatibilità modello/revisione se una voce non è disponibile.</li>
+<li>Controlla sulla cassa che i valori programmati siano quelli giusti.</li>
+<li>Dopo la modifica, esporta una copia di sicurezza della configurazione (file di salvataggio).</li>
+<li>Se una voce non è disponibile, verifica che il modello di cassa sia compatibile; in caso di dubbi contatta il tecnico.</li>
 </ul>
 <img src="assets/img/editremote/ateco.png" class="img-fluid rounded border" alt="Programmazione ATECO">
 </div>
@@ -364,21 +364,13 @@
 <div class="card">
 <div class="card-body">
 <h2 id="tablet-ateco" class="card-title">Sul tablet: verifica dei cinque campi</h2>
-<div class="alert alert-warning" role="alert"><strong>SMARTY EVO REV. 2.7, prova del 17 ottobre 2026:</strong> i tre codici e l'ATECO predefinito sono stati salvati e riletti correttamente. Le modalita' 1 (stabile) e 2 (singola operazione), invece, sono tornate entrambe a 0 nella nuova lettura. L'app segnala il valore non memorizzato: non considerare il solo ACK una conferma. La dimostrazione seguente su firmware compatibile non certifica queste modalita' sulla EVO in prova. La configurazione originale e' stata ripristinata e riletta integralmente.</div>
 <ol>
-<li>Premi <strong>Importa</strong> prima di modificare Codice 1, Codice 2 e Codice 3.</li>
-<li>Controlla anche <strong>Ateco Default</strong> e <strong>Modalita</strong>, non soltanto i tre numeri.</li>
-<li>Premi <strong>Salva</strong>, attendi e premi nuovamente <strong>Importa</strong>.</li>
-<li>Verifica tutti e cinque i campi riletti. Se la modalita' non persiste, controlla la compatibilita' del firmware con l'assistenza.</li>
+<li>Premi <strong>Importa</strong> prima di modificare <strong>Codice 1</strong>, <strong>Codice 2</strong> e <strong>Codice 3</strong>.</li>
+<li>Controlla anche <strong>Ateco Default</strong> e <strong>Modalità</strong>, non solo i tre codici.</li>
+<li>Premi <strong>Salva</strong>, attendi la conferma e premi di nuovo <strong>Importa</strong>.</li>
+<li>Verifica che tutti e cinque i campi riletti siano uguali a quelli che hai inserito.</li>
 </ol>
-<div class="alert alert-warning" role="alert">I codici della dimostrazione sono dati di prova, non una proposta per la tua attivita'. Non copiarli senza verifica con il consulente.</div>
-<figure>
-<img src="assets/img/editremote/tablet-ateco.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border" alt="ATECO su tablet: tre codici, ATECO predefinito e modalita' di selezione">
-<figcaption>Rilettura reale dei cinque campi dopo il salvataggio, su firmware compatibile.</figcaption>
-</figure>
-<video controls preload="metadata" playsinline class="w-100 rounded border" aria-label="Dimostrazione dei campi ATECO sul tablet">
-<source src="assets/video/tablet-ateco.mp4" type="video/mp4"> Il browser non supporta il video. <a href="assets/video/tablet-ateco.mp4">Scarica la registrazione MP4</a>. </video>
-<p class="text-muted mt-2">Estratto della programmazione di prova. La registrazione non costituisce verifica fiscale dell'esistenza o dell'adeguatezza dei codici.</p>
+<div class="alert alert-warning" role="alert">Se un campo non resta salvato, contatta il tecnico o l'assistenza prima di continuare.</div>
 </div>
 </div>
 </section>

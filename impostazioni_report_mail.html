@@ -309,42 +309,33 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Guida operativa</h5>
-<div class="alert alert-warning" role="alert"><strong>Remoto: prova sulla cassa non completata.</strong> Il 17 ottobre 2026 la lettura non ha aperto il dialogo entro l'attesa e anche altre sezioni hanno smesso di rispondere: non e' dimostrato un difetto specifico di Report Mail. L'invio remoto mancante e' stato collegato nei sorgenti e verificato offline, non ancora sul RT. Dopo l'aggiornamento attendi l'applicazione e riapri per rileggere; in caso di errore conserva la bozza e verifica prima di reinviare. L'esempio riuscito seguente riguarda BLE, non il recapito delle email. <a href="panoramica_app.html#collegamento-remoto">Versioni e verifica della sessione remota</a>.</div>
-<p> Questa programmazione equivale al comando <strong>853 MENU</strong> sul registratore RT.</p>
+<p>Questa sezione equivale al comando <strong>853 MENU</strong> sulla cassa. Serve a scegliere a quale indirizzo email arrivano i report, quali eventi li generano e ogni quanto vengono inviati.</p>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
 <strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
-<ol>
-<li>Apri la sezione dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
-<li>Applica solo le modifiche necessarie.</li>
-<li>Salva e verifica l'esito operativo.</li>
-</ol>
-<h6>Campi principali e a cosa servono</h6>
+<h6>Campi da compilare</h6>
 <ul>
-<li>
-<strong>Email:</strong> indirizzo destinatario dei report.</li>
-<li>
-<strong>Eventi che generano report:</strong> seleziona quali eventi devono produrre una e-mail.</li>
-<li>
-<strong>Intervallo:</strong> definisce ogni quanto inviare i report.</li>
+<li><strong>Email</strong>: l'indirizzo che riceve i report. È la casella di posta a cui vanno inviate le email: chiedila all'esercente.</li>
+<li><strong>Eventi che generano report</strong>: l'elenco degli eventi che, quando si verificano, producono una email. Attiva solo quelli che ti servono.</li>
+<li><strong>Intervallo</strong>: indica ogni quanto inviare i report.</li>
 </ul>
+<h6>Come impostare i report mail</h6>
+<ol>
+<li>Apri la sezione dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Importa</strong> e conserva indirizzo, intervallo e stato di tutti i dodici eventi.</li>
+<li>Seleziona l'intervallo necessario, senza cambiare il destinatario.</li>
+<li>Scorri la lista per controllare anche <strong>Cambio intestazione, Hard init, Soft init e Aggiornamento firmware</strong>: non sono tutti visibili nella prima schermata.</li>
+<li>Premi <strong>Salva</strong>, attendi il completamento, poi premi di nuovo <strong>Importa</strong> e confronta ogni evento e l'intervallo con quelli che hai impostato.</li>
+</ol>
+<div class="alert alert-warning" role="alert">
+In caso di errore, non inviare di nuovo subito. Verifica prima i valori sulla cassa oppure contatta il tecnico.
+</div>
 <h6>Controlli finali consigliati</h6>
 <ul>
-<li>Conferma su cassa dei valori programmati.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Verifica compatibilità modello/revisione se una voce non è disponibile.</li>
+<li>Conferma sulla cassa i valori programmati.</li>
+<li>Esporta una copia di sicurezza della configurazione (file di salvataggio) dopo la modifica.</li>
+<li>Se una voce non è disponibile, verifica che il modello di cassa sia compatibile con la funzione.</li>
 </ul>
-<h6 class="mt-4">Report Mail</h6>
-<h3 class="h6">Esempio verificato via BLE su tablet e SMARTY EVO REV. 2.7</h3>
-<ol>
-<li>Premi <strong>Importa</strong> e conserva indirizzo, intervallo e stato di tutti i dodici eventi.</li>
-<li>Seleziona l'intervallo necessario. Nella prova e' passato da <strong>30 minuti a 1 ora</strong>, senza cambiare destinatario.</li>
-<li>Scorri la lista per controllare anche <strong>Cambio intestazione, Hard init, Soft init e Aggiornamento firmware</strong>: non sono tutti visibili nella prima schermata.</li>
-<li>Premi <strong>Salva</strong>, attendi il completamento, poi <strong>Importa</strong> e confronta ogni evento e l'intervallo.</li>
-</ol>
-<p>Nel collaudo del 17 ottobre 2026 tutti i dodici eventi sono stati invertiti e riletti, poi ripristinati insieme all'intervallo originale. Il confronto finale del record MR e' risultato identico alla baseline privata. Non e' una prova di consegna delle email: la configurazione salvata non certifica SMTP o recapito.</p>
-<img src="assets/img/editremote/evo-report-mail.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border mb-3" alt="Report Mail su tablet: intervallo e primi eventi; campo destinatario oscurato">
 <img src="assets/img/editremote/report_mail_config.png" class="img-fluid rounded border" alt="Programmazione Report Mail">
 </div>
 </div>

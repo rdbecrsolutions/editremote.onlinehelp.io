@@ -309,47 +309,45 @@
 <div class="card">
 <div class="card-body">
 <h5 class="card-title">Guida operativa</h5>
-<p> Questa programmazione equivale al comando <strong>811 MENU</strong> sul registratore RT.</p>
+<p>Questa sezione serve a impostare il servizio di posta con cui la cassa spedisce le e-mail (ad esempio scontrini o documenti ai clienti). Corrisponde al comando <strong>811 MENU</strong> sulla cassa.</p>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Nota operativa:</strong>
-<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale. </div>
+<strong>Import</strong> legge i dati dalla cassa, <strong>Salva</strong> programma la cassa, mentre <strong>Esci</strong> ti riporta alla schermata principale.</div>
 <ol>
-<li>Apri la sezione dalla lista Configurazioni.</li>
-<li>Importa i dati correnti dalla cassa.</li>
-<li>Applica solo le modifiche necessarie.</li>
-<li>Salva e verifica l'esito operativo.</li>
+<li>Apri la sezione dalla lista <strong>Configurazioni</strong>.</li>
+<li>Premi <strong>Import</strong> per leggere i dati attuali dalla cassa.</li>
+<li>Modifica solo i campi che devono cambiare.</li>
+<li>Premi <strong>Salva</strong>, attendi la conferma e controlla che l'esito sia positivo.</li>
 </ol>
-<h6>Cosa cambiare e a cosa serve</h6>
+<h6>Cosa scrivere nei campi e da dove si ricava</h6>
 <ul>
 <li>
-<strong>Server SMTP:</strong> definisce il server usato per spedire le e-mail.</li>
+<strong>Server SMTP:</strong> l'indirizzo del servizio che spedisce le e-mail (il server di posta in uscita) del tuo gestore e-mail, ad esempio smtp.gmail.com per Gmail. Lo trovi nelle impostazioni della posta o nelle guide del gestore, cercando "posta in uscita" (o "SMTP", il nome tecnico usato da molti gestori).</li>
 <li>
-<strong>Porta:</strong> imposta il canale di comunicazione (es. 465 SSL o 587 TLS).</li>
+<strong>Porta:</strong> il numero del canale di collegamento del servizio di posta in uscita. I valori più comuni sono 465 e 587. Va sempre indicato insieme all'indirizzo del Server SMTP.</li>
 <li>
-<strong>Sicurezza SSL/TLS:</strong> abilita la cifratura del traffico SMTP.</li>
+<strong>Sicurezza SSL/TLS:</strong> il tipo di protezione (SSL o TLS, nomi tecnici) con cui la cassa si collega al servizio di posta. Scegli quello indicato dal gestore insieme alla porta.</li>
 <li>
-<strong>Utente mittente:</strong> account autorizzato all'invio.</li>
+<strong>Utente mittente:</strong> l'indirizzo e-mail con cui spedisci, cioè il tuo account di posta.</li>
 <li>
-<strong>Password:</strong> credenziale dell'account SMTP (per Gmail usare password app).</li>
+<strong>Password:</strong> la password dell'account di posta. Per Gmail non usare la password normale, ma la Password per le app (vedi avviso sotto). Sullo schermo i caratteri compaiono come asterischi: è normale, non devi scrivere gli asterischi, ma digitare la password vera.</li>
 <li>
-<strong>StartTLS:</strong> abilitalo quando il provider richiede cifratura negoziata sulla connessione SMTP (tipicamente porta 587). Se usi relay locale senza TLS, lascialo disattivo.</li>
+<strong>StartTLS:</strong> una protezione aggiuntiva della connessione. Attivala solo se il gestore lo richiede, di solito quando usi la porta 587. Se non sai, chiedi al gestore.</li>
 <li>
-<strong>Client Authentication:</strong> abilitala quando il server SMTP richiede login client (username/password). Se il server accetta invio senza autenticazione dalla rete locale, può rimanere disattiva.</li>
+<strong>Client Authentication:</strong> fa in modo che la cassa acceda al servizio con utente e password prima di spedire. Attivala se il gestore richiede il login per inviare e-mail.</li>
 </ul>
 <h6>Controlli finali consigliati</h6>
 <ul>
-<li>Conferma su cassa dei valori programmati.</li>
-<li>Export XML di backup dopo la modifica.</li>
-<li>Verifica compatibilità modello/revisione se una voce non è disponibile.</li>
+<li>Verifica sulla cassa che i valori salvati siano quelli corretti.</li>
+<li>Salva una copia di sicurezza (file di salvataggio della configurazione) dopo la modifica.</li>
+<li>Se una voce non è disponibile, verifica con l'assistenza che il modello della cassa sia compatibile.</li>
 </ul>
-<div class="alert alert-warning" role="alert"> Per account Google/Gmail usa una <strong>Password per le app</strong> (non la password principale): attiva prima la verifica in due passaggi sull'account Google e poi genera la password app dedicata da inserire in configurazione. </div>
+<div class="alert alert-warning" role="alert">Per gli account Google/Gmail usa una <strong>Password per le app</strong>, non la password normale dell'account. Attiva prima la verifica in due passaggi sull'account Google, poi crea una Password per le app dedicata e inseriscila nel campo Password.</div>
 <h6 class="mt-4">Configurazione Tx Email</h6>
-<div class="alert alert-warning" role="alert"><strong>Attenzione alla modalita' Remoto.</strong> Nel collaudo del 17 ottobre 2026, dopo Salva e una nuova lettura remota, StartTLS e Client Authentication erano rimasti ai valori iniziali: l'invio non era avvenuto. Il percorso remoto e' stato corretto nei sorgenti e verificato offline, ma va ancora aggiornato e collaudato sulla cassa. La prova riuscita seguente riguarda esclusivamente BLE. Non considerare il cambio delle spunte una conferma: attendi l'applicazione e riapri la sezione per una nuova lettura. In caso di errore la bozza resta modificabile. <a href="panoramica_app.html#collegamento-remoto">Versioni e verifica della sessione remota</a>.</div>
-<h3 class="h6">Prova su tablet via BLE: StartTLS e autenticazione</h3>
-<p>Su SMARTY EVO REV. 2.7 sono state invertite entrambe le spunte <strong>StartTLS</strong> e <strong>Client Authentication</strong>, quindi salvate e rilette con <strong>Importa</strong>. Sono state infine ripristinate: entrambi i record E1/E2 sono tornati identici alla lettura iniziale, comprese le credenziali mantenute in privato.</p>
-<p>Prima di modificare salva una baseline completa. Non sostituire la password con asterischi: la mascheratura nasconde il valore, non e' una password da digitare. Il collaudo conferma la programmazione dei flag, non un accesso al server o il recapito di un'email.</p>
-<img src="assets/img/editremote/evo-txemail.png" width="1280" height="800" loading="lazy" class="img-fluid rounded border mb-3" alt="Tx Email su tablet: server, porta e flag di sicurezza; destinatario, username e password oscurati">
+<div class="alert alert-warning" role="alert"><strong>Se lavori in modalità Remoto:</strong> dopo <strong>Salva</strong>, attendi la conferma, riapri la sezione e controlla che <strong>StartTLS</strong> e <strong>Client Authentication</strong> siano come li hai impostati. Se non restano uguali, il salvataggio non è avvenuto: ripeti l'operazione o contatta l'assistenza. Per maggiori dettagli vedi <a href="panoramica_app.html#collegamento-remoto">Collegamento remoto</a>.</div>
+<p>Prima di modificare, annota i valori attuali (server, porta, sicurezza e utente). Così puoi tornare indietro se qualcosa non funziona.</p>
 <img src="assets/img/editremote/txemail.png" class="img-fluid rounded border" alt="Programmazione TX Email">
+
 </div>
 </div>
 </div>

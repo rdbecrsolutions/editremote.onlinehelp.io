@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gestione DGFE - EditRemote Help</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+<div class="d-flex align-items-center justify-content-between">
+<a href="index.html" class="logo d-flex align-items-center">
+<img src="assets/img/Icon.png" alt="">
+<span class="d-none d-lg-block">EditRemote</span>
+</a>
+<i class="bi bi-list toggle-sidebar-btn">
+</i>
+</div>
+<!-- End Logo -->
+<nav class="header-nav ms-auto">
+<ul class="d-flex align-items-center">
+<li class="nav-item d-block d-lg-none">
+<a class="nav-link nav-icon search-bar-toggle " href="#">
+<i class="bi bi-search">
+</i>
+</a>
+</li>
+<!-- End Search Icon-->
+<li class="nav-item dropdown">
+</header>
+<!-- End Header -->
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+<ul class="sidebar-nav" id="sidebar-nav">
+<li class="nav-item">
+<a class="nav-link collapsed" href="index.html">
+<i class="bi bi-grid">
+</i>
+<span>Home</span>
+</a>
+</li>
+<!-- End Dashboard Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" data-bs-target="#Panoramica" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Panoramica</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Panoramica" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+<li>
+<a href="panoramica_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Panoramica</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#Configurazioni" data-bs-toggle="collapse" href="#">
+<i class="bi bi-menu-button-wide">
+</i>
+<span>Configurazioni</span>
+<i class="bi bi-chevron-down ms-auto">
+</i>
+</a>
+<ul id="Configurazioni" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+<li>
+<a href="impostazioni_intestazione.html">
+<i class="bi bi-circle">
+</i>
+<span>Intestazione</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cortesia.html">
+<i class="bi bi-circle">
+</i>
+<span>Cortesia</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_iva.html">
+<i class="bi bi-circle">
+</i>
+<span>IVA</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_reparti.html">
+<i class="bi bi-circle">
+</i>
+<span>Reparti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_modificatori.html">
+<i class="bi bi-circle">
+</i>
+<span>Modificatori</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_pagamenti.html">
+<i class="bi bi-circle">
+</i>
+<span>Pagamenti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_articoli.html">
+<i class="bi bi-circle">
+</i>
+<span>Articoli</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_ateco.html">
+<i class="bi bi-circle">
+</i>
+<span>Ateco</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_opzioni_app.html">
+<i class="bi bi-circle">
+</i>
+<span>Opzioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_autorizzazioni.html">
+<i class="bi bi-circle">
+</i>
+<span>Autorizzazioni</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_cassieri.html">
+<i class="bi bi-circle">
+</i>
+<span>Cassieri</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_clienti.html">
+<i class="bi bi-circle">
+</i>
+<span>Clienti</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_messaggi_pubblicitari.html">
+<i class="bi bi-circle">
+</i>
+<span>Messaggi Pubblicitari</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_varie.html">
+<i class="bi bi-circle">
+</i>
+<span>Varie</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Tx Email</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_dati_fattura.html">
+<i class="bi bi-circle">
+</i>
+<span>Fatture RT</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_prog_pos.html">
+<i class="bi bi-circle">
+</i>
+<span>Config POS</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_protezione_parco_installato.html">
+<i class="bi bi-circle">
+</i>
+<span>Protezione parco installato</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_mail.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Mail</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_report_esercente.html">
+<i class="bi bi-circle">
+</i>
+<span>Report Esercente</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_tastiera.html">
+<i class="bi bi-circle">
+</i>
+<span>Tastiera</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_esporta.html">
+<i class="bi bi-circle">
+</i>
+<span>Esporta</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_import_export.html">
+<i class="bi bi-circle">
+</i>
+<span>Import / Export</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_aggiornamento.html">
+<i class="bi bi-circle">
+</i>
+<span>Aggiornamento</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_dgfe.html" class="active">
+<i class="bi bi-circle">
+</i>
+<span>Gestione DGFE</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_disegno.html">
+<i class="bi bi-circle">
+</i>
+<span>Disegno</span>
+</a>
+</li>
+<li>
+<a href="impostazioni_abbonamento.html">
+<i class="bi bi-circle">
+</i>
+<span>Piani di abbonamento</span>
+</a>
+</li>
+</ul>
+</li>
+<!-- End Components Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-faq.html">
+<i class="bi bi-question-circle">
+</i>
+<span>F.A.Q</span>
+</a>
+</li>
+<!-- End F.A.Q Page Nav -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="pages-contact.html">
+<i class="bi bi-envelope">
+</i>
+<span>Supporto</span>
+</a>
+</li>
+<!-- End Contact Page Nav -->
+</ul>
+</aside>
+<!-- End Sidebar-->
+<main id="main" class="main">
+<div class="pagetitle">
+<h1>Gestione DGFE</h1>
+<nav>
+<ol class="breadcrumb">
+<li class="breadcrumb-item">
+<a href="index.html">Home</a>
+</li>
+<li class="breadcrumb-item">Configurazioni</li>
+<li class="breadcrumb-item active">Gestione DGFE</li>
+</ol>
+</nav>
+</div>
+<section class="section">
+<div class="row">
+<div class="col-12">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Guida operativa</h5>
+<p>Il <strong>DGFE</strong> (o <strong>GE</strong>) è il giornale elettronico: la "memoria" in cui la cassa conserva tutti gli scontrini. Come un libretto, a un certo punto finisce o scade. Da questa sezione puoi vedere quanto tempo gli resta e, se è del tipo giusto, allungarne la scadenza, senza toccare la cassa.</p>
+<div class="alert alert-info" role="alert">
+<strong>Funziona solo in Remoto.</strong> La voce <strong>Gestione DGFE</strong> compare solo quando EditRemote è collegato alla cassa in modalità <strong>Remoto</strong>. Tutti i messaggi si leggono sul telefono o sul tablet: <strong>la cassa non stampa nulla</strong>.
+</div>
+<div class="alert alert-warning" role="alert">
+<strong>Serve la Protezione Parco (Park Protection).</strong> Senza la Protezione Parco attiva sulla cassa non è possibile ricaricare il giornale elettronico né cambiarne il tipo. Per entrare in questa sezione ti verrà chiesto il codice della Protezione Parco: se non lo conosci, chiedilo al tuo tecnico. Vedi anche <a href="impostazioni_protezione_parco_installato.html">Protezione Parco</a>.
+</div>
+
+<h6>I tipi di giornale elettronico</h6>
+<p>Ci sono tre tipi di giornale elettronico. L'app ti dice quale hai nella riga <strong>Tipo DGFE</strong>.</p>
+<ul>
+<li><strong>Standard</strong> (nell'app: <em>classico</em>). È il tipo più vecchio. Si consuma solo nei giorni in cui la cassa lavora: se la cassa resta spenta o ferma, il giornale non "invecchia".</li>
+<li><strong>Fisso</strong> (nell'app: <em>durata fissa</em>). Ha una data di scadenza, calcolata dal tempo che restava al giornale Standard, pensando a una cassa che lavora sei giorni alla settimana. Da quel momento i giorni passano come sul calendario, anche se la cassa non viene usata. <strong>Non si può ricaricare.</strong></li>
+<li><strong>Ricaricabile</strong>. Ha una data di scadenza e i giorni passano come sul calendario, che la cassa lavori o no. La scadenza si può allungare quando serve, ma in tutto il giornale non può durare più di <strong>quattro anni</strong> dal giorno in cui è stato montato.</li>
+</ul>
+
+<h6>Giornali Standard di casse più vecchie</h6>
+<p>Su alcune casse aggiornate da un software più vecchio, un giornale <strong>Standard</strong> che era stato impostato per durare <strong>un anno o meno</strong> può diventare <strong>Ricaricabile</strong> con il tasto <strong>Converti in ricaricabile</strong>. Dopo il cambio il giornale scade dopo un anno e potrà essere allungato fino a un massimo di quattro anni in tutto.</p>
+
+<h6>Entrare nella sezione</h6>
+<ol>
+<li>Collegati in <strong>Remoto</strong> e aspetta che compaia il modello della cassa.</li>
+<li>Tocca <strong>Gestione DGFE</strong>.</li>
+<li>Se l'app chiede il codice, scrivilo nella casella <strong>Autorizzazione RT / Park Protection</strong>, chiudi la tastiera e tocca <strong>Leggi informazioni DGFE</strong>.</li>
+</ol>
+<p>La cassa risponde con un po' di ritardo: anche mezzo minuto. Mentre aspetti compare la scritta <em>Operazione DGFE in corso...</em>. Non toccare nulla e attendi.</p>
+
+<h6>Cosa ti dice l'app</h6>
+<ul>
+<li><strong>Tipo DGFE</strong>: quale dei tipi descritti sopra hai.</li>
+<li><strong>Linee residue</strong> e <strong>Giorni residui</strong>: quanto spazio e quanto tempo restano.</li>
+<li><strong>Scadenza</strong>: il giorno in cui il giornale scade.</li>
+<li><strong>OTP richiesto</strong>: se c'è scritto <em>si</em>, per la prossima ricarica ti servirà un codice di sicurezza (vedi più sotto).</li>
+</ul>
+
+<h6>Allungare la scadenza (solo giornale Ricaricabile)</h6>
+<ol>
+<li>Tocca <strong>Leggi informazioni DGFE</strong>: l'app propone già la prima data possibile.</li>
+<li>Scegli la nuova data di scadenza e scrivila uguale in <strong>Nuova scadenza</strong> e in <strong>Ripeti scadenza</strong>. Tocca il giorno, il mese o l'anno e cambialo con le frecce, oppure tocca la freccina a destra per aprire il calendario. L'app accetta solo le date permesse.</li>
+<li>Tocca <strong>Programma / ricarica scadenza</strong> e rispondi di sì alla domanda. Se hai scelto un sabato o una domenica, la data diventa il lunedì dopo.</li>
+<li>Quando compare <em>Operazione completata dal RT</em>, tocca di nuovo <strong>Leggi informazioni DGFE</strong> e controlla che la scadenza sia quella che volevi.</li>
+</ol>
+
+<h6>Il codice di sicurezza (OTP)</h6>
+<p>Se la nuova data cade in un <strong>anno diverso</strong> da quello di oggi, serve un codice di sicurezza chiamato <strong>OTP</strong>. Arriva per email o te lo dà l'assistenza. Quando mancano 30 giorni o meno alla scadenza, la cassa può mandare l'email in anticipo, così trovi il codice già pronto.</p>
+<ol>
+<li>Tocca <strong>Programma / ricarica scadenza</strong>: la prima volta la cassa chiede soltanto il codice e l'app scrive <em>Richiesta OTP inviata</em>. La data non cambia ancora.</li>
+<li>Quando hai il codice, scegli di nuovo la data e tocca <strong>Programma / ricarica scadenza</strong>.</li>
+<li>Scrivi il codice nella casella <strong>OTP ricevuto dall'assistenza / email</strong> e tocca <strong>Verifica OTP e prosegui</strong>. Fallo <strong>entro 5 minuti</strong>: se aspetti di più, l'app ti dice che la procedura è scaduta e devi ricominciare dal punto 2 (il codice resta lo stesso).</li>
+<li>Se l'email non arriva, tocca <strong>Richiedi OTP GE (reinvio)</strong> per farla mandare di nuovo. Se ancora non arriva, chiama il tuo rivenditore o l'assistenza: ti daranno loro il codice da scrivere.</li>
+<li>Se proprio il codice non c'è, puoi toccare <strong>Estendi di 15 giorni</strong>: la cassa ti regala fino a 15 giorni in più, così hai tempo di procurarti il codice. Si può fare <strong>una sola volta</strong> e mai oltre i quattro anni in tutto.</li>
+<li>Per fermarti senza cambiare niente tocca <strong>Annulla procedura DGFE</strong>.</li>
+</ol>
+
+<h6>Altri tasti</h6>
+<ul>
+<li><strong>Richiedi OTP GE (reinvio)</strong>: fa mandare di nuovo l'email con il codice.</li>
+<li><strong>Converti in ricaricabile</strong>: trasforma il giornale in Ricaricabile. Può chiedere il codice OTP; se l'email non si può mandare, si completa con il codice manuale o con l'aiuto dell'assistenza.</li>
+<li><strong>Ripristina in classico</strong>: riporta a Standard un giornale <strong>Fisso</strong>, solo se quel giornale è stato preparato per tornare indietro. <strong>Non</strong> serve a riportare il giornale com'era prima di un aggiornamento della cassa.</li>
+<li><strong>Trasforma in infinito</strong>: toglie per sempre la scadenza al giornale, solo se la cassa lo consente. Non si torna indietro.</li>
+</ul>
+<p>Per cambiare il tipo, la cassa manda un'email con un codice OTP: scrivilo nella casella e tocca <strong>Verifica OTP e prosegui</strong> entro 5 minuti. Ogni volta che ricominci, la cassa manda un codice nuovo: usa sempre quello dell'<strong>email più recente</strong>, perché i codici delle email precedenti non valgono più. Se l'email non arriva, tocca <strong>Riprova invio OTP</strong>. Prima di cambiare il tipo l'app chiede sempre conferma. Se il tuo giornale non può essere cambiato, l'app avvisa che la cassa ha rifiutato l'operazione e non cambia niente.</p>
+<div class="alert alert-warning" role="alert">
+Ricariche e cambi di tipo spesso <strong>non si possono annullare</strong>: controlla bene prima di confermare. Non togliere il giornale e non spegnere la cassa mentre aspetti. Se non arriva nessuna risposta, tocca <strong>Leggi informazioni DGFE</strong> prima di riprovare.
+</div><h6 class="mt-4">Voce Gestione DGFE nel collegamento remoto</h6>
+<img src="assets/img/editremote/dgfe-menu.png" class="img-fluid rounded border mb-3" alt="Menu con voce Gestione DGFE">
+<h6>Informazioni lette dalla cassa</h6>
+<img src="assets/img/editremote/dgfe-info.png" class="img-fluid rounded border mb-3" alt="Informazioni DGFE">
+<h6>Conferma della nuova scadenza</h6>
+<img src="assets/img/editremote/dgfe-conferma.png" class="img-fluid rounded border mb-3" alt="Conferma nuova scadenza DGFE">
+<h6>Esito dell'operazione</h6>
+<img src="assets/img/editremote/dgfe-esito.png" class="img-fluid rounded border mb-3" alt="Esito operazione DGFE">
+<h6>Video: ricarica di una settimana</h6>
+<video class="img-fluid rounded border" controls preload="metadata" src="assets/video/dgfe-ricarica.mp4">Il browser non supporta la riproduzione video.</video>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+<div class="copyright"> &copy; Copyright <strong>
+<span>EditRemote Help</span>
+</strong>. All Rights Reserved </div>
+<div class="credits">
+<!-- All the links in the footer should remain intact. -->
+<!-- You can delete the links only if you purchased the pro version. -->
+<!-- Licensing information: https://bootstrapmade.com/license/ -->
+<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ --> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+</div>
+</footer>
+<!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+<i class="bi bi-arrow-up-short">
+</i>
+</a>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js">
+</script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>

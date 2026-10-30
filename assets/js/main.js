@@ -58,6 +58,18 @@
 
   addWifiHelpLink()
 
+  const addCloudAlertsHelpLink = () => {
+    const menu = select('#Configurazioni')
+    if (!menu || menu.querySelector('a[href*="impostazioni_segnalazioni_cloud.html"]')) return
+
+    const linkPrefix = window.location.pathname.includes('/pagamenti/') ? '../' : ''
+    const item = document.createElement('li')
+    item.innerHTML = '<a href="' + linkPrefix + 'impostazioni_segnalazioni_cloud.html"><i class="bi bi-circle"></i><span>Segnalazioni cloud</span></a>'
+    menu.appendChild(item)
+  }
+
+  addCloudAlertsHelpLink()
+
   /**
    * Sidebar toggle
    */

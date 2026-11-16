@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="420" viewBox="0 0 340 420" role="img" aria-labelledby="title">
+<title id="title">Esempio illustrato: aprire il profilo nel Play Store</title>
+<rect width="340" height="420" rx="16" fill="#eaf1ff"/><rect x="38" y="12" width="264" height="396" rx="24" fill="#fff" stroke="#64748b" stroke-width="2"/>
+<text x="58" y="43" font-family="Arial,sans-serif" font-size="12" fill="#64748b">ESEMPIO ILLUSTRATO</text>
+<rect x="56" y="58" width="228" height="48" rx="24" fill="#edf1f8"/><text x="72" y="88" font-family="Arial,sans-serif" font-size="15" fill="#24324a">Cerca nel Play Store</text>
+<circle cx="258" cy="82" r="20" fill="#2563eb"/><text x="252" y="88" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff">A</text>
+<circle cx="258" cy="82" r="27" fill="none" stroke="#e11d48" stroke-width="3"/><path d="M229 142 L247 110" stroke="#e11d48" stroke-width="3"/><path d="M240 113 L248 106 L250 117" fill="none" stroke="#e11d48" stroke-width="3"/>
+<rect x="60" y="150" width="220" height="55" rx="10" fill="#e8f0fe"/><text x="75" y="173" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#123a75">1. Tocca il cerchietto</text><text x="75" y="193" font-family="Arial,sans-serif" font-size="14" fill="#123a75">con foto o iniziale</text>
+<rect x="60" y="226" width="220" height="128" rx="10" fill="#f8fafc" stroke="#dbe4ef"/><text x="74" y="253" font-family="Arial,sans-serif" font-size="14" fill="#1e293b">Controlla l'account</text><line x1="74" y1="267" x2="263" y2="267" stroke="#cbd5e1"/><text x="74" y="292" font-family="Arial,sans-serif" font-size="13" fill="#1e293b">Pagamenti e abbonamenti</text><text x="74" y="321" font-family="Arial,sans-serif" font-size="13" fill="#1e293b">Metodi di pagamento</text>
+</svg>

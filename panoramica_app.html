@@ -355,11 +355,11 @@
 <ul>
 <li>Elenco delle sezioni che puoi programmare: Reparti, IVA, Articoli, Pagamenti, Clienti, POS e altre.</li>
 <li>Le voci non compatibili con il modello o la versione della cassa restano disattivate automaticamente.</li>
-<li>La voce <strong>Abbonamento App</strong> resta sempre accessibile, per controllare lo stato del piano.</li>
+<li>La voce <strong>Abbonamento App</strong> su Android, oppure <strong>Licenza Windows</strong> su PC, resta sempre accessibile per controllare lo stato dell'abilitazione.</li>
 <li><a href="impostazioni_segnalazioni_cloud.html"><strong>Segnalazioni cloud</strong></a> mostra avvisi ed errori delle casse del laboratorio, anche senza una cassa collegata. Configura la P.IVA laboratorio e premi <strong>Aggiorna</strong>.</li>
 </ul>
 <h6>Scorciatoie in basso</h6>
-<p>L'<strong>ingranaggio</strong> accanto alla versione apre Abbonamento App. Quando sono presenti segnalazioni compare anche il <strong>triangolo Alert</strong>: toccalo per aprire direttamente la lista. Su telefono in verticale le segnalazioni sono organizzate in schede da scorrere. Vedi la <a href="impostazioni_segnalazioni_cloud.html">guida Segnalazioni cloud con le schermate</a>.</p>
+<p>L'<strong>ingranaggio</strong> accanto alla versione apre <strong>Abbonamento App</strong> su Android oppure <strong>Licenza Windows</strong> su PC. Quando sono presenti segnalazioni compare anche il <strong>triangolo Alert</strong>: toccalo per aprire direttamente la lista. Su telefono in verticale le segnalazioni sono organizzate in schede da scorrere. Vedi la <a href="impostazioni_segnalazioni_cloud.html">guida Segnalazioni cloud con le schermate</a>.</p>
 <div class="alert alert-info mt-3" role="alert">
 <strong>Uso in portrait:</strong> l'elenco delle configurazioni si scorre verticalmente. Nelle tabelle che superano la larghezza dello schermo, usa la barra di scorrimento orizzontale in basso per raggiungere le colonne non visibili; le intestazioni e i testi più lunghi possono apparire troncati finché la colonna non è portata in vista.
 </div>
@@ -415,10 +415,13 @@
 </div>
 </div>
 <h3 class="h6">3. Collega EditRemote</h3>
+<div class="alert alert-warning" role="alert">
+<strong>Prima di premere Connetti nell'app, attendi la richiesta del codice sul display della cassa.</strong> Deve comparire il codice temporaneo (<strong>CODICE: 01234</strong>, esempio) oppure, se la Protezione Parco &egrave; attiva, la richiesta <strong>CODICE IN APP</strong>. Non premere <strong>Connetti</strong> mentre la cassa sta ancora avviando il collegamento cloud e non ha ancora mostrato il codice o la relativa richiesta.
+</div>
 <ol>
 <li>Nella schermata principale seleziona <strong>Remoto</strong> come modalità di connessione.</li>
 <li>Inserisci la <strong>matricola completa della cassa</strong> nell'area Dispositivo ECR. Non serve inserire l'indirizzo IP.</li>
-<li>Premi <strong>Connetti</strong>.</li>
+<li>Solo dopo che sul display della cassa compare il codice temporaneo oppure la richiesta <strong>CODICE IN APP</strong>, premi <strong>Connetti</strong> nell'app.</li>
 <li>Quando compare il messaggio <strong>Inserire il codice richiesto dalla cassa (OTP o codice Park Protection)</strong>, digita il codice temporaneo mostrato dalla cassa oppure il codice di Protezione Parco, in base al caso, e premi <strong>Conferma</strong>. OTP è il codice di conferma usa e getta.</li>
 <li>Attendi il messaggio <strong>Sessione remota pronta</strong>: l'app riconosce il modello e il pulsante diventa <strong>Disconnetti</strong>. Sulla cassa può comparire brevemente <strong>OPRZ. COMPLETATA</strong>, seguito da <strong>COLLEG.CLOUD ATT.</strong> con il tempo trascorso.</li>
 <li>Apri una funzione disponibile, ad esempio <strong>Info RT</strong> o una sezione di programmazione. Durante la lettura attendi che la cassa invii la configurazione; durante il salvataggio attendi la conferma di applicazione. Le funzioni disponibili dipendono dal modello, dalla versione della cassa e dal piano dell'app.</li>
